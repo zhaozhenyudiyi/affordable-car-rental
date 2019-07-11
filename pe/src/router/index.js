@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '../components/index/index'
+import index from '../components/zzy/start/start'
 
 Vue.use(Router)
 
