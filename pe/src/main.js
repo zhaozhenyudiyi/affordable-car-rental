@@ -5,9 +5,10 @@ import App from './App';
 import router from './router';
 
 
-import Swiper from 'swiper'; 
-import 'swiper/dist/css/swiper.min.css';
-Vue.use(Swiper);
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// require styles
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 
 import Mint from 'mint-ui';
