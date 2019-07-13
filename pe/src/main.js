@@ -5,10 +5,18 @@ import App from './App';
 import router from './router';
 
 
+<<<<<<< HEAD
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 // require styles
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
+=======
+
+
+// import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import 'swiper/dist/css/swiper.css'
+// Vue.use(VueAwesomeSwiper)
+>>>>>>> upstream/master
 
 
 import Mint from 'mint-ui';
@@ -17,7 +25,7 @@ Vue.use(Mint);
 
 import Axios from 'axios';
 import VueAxios from 'vue-axios';
-Vue.use(VueAxios, Axios);
+Vue.use(VueAxios, Axios)
 
 
 import Vant from 'vant';
