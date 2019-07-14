@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import StoreDetails from "../components/myt/StoreDetails/StoreDetails.vue"
+import CarDetails from "../components/myt/carDetails/carDetails.vue"
 // import index from '../components/index/index'
 import Pcomments from './../components/DMH/Pcomments/comments'
 import Evaluation from './../components/DMH/Evaluation/Evaluation'
@@ -8,11 +10,23 @@ import Choice from './../components/DMH/UrbanChoice/Choice'
 import Start from '../components/zzy/start/start'
 import intro from '../components/zzy/start/intro'
 import Shop from '../components/zzy/shop/shop'
+import Login from './../components/swh/login/login'
+import Registered from './../components/swh/registered/registered'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/StoreDetails',
+      name: 'StoreDetails',
+      component:StoreDetails
+    },
+    {
+      path:"/carDetails",
+      name:"CarDetails",
+      component:CarDetails
+    },
     {
       path: '/comments',
       name: 'Pcomments',
@@ -42,6 +56,16 @@ export default new Router({
       path: '/shop',
       name: 'shop',
       component: Shop
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/registered',
+      name: 'registered',
+      component: Registered
     },
     {
       path: '/start',
