@@ -15,9 +15,8 @@ export default {
 }
 </script>
 
-
-<style >
-
+<style>
+@import './../static/css/reset.css';
 html ,
 body{
   width: 100%;
