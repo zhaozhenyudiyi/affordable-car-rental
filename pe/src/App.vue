@@ -16,5 +16,17 @@ export default {
 </script>
 
 <style>
-
+  body,html{
+    height: 100%;
+    width:100%;
+    background: #2f3032;
+  }
+  #app{
+    height: 100%;
+    width:100%;
+    /* background: #2f3032; */
+  }
+  /* p{
+    margin: 0;
+  } */
 </style>

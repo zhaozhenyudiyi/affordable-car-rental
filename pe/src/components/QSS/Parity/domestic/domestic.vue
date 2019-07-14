@@ -1,0 +1,247 @@
+<template>
+  <div class="Banner">
+    <Banner>
+      <swiper-slide slot="swiper_sli">
+        <img src="./img/banner1.png" />
+      </swiper-slide>
+      <swiper-slide slot="swiper_sli">
+        <img src="./img/banner2.png" />
+      </swiper-slide>
+      <swiper-slide slot="swiper_sli">
+        <img src="./img/banner1.png" />
+      </swiper-slide>
+      <swiper-slide slot="swiper_sli">
+        <img src="./img/banner2.png" />
+      </swiper-slide>
+    </Banner>
+    <div class="sent">
+      <span class="left">租</span>
+      <van-dropdown-menu class="change">
+        <van-dropdown-item v-model="value" :options="option" />
+      </van-dropdown-menu>
+      <p class="area">郑州动物园自助点</p>
+      <div class='icon'>
+        <span id="door" :class="{door:flay1}" @click="flay1 = !flay1">上门</span>
+        <span id="store":class="{store:!flay1}" @click="flay1 = false">到店</span>
+      </div>
+    </div>
+
+    <div class="sent">
+      <span class="left">还</span></span>
+      <van-dropdown-menu class="change">
+        <van-dropdown-item v-model="value1" :options="option1" />
+      </van-dropdown-menu>
+      <p class="area">郑州动物园自助点</p>
+      <div class='icon'>
+        <span id="door" :class="{door:flay2}" @click="flay2 = !flay2">上门</span>
+        <span id="store":class="{store:!flay2}" @click="flay2 = false">到店</span>
+      </div>
+    </div>
+    <div class="time">
+        <div class="star">
+          <p class="math">07月8日</p>
+          <p class="clock">周一17：00</p>
+        </div>
+        <div class="day">
+          <span>2天</span>
+          <img src="./img/形状 4.png">
+        </div>
+        <div class="end">
+          <p class="math">07月10日</p>
+          <p class="clock">周三17：00</p>
+        </div>
+    </div>
+    <div class="choice">
+      <input type="button" value="立即选车">
+    </div>
+    <Recommend></Recommend>
+  </div>
+</template>
+
+<script>
+import Banner from "../banner/banner";
+import Recommend from '../recommend/recommend'
+export default {
+  data() {
+    return {
+      value: 0,
+      // switch1: false,
+      // switch2: false,
+      value1:'a',
+      option: [
+        { text: "郑州", value: 0 },
+        { text: "北京", value: 1 },
+        { text: "上海", value: 2 }
+      ],
+       option1: [
+        { text: "郑州", value: 'a' },
+        { text: "北京", value: 'b' },
+        { text: "上海", value: 'c' }
+      ],
+      overlay: false,
+      flay1:true,
+      flay2:true,
+    };
+  },
+  methods: {},
+  components: {
+    Banner,
+    Recommend
+  }
+};
+</script>
+
+<style scoped lang='less'>
+.Banner {
+  width: 100%;
+  height: 2.55rem;
+}
+.Banner img {
+  width: 7.5rem;
+}
+.van-dropdown-menu {
+  width: 2rem;
+  background: none;
+  .van-dropdown-menu__title {
+    color: white;
+  }
+}
+.van-dropdown-item--down .van-popup {
+  width: 30%;
+}
+.van-hairline--top-bottom::after {
+  border: none;
+}
+.change {
+  color: white;
+  width: 0.6rem;
+  height: auto;
+  font-size: 0.26rem;
+  margin-left: .19rem;
+}
+.sent {
+  font-size: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  padding: 0 .29rem;
+  border-bottom: 1px solid #fafafa;
+  .left {
+    display: block;
+    width: 0.24rem;
+    height: 0.24rem;
+    font-size: 0.24rem;
+    color: white;
+    background: #ffc600;
+    text-align: center;
+    line-height: 0.24rem;
+    padding: 0.03rem;
+    border-radius: 0.05rem;
+  }
+  .area {
+    font-size: 0.26rem;
+    color: white;
+    margin-left: .38rem;
+  }
+  .icon{
+    width: 1.26rem;
+    height: .33rem;
+    background: #dadada;
+    border-radius: .17rem;
+    position: absolute;
+    right: 0.29rem;
+    #door {
+      display: inline-block;
+    width: .64rem;
+    color: black;
+    font-size: 0.23rem;
+    border-radius: 38%;
+    text-align: center;
+  }
+  .door{
+    background: #FFC600;
+  }
+  #store {
+    display: inline-block;
+    width: .62rem;
+    color: black;
+    font-size: 0.23rem;
+    border-radius: .17rem;
+    text-align: center;
+  }
+  .store{
+    background: #FFC600;
+  }
+}
+  
+}
+.time{
+    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0 .33rem;
+    justify-content: space-between;
+    margin-top: .39rem;
+    .star{
+      display: flex;
+      flex-direction: column;
+      font-size: .26rem;
+      width: 1.5rem;
+      align-items: center;
+      .math{
+        font-size: .26rem;
+        margin: 0;
+        color: white;
+      }
+      .clock{
+        font-size: .20rem;
+        margin: 0;
+        color: #999999;
+      }
+    }
+    .day{
+       display: flex;
+      flex-direction: column;
+      font-size: .26rem;
+      width: 2rem;
+      align-items: center;
+      span{
+        color: #FFC600;
+      }
+      img{
+        width: 100%;
+        height: .14rem;
+      }
+    }
+    .end{
+       display: flex;
+      flex-direction: column;
+      font-size: .26rem;
+      width: 1.5rem;
+      align-items: center;
+      .math{
+        font-size: .26rem;
+        margin: 0;
+        color: white;
+      }
+      .clock{
+        font-size: .20rem;
+        margin: 0;
+        color: #999999;
+      }
+    }
+  }
+  .choice{
+    text-align: center;
+    input{
+      width: 6.86rem;
+      height: .89rem;
+      background: #FFC600;
+      font-size: .32rem;
+      border:none;
+      border-radius: .45rem;
+    }
+  }
+</style>
+

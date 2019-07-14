@@ -25,8 +25,13 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);
 
-
-
+//地图插件
+import BaiduMap from 'vue-baidu-map'
+Vue.use(BaiduMap,{
+  //ak 是在百度地图开发者平台申请的秘钥
+  ak:'YOUR_APP_KEY',
+  
+})
 
 // Vue.use(Vant);
 
