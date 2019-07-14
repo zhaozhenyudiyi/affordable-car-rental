@@ -26,7 +26,7 @@
                 <router-link to="/registered"><button>注册</button></router-link>
                 <router-link to="/login"><button  @click="phone">登录</button></router-link>
             </div>
-            <p>登录或者注册即同意平价分时租车<router-link to="/login">用户服务协议</router-link></p>
+            <p>登录或者注册即同意平价分时租车<router-link to="/shop">用户服务协议</router-link></p>
         </footer>
      </div>
  </div>
@@ -64,7 +64,7 @@ export default {
         position: fixed;
         width: 100%;
         height: 100%;
-        background-size: 100%;
+        background-size: 100% 100%;
         img{
             width: 100%;
             height: 100%;
@@ -97,6 +97,7 @@ export default {
                        left: 1.15rem;
                        font-size: .28rem;
                        color: #ffffff;
+                       border: 0;
                    }
                    input::-webkit-input-placeholder{
                        color: #ffffff;
@@ -113,15 +114,15 @@ export default {
             section{
                 position: absolute;
                 overflow: hidden;
-                top:9.1rem;
+                top:9rem;
                 margin-bottom: .33rem;
                 p{
                     color: #ffffff;
                     margin-left: 1.85rem;
-                    font-size: .23rem;
+                    font-size: .12rem;
                 }
                 ul{
-                    margin: .59rem .48rem .3rem .52rem;
+                    margin: .59rem .48rem .54rem .52rem;
                     display: flex;
                     li{
                         img{
@@ -139,12 +140,13 @@ export default {
             }
             footer{
                 position: absolute;
-                bottom:.31rem;
+                bottom:-.1rem;
+                font-size: 0;
                 div{
                     width: 5.63rem;
                     height: .88rem;
                     display: flex;
-                    margin-bottom: .23rem;
+                    margin-bottom: .14rem;
                     a{
                         position: relative;
                         button{
@@ -154,6 +156,7 @@ export default {
                             border-radius:.44rem;
                             font-size: .23rem;
                             position: absolute;
+                            border: 0;
                         }
                     }
                     a:last-child{
@@ -161,22 +164,22 @@ export default {
                             left: 2.47rem;
                             background-color:#FFC600;
                             z-index: 333;
+                            color: #000000;
                         }
-                        
                     }
                     a:frist-child{
                         button{
                             left: 0;
-                            background-color:rgba(104, 89, 89, 0.904);
+                            background-color:#7c7e7d;
+                            color:#000000;
                         }
                     }
                 }
                 p{
-                    font-size: .14rem;
+                    font-size: .12rem;
                     text-align: center;
                     a{
                         color: #ffffff;
-                        font-size: .14rem;
                     }
                 }
             }
