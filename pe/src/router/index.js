@@ -8,6 +8,8 @@ import Choice from './../components/DMH/UrbanChoice/Choice'
 import Start from '../components/zzy/start/start'
 import intro from '../components/zzy/start/intro'
 import Shop from '../components/zzy/shop/shop'
+import Login from './../components/swh/login/login'
+import Registered from './../components/swh/registered/registered'
 
 Vue.use(Router)
 
@@ -42,6 +44,16 @@ export default new Router({
       path: '/shop',
       name: 'shop',
       component: Shop
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/registered',
+      name: 'registered',
+      component: Registered
     },
     {
       path: '/start',
