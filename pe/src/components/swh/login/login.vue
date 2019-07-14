@@ -23,8 +23,8 @@
         </section>
         <footer>
             <div>
-                <router-link to="/registered"><button>注册</button></router-link>
-                <router-link to="/login"><button  @click="phone">登录</button></router-link>
+                <router-link to="/registered"><button class="aa">注册</button></router-link>
+                <router-link to="/login"><button  @click="phone" class="log" style="color:#000000;">登录</button></router-link>
             </div>
             <p>登录或者注册即同意平价分时租车<router-link to="/shop">用户服务协议</router-link></p>
         </footer>
@@ -60,6 +60,17 @@ export default {
 </script>
 
 <style scoped lang="less">
+    .log{
+        left: 0;
+        background-color:#FFC600;
+        z-index: 3;
+    }
+    .aa{
+      color:red;
+      background:rgba(245,245,245,1);
+      opacity:.4;
+      
+    }
     .login{
         position: fixed;
         width: 100%;
@@ -149,12 +160,13 @@ export default {
                     margin-bottom: .14rem;
                     a{
                         position: relative;
+                        font-size: 0;
                         button{
                             width:3.15rem;
                             height:.88rem;
                             box-shadow:-9px 0px 16px 0px rgba(51,51,51,0.18);
                             border-radius:.44rem;
-                            font-size: .23rem;
+                            font-size: .36rem;
                             position: absolute;
                             border: 0;
                         }
@@ -171,7 +183,6 @@ export default {
                         button{
                             left: 0;
                             background-color:#7c7e7d;
-                            color:#000000;
                         }
                     }
                 }

@@ -46,11 +46,6 @@ export default new Router({
       component: Shop
     },
     {
-      path: '/',
-      name: 'Login',
-      component: Login
-    },
-    {
       path: '/login',
       name: 'Login',
       component: Login
