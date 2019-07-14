@@ -2,10 +2,6 @@
   <div>
     <div class="kong"></div>
   <div class="big">
-      <div class="header">
-     <router-link to=""><img src="./img/形状 17 拷贝.png" alt=""></router-link>
-     <p>车辆 详情</p>  
-   </div>
    <div class="price">
      <ul>
        <li v-for="(item,ind) in prt" @click="dian(ind)">

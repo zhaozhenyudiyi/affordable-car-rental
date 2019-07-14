@@ -2,10 +2,6 @@
   <div>
     <div class="kong"></div>
     <div class="big">
-      <div class="header">
-     <router-link to=""><img src="./img/形状 17.png" alt=""></router-link>
-     <p>门店详情</p>  
-   </div>
    <div class="banner">
      <img src="./img/图层 516.png">
    </div>
@@ -155,16 +151,13 @@ export default {
 .kong{
   width: 100%;
   height: .88rem;
-  // border:1px red solid;
 }
 .bao{
   width: 100%;
-  // border: 1px red solid;
 }
   .big{
     background:#303133;
     color: #fff;
-    // overflow: auto; 
     width: 100%; 
     height: 4.8rem;
     .header {
@@ -186,7 +179,7 @@ export default {
     .banner{
       width: 100%;
       height: 3.6rem;
-      margin-top: .2rem;
+      margin-top: .3rem;
       img{
         width: 100%;
         height: 100%;
@@ -196,10 +189,10 @@ export default {
   .top{
     width: 100%; 
     background: #384043;
-  
+    margin-top: -2.13rem;
   .xia{
     width: 95%;
-    margin:-0.69rem auto;
+    margin:-1.62rem auto;
     color: white;
     overflow: hidden;
     .star{
