@@ -11,7 +11,7 @@
     <div class="ul">
       <ul class="area">
         <li
-          v-for="(value,index) in site"
+          v-for="(vlaue,index) in site"
           :key="index"
           class="li"
           :class="{click:index == 0}"
@@ -50,7 +50,6 @@ export default {
       li[this.num].classList.remove("click");
       li[index].classList.add("click");
       this.num = index;
-    //   console.log();
     }
   },
   components: {
