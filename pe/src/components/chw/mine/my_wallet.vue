@@ -24,7 +24,9 @@
       <p class='jf'>说明：</p>
       <p class=jf>1积分=1元，每单最高可使积分冲抵40%租车费用</p>
     </div>
-    <div class='cz_btn'>充值</div>
+    <router-link to='mine'>
+      <div class='cz_btn'>充值</div>
+    </router-link>
   </div>
 </template>
 
@@ -114,7 +116,7 @@ export default {
     text-align: center;
     font-size:.4rem;
     line-height: .88rem;
-    
+    color:#000;
   }
 }
 </style>

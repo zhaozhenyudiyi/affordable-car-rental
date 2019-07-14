@@ -83,6 +83,8 @@ export default {
       color:#999;
       padding:.2rem 0;
       img{
+        width:.4rem;
+        height:.4rem;
         margin-right:.2rem;
       }
     }
