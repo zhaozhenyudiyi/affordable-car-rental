@@ -12,8 +12,8 @@
     <aside>
       <div class="driving">
         <ul>
-          <li v-for="(item, index) in coin" :key="index">
-            <p class="pb">{{item.name}}驾币</p>
+          <li v-for="(item, index) in coin" :key="index" @click="driv(index)">
+            <p class="pb" :class="item.vg?'dive':''">{{item.name}}驾币</p>
           </li>
           <li>
             <div>
@@ -23,6 +23,7 @@
                 clickable
                 :value="value"
                 @touchstart.native.stop="show = true"
+                @focus="dir"
               />
 
               <van-number-keyboard
@@ -76,7 +77,7 @@
     </div>
     <div class="arge">
       <van-button :disabled="chong" type="primary" class="arge-icon" @click="showPopup">充值</van-button>
-      <van-popup v-model="popup" position="bottom" :style="{ height: '65%' }" >
+      <van-popup v-model="popup" position="bottom" :style="{ height: '65%' }">
         <div class="hea">
           <div class="hea1">
             <img src="./img/icon1.png" alt />
@@ -135,6 +136,8 @@ export default {
       Alipay: "支付宝支付",
       WeChat: "微信支付",
       Ali: ""
+      //选中变色
+      // ive:false
     };
   },
   methods: {
@@ -144,6 +147,9 @@ export default {
     },
     showPopup() {
       this.popup = true;
+      if (this.value != "") {
+        this.nihao = this.value;
+      }
     },
     textali() {
       if (this.zf == false) {
@@ -152,10 +158,23 @@ export default {
         this.Ali = this.WeChat;
       }
       return this.Ali;
+    },
+    driv(a) {
+      this.coin.forEach(element => {
+        element.vg = false;
+      });
+      this.coin[a].vg = true;
+      this.nihao = this.coin[a].name;
+    },
+    dir() {
+      this.coin.forEach(element => {
+        element.vg = false;
+      });
     }
   },
   mounted() {},
-  components: {}
+  components: {},
+  updated() {}
 };
 </script>
 
@@ -202,6 +221,10 @@ section {
             padding: 0;
             font-size: 0.32rem;
             color: rgba(251, 253, 253, 1);
+          }
+          .dive {
+            color: #ffc600;
+            font-weight: 900;
           }
           input {
             display: inline-block;
