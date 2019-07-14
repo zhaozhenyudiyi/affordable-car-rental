@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<<<<<<< HEAD
+
 <style >
 
 html ,
