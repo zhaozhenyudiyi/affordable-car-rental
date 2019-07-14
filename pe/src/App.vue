@@ -15,8 +15,15 @@ export default {
 }
 </script>
 
-<style>
-p{
-  font-size: 1rem;
+<style lang=less>
+*{
+  box-sizing: border-box;
+}
+html,body,#app{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  font-size:1rem;
 }
 </style>
