@@ -17,7 +17,7 @@ export default {
 
 <<<<<<< HEAD
 <style >
-@import "../static/css/reset.css";
+@import "./../static/css/reset.css";
 html ,
 body{
   width: 100%;
