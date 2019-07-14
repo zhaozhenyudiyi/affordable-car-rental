@@ -1,27 +1,32 @@
 <template>
   <div>
-
+   
   </div>
 </template>
 
 <script>
-// import Swiper from 'swiper'; 
-// import 'swiper/dist/css/swiper.min.css';
 export default {
   data() {
-    return {
-
-    }
+    return {};
   },
-  methods: {
-
-  },
-  components: {
-
+  methods: {},
+  components: {},
+  mounted() {
+     setTimeout(()=>{
+      this.$router.push("/intro");
+    }, 3000);
+   
   }
-}
+};
 </script>
 
 <style scoped lang='less'>
-
+div {
+  width: 100%;
+  height: 100%;
+}
+img{
+  float: left;
+  width: 100%;
+}
 </style>
