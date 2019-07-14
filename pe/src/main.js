@@ -6,16 +6,10 @@ import router from './router';
 
 
 
-<<<<<<< HEAD
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
-Vue.use(VueAwesomeSwiper);
-=======
 
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import 'swiper/dist/css/swiper.css'
 // Vue.use(VueAwesomeSwiper)
->>>>>>> zhaozhenyudiyi/master
 
 
 import Mint from 'mint-ui';
