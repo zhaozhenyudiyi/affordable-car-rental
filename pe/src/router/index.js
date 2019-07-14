@@ -4,6 +4,8 @@ import Mine from "../components/chw/mine/mine.vue"
 import Mywallet from "../components/chw/mine/my_wallet.vue"
 import Myorder from "../components/chw/mine/my_order.vue"
 import Paysuccess from "../components/chw/paysuccess/pay_success.vue"
+import StoreDetails from "../components/myt/StoreDetails/StoreDetails.vue"
+import CarDetails from "../components/myt/carDetails/carDetails.vue"
 import Pcomments from './../components/DMH/Pcomments/comments'
 import Evaluation from './../components/DMH/Evaluation/Evaluation'
 import Recharge from './../components/DMH/Recharge/Recharge'
@@ -44,7 +46,17 @@ export default new Router({
       component: Paysuccess,
     },
     {
-      path: '/comion',
+      path: '/StoreDetails',
+      name: 'StoreDetails',
+      component:StoreDetails
+    },
+    {
+      path:"/carDetails",
+      name:"CarDetails",
+      component:CarDetails
+    },
+    {
+      path: '/comments',
       name: 'Pcomments',
       component: Pcomments
     },
