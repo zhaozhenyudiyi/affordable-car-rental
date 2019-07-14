@@ -11,7 +11,8 @@
       />
       <div class="sear" v-show="show">
         <ul>
-          <li v-for="(item, index) in fn" :key="index" v-text="$options.filters.c(item)"></li>
+          <li v-for="(item, index) in fn" :key="index" v-text="$options.filters.c(item)"
+           @click="title(item)"></li>
         </ul>
       </div>
     </div>
@@ -36,7 +37,7 @@
           </i>
         </p>
         <ul>
-          <li>郑州</li>
+          <li v-for="(item, index) in History" :key="index">{{ item }}</li>
         </ul>
       </div>
       <div class="Popular">
@@ -55,49 +56,159 @@
       <aside>
         <van-index-bar>
           <van-index-anchor index="A" />
-          <van-cell title v-for="(item, index) in list[0].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[0].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="B" />
-          <van-cell title v-for="(item, index) in list[1].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[1].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="C" />
-          <van-cell title v-for="(item, index) in list[2].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[2].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="D" />
-          <van-cell title v-for="(item, index) in list[3].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[3].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="E" />
-          <van-cell title v-for="(item, index) in list[4].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[4].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="F" />
-          <van-cell title v-for="(item, index) in list[5].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[5].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="G" />
-          <van-cell title v-for="(item, index) in list[6].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[6].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="H" />
-          <van-cell title v-for="(item, index) in list[7].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[7].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="J" />
-          <van-cell title v-for="(item, index) in list[8].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[8].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="K" />
-          <van-cell title v-for="(item, index) in list[9].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[9].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="L" />
-          <van-cell title v-for="(item, index) in list[10].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[10].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="M" />
-          <van-cell title v-for="(item, index) in list[11].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[11].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="N" />
-          <van-cell title v-for="(item, index) in list[12].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[12].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="P" />
-          <van-cell title v-for="(item, index) in list[13].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[13].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="Q" />
-          <van-cell title v-for="(item, index) in list[14].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[14].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="R" />
-          <van-cell title v-for="(item, index) in list[15].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[15].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="S" />
-          <van-cell title v-for="(item, index) in list[16].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[16].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="T" />
-          <van-cell title v-for="(item, index) in list[17].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[17].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="W" />
-          <van-cell title v-for="(item, index) in list[18].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[18].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="X" />
-          <van-cell title v-for="(item, index) in list[19].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[19].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="Y" />
-          <van-cell title v-for="(item, index) in list[20].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[20].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
           <van-index-anchor index="Z" />
-          <van-cell title v-for="(item, index) in list[21].list " :key="index">{{ item.name }}</van-cell>
+          <van-cell
+            title
+            v-for="(item, index) in list[21].list "
+            :key="index"
+            @click="title(item.name)"
+          >{{ item.name }}</van-cell>
         </van-index-bar>
       </aside>
     </div>
@@ -115,7 +226,7 @@ export default {
       soulogo: require("./img/icon-01.png"),
       list: city.city, //首字母  城市
       //历史城市
-      History: [],
+      History: ['郑州',],
       //热门城市
       Popular: [
         "昆明",
@@ -136,6 +247,8 @@ export default {
       ],
       clas: true
       //样式切换
+
+      //
     };
   },
   filters: {
@@ -143,7 +256,12 @@ export default {
       return val;
     }
   },
-  methods: {},
+  methods: {
+    title(a){
+      this.History.push(a);
+      this.value = "";
+    }
+  },
   components: {},
   computed: {
     fn() {
@@ -158,7 +276,7 @@ export default {
           }
         });
       });
-      bb.length>15?bb.length=15:bb;
+      bb.length > 15 ? (bb.length = 15) : bb;
       return bb;
     }
   },
@@ -207,7 +325,7 @@ section {
         li {
           padding: 0.1rem 0;
           border-bottom: 1px solid #eee;
-          margin: .2rem 0;
+          margin: 0.2rem 0;
         }
       }
     }
