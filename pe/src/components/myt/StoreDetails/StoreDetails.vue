@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="kong"></div>
     <div class="big">
       <div class="header">
      <router-link to=""><img src="./img/形状 17.png" alt=""></router-link>
@@ -31,7 +32,7 @@
        <img src="./img/icon2.png">
      </li>
    </ul>
-   <span style="margin-right: 3.20rem;">5.0</span>
+   <span style="margin-right: 3.20rem; margin-left:.16rem;">5.0</span>
 
  <div class="ping">
    <span>1126人评价</span>
@@ -67,7 +68,7 @@
       <span></span>
       <span style="margin-left: 1.40rem;">07-06  10:30</span>
       <ul style="    float: right;
-    margin-top: -0.29rem;
+    margin-top: -0.33rem;
     margin-left: .90rem">
      <li>
        <img src="./img/icon2.png">
@@ -99,8 +100,8 @@
       <span>15639619820</span>
       <span></span>
       <span style="margin-left: 1.40rem;">07-06  10:30</span>
-      <ul style="    float: right;
-    margin-top: -0.29rem;
+      <ul  style="    float: right;
+    margin-top: -0.33rem;
     margin-left: .90rem">
      <li>
        <img src="./img/icon2.png">
@@ -151,6 +152,11 @@ export default {
 </script>
 
 <style scoped lang='less'>
+.kong{
+  width: 100%;
+  height: .88rem;
+  // border:1px red solid;
+}
 .bao{
   width: 100%;
   // border: 1px red solid;
@@ -166,11 +172,12 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: .6rem;
-      
+      // padding-top: .6rem;
+     
       img{
         width: .43rem;
         height: .43rem;
+        margin-bottom: .18rem;
       }
       p{
       font-size: .36rem;
@@ -192,24 +199,23 @@ export default {
   
   .xia{
     width: 95%;
-    margin: 0 auto;
+    margin:-0.69rem auto;
     color: white;
     overflow: hidden;
     .star{
-          // margin-top: .18rem;
-          height: .8rem;
+          font-size: .32rem;
           display: flex;
-          align-items: center;
-          justify-content: space-between;
-          border-bottom: 1px #ccc solid;
+          // align-items: center;
+          // justify-content: space-between;
+          // border-bottom: 1px #ccc solid;
           span{
             font-size: .28rem;
-            float: left;
+            // float: left;
           }
     }
     p{
       font-size: .32rem;
-      padding-top: .35rem;
+      padding-top: .9rem;
     }
     ul li{
       float: left;
@@ -220,6 +226,8 @@ export default {
     }
   }
   .ping{
+    display: flex;
+    align-items: center;
     img{
       width: .43rem;
       height: .43rem;

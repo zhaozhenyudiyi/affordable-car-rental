@@ -17,7 +17,6 @@ export default {
 
 
 <style >
-
 html ,
 body{
   width: 100%;
