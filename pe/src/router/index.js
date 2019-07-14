@@ -86,13 +86,18 @@ export default new Router({
       component: Shop
     },
     {
+      path: '/',
+      name: 'Login',
+      component: Login
+    },
+    {
       path: '/login',
-      name: 'login',
+      name: 'Login',
       component: Login
     },
     {
       path: '/registered',
-      name: 'registered',
+      name: 'Registered',
       component: Registered
     },
     {
