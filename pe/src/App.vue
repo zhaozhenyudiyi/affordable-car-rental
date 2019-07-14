@@ -15,6 +15,7 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
 <style >
 @import "../static/css/reset.css";
 html ,
