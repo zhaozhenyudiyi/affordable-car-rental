@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <img src="../start/img/lond.gif" alt/> -->
+
   </div>
 </template>
 
