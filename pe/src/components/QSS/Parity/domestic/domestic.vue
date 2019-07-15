@@ -1,6 +1,7 @@
 <template>
   <div class="Banner">
-    <Banner>
+    <!-- <Banner> -->
+<!-- <swiper :options="swiperOption" ref="mySwiper">
       <swiper-slide slot="swiper_sli">
         <img src="./img/banner1.png" />
       </swiper-slide>
@@ -13,7 +14,53 @@
       <swiper-slide slot="swiper_sli">
         <img src="./img/banner2.png" />
       </swiper-slide>
-    </Banner>
+</swiper> -->
+
+
+
+<div class="swiper-container auto">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./img/banner1.png" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/banner2.png" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/banner1.png" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/banner2.png" alt />
+        </div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+
+
+    <!-- </Banner> -->
+   <!-- <div class="swiper-container auto">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../domestic/img/banner1.png" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="../domestic/img/banner2.png" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="../domestic/img/banner1.png" alt />
+        </div>
+        <div class="swiper-slide">
+          <img src="../domestic/img/banner2.png" alt />
+        </div>
+      </div>
+      
+      <div class="swiper-pagination"></div>
+    </div> -->
+
+
+
     <div class="sent">
       <span class="left">租</span>
       <van-dropdown-menu class="change">
@@ -59,9 +106,12 @@
 </template>
 
 <script>
-import Banner from "../banner/banner";
+import Swiper from "swiper";
+import "swiper/dist/css/swiper.css";
+// import Banner from "../banner/banner";
 import Recommend from '../recommend/recommend'
 export default {
+  name: 'carrousel',
   data() {
     return {
       value: 0,
@@ -81,13 +131,48 @@ export default {
       overlay: false,
       flay1:true,
       flay2:true,
+      // swiperOption: {
+      //     loop:true,//是否循环播放
+      //     autoplay:{
+      //         delay:1000,//轮播的速度
+      //         disableOnInteraction : false//用户操作swiper之后，是否禁止autoplay
+      //     },
+      //     effect : 'slide',
+      //     pagination : {
+      //       el: '.swiper-pagination',
+      //       type: 'bullets',  
+      //     },
+          
+      //   }
     };
   },
+  computed: {
+      swiper() {
+        return this.$refs.mySwiper.swiper
+      }
+    },
   methods: {},
   components: {
-    Banner,
+    // Banner,
+    // swiper,
     Recommend
-  }
+  },
+  mounted() {
+      var mySwiper = new Swiper(".auto", {
+      loop : true,
+      effect : 'slide',
+      direction: "horizontal", // 垂直切换选项
+      loop: false, // 循环模式选项
+      autoplay:{
+        delay:1000,
+        disableOnInteraction : false
+      },
+      // 如果需要分页器
+      pagination: {
+        el: ".swiper-pagination"
+      }
+    });
+  },
 };
 </script>
 
@@ -95,6 +180,9 @@ export default {
 .Banner {
   width: 100%;
   height: 2.55rem;
+  /deep/.swiper-pagination-bullet{
+    background:#ffc600;
+  }
 }
 .Banner img {
   width: 7.5rem;
