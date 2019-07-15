@@ -1,0 +1,22 @@
+[
+    {
+       "serialNumber" :"8Y491234612123",
+       "everconfirmed":"待确认",
+       "car_img":"./../../static/img-order/car1.png",
+       "car_model":"启辰D50",
+       "get_time":"2019-02-26 15:30",
+       "repay_time":"2019-02-28 15:30",
+       "money":"560:00",
+       "bool":"true"
+    },
+    {
+        "serialNumber": "8Y491234612123",
+        "everconfirmed": "已作废",
+        "car_img": "./../../static/img-order/car1.png",
+        "car_model": "启辰D50",
+        "get_time": "2019-02-26 15:30",
+        "repay_time": "2019-02-28 15:30",
+        "money": "560:00",
+        "bool":"false"
+    }
+]
