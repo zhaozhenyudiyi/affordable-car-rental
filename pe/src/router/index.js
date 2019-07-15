@@ -1,5 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+<<<<<<< HEAD
+=======
+import index from '../components/zzy/start/start'
+import Domestic from '../components/QSS/Parity/domestic/domestic'
+import Freeride from '../components/QSS/Parity/Freeride/Freeride.vue'
+import Timesharing from '../components/QSS/Parity/Timesharing/Timesharing'
+import Testdrive from '../components/QSS/Parity/testdrive/testdrive'
+import Longrent from '../components/QSS/Parity/Longrent/Longrent'
+import Pages from '../components/QSS/Parity/pagas/pagas.vue'
+import YearSent from '../components/QSS/Parity/Longrent/year_sent/year_sent.vue'
+import BestLong from '../components/QSS/Parity/Longrent/bestlong_sent/bestlong_sent.vue'
+>>>>>>> zhaozhenyudiyi/master
 import Mine from "../components/chw/mine/mine.vue"
 import Mywallet from "../components/chw/mine/my_wallet.vue"
 import Myorder from "../components/chw/mine/my_order.vue"
@@ -19,7 +31,69 @@ import Registered from './../components/swh/registered/registered'
 Vue.use(Router)
 
 export default new Router({
+<<<<<<< HEAD
   routes: [
+=======
+  routes: [{
+      path: '/',
+      name: 'index',
+      component: index
+    },
+    {
+      path: '/pages',
+      name: 'Pages',
+      component: Pages,
+      children: [
+        {
+          path: '/',
+          name: 'Domestic',
+          component: Domestic
+        },
+        {
+          path: '/domestic',
+          name: 'Domestic',
+          component: Domestic
+        },
+        {
+          path: '/freeride',
+          name: 'Freeride',
+          component: Freeride
+        },
+        {
+          path: '/timesharing',
+          name: 'Timesharing',
+          component: Timesharing
+        },
+        {
+          path: '/testdrive',
+          name: 'Testdrive',
+          component: Testdrive
+        },
+        {
+          path: '/longrent',
+          name: 'Longrent',
+          component: Longrent,
+          children:[
+            {
+              path: '',
+              name: 'YearSent',
+              component: YearSent
+            },
+            {
+              path: '/year_sent',
+              name: 'YearSent',
+              component: YearSent
+            },
+            {
+              path: '/bestlong_sent',
+              name: 'BestLong',
+              component: BestLong
+            }
+          ]
+        },
+      ]
+    },
+>>>>>>> zhaozhenyudiyi/master
     {
       path: '/paysuccess',
       name: 'Paysuccess',
@@ -41,6 +115,14 @@ export default new Router({
       component: Myorder,
     },
     {
+<<<<<<< HEAD
+=======
+      path: '/paysuccess',
+      name: 'Paysuccess',
+      component: Paysuccess,
+    },
+    {
+>>>>>>> zhaozhenyudiyi/master
       path: '/StoreDetails',
       name: 'StoreDetails',
       component:StoreDetails
@@ -56,6 +138,7 @@ export default new Router({
       component: Pcomments
     },
     {
+<<<<<<< HEAD
       path:'/evaluation',
       name: 'Evaluation',
       component:Evaluation
@@ -69,6 +152,22 @@ export default new Router({
       path:'/choice',
       name:'Choice',
       component:Choice
+=======
+
+      path: '/evaluation',
+      name: 'Evaluation',
+      component: Evaluation
+    },
+    {
+      path: '/recharge',
+      name: 'Recharge',
+      component: Recharge
+    },
+    {
+      path: '/choice',
+      name: 'Choice',
+      component: Choice
+>>>>>>> zhaozhenyudiyi/master
     },
     {
       path: '/intro',
@@ -81,7 +180,16 @@ export default new Router({
       component: Shop
     },
     {
+<<<<<<< HEAD
       path: '/Login',
+=======
+      path: '/',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/login',
+>>>>>>> zhaozhenyudiyi/master
       name: 'Login',
       component: Login
     },
