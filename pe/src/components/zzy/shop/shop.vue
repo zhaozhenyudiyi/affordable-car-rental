@@ -3,7 +3,7 @@
     <div class="head"></div>
     <p>
       <span>用车城市</span>
-      <router-link to="/intro">
+      <router-link to="/intro" class="a">
         <span>郑州</span>
         <img src="./img/icon1.png" alt />
       </router-link>
@@ -11,7 +11,7 @@
     <div class="ul">
       <ul class="area">
         <li
-          v-for="(vlaue,index) in site"
+          v-for="(value,index) in site"
           :key="index"
           class="li"
           :class="{click:index == 0}"
@@ -50,6 +50,7 @@ export default {
       li[this.num].classList.remove("click");
       li[index].classList.add("click");
       this.num = index;
+    //   console.log();
     }
   },
   components: {
@@ -84,9 +85,13 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 0.3rem;
-
+    .a{
+      display: flex;
+      align-items: center;
+    }
     span {
       color: #fff;
+      margin-right: .05rem;
     }
 
     img {
