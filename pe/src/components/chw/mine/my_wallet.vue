@@ -2,7 +2,8 @@
 <template>
   <div class="my_wallet">
     <Myheader txt="我的钱包">
-      <span slot="left-img" class="left-img" @click="back">＜</span>
+      <img src="./../images/2.png" slot="left-img" class="left-img" @click="back" alt="">
+      <!-- <span slot="left-img" class="left-img" @click="back">＜</span> -->
     </Myheader>
     <div class="wallet-ligo">
       <div>
@@ -53,8 +54,9 @@ export default {
   height: 100%;
   font-size: 0.2rem;
   background-color: #363b3e;
-  /* box-sizing: border-box; */
+  overflow: hidden;
   .wallet-ligo {
+    margin-top:.88rem;
     width: 6.85rem;
     height: 3.86rem;
     border-radius: .4rem;
