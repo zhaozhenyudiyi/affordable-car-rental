@@ -1,10 +1,17 @@
 <template>
   <div>
-    <div id="myChart" :style="{width: '300px', height: '300px'}"></div>
+    <div id="myCharts" :style="{width: '226px', height: '226px'}"></div>
   </div>
 </template>
 
 <script>
+var echarts = require("echarts/lib/echarts");
+// 引入柱状图
+require("echarts/lib/chart/Pie");
+// 引入提示框和标题组件
+require("echarts/lib/component/tooltip");
+require("echarts/lib/component/title");
+
 export default {
   name: "hello",
   data() {
@@ -16,7 +23,7 @@ export default {
   methods: {
     drawLine() {
       // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById("myChart"));
+      let myChart = echarts.init(document.getElementById("myCharts"));
       // 绘制图表
       myChart.setOption({
         tooltip: {
@@ -42,7 +49,7 @@ export default {
               emphasis: {
                 show: true,
                 textStyle: {
-                  fontSize: "30",
+                  fontSize: "20",
                   fontWeight: "bold"
                 }
               }
@@ -53,14 +60,13 @@ export default {
               }
             },
             data: [
-              { value: 335, name: "日租车辆"},
+              { value: 335, name: "日租车辆" },
               { value: 310, name: "月租车辆" },
               { value: 234, name: "年租车辆" },
               { value: 135, name: "损坏车辆" },
               { value: 1548, name: "可用车辆" }
             ],
-            color:['#37A2DA', '#67E0E3', '#FFDB5C','#FF9F7F','#E062AE'],
-            
+            color: ["#37A2DA", "#67E0E3", "#FFDB5C", "#FF9F7F", "#E062AE"]
           }
         ]
       });

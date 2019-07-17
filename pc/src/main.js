@@ -3,6 +3,10 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+<<<<<<< HEAD
+// import Vue from 'vue';
+=======
+>>>>>>> upstream/master
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 Vue.use(VueAxios, axios)
