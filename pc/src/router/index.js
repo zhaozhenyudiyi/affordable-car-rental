@@ -8,7 +8,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    //myt从 /CostSettlement 到 /hou
+    //myt从 CostSettlement 到 /hou
     { 
       path: '/CostSettlement',
       name: 'CostSettlement',
