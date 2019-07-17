@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import Vue from 'vue';
+// import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 // import Swiper from 'swiper'; 

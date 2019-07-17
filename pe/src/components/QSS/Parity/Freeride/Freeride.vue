@@ -8,6 +8,10 @@
       @click="getClickInfo"
     >
       <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
+      <bm-geolocation anchor="BMAP_ANCHOR_TOP_LEFT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
+      <bm-marker :position="{lng: 113.62, lat: 34.75}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE">
+      <bm-label content="" :labelStyle="{color: 'red', fontSize : '24px'}" :offset="{width: -35, height: 30}"/>
+    </bm-marker>
     </baidu-map>
     <input type="button" value="我要租车" v-if="isShow" @click="isShow = !isShow" />
     <div class="car_info" v-else>
