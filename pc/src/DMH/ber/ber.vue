@@ -35,7 +35,7 @@ export default {
       if (this.member == true) {
         this.member = false;
       } else {
-        this.member = true;
+        return;
       }
     }
   },
@@ -51,10 +51,10 @@ section {
   flex-direction: column;
   .hea {
     width: 100%;
-    height: 94px;
-    border: 1px solid #e8e8e8;
     display: flex;
     align-items: flex-end;
+    padding-top: 30px;
+    border: 1px solid #e8e8e8;
     div {
       flex: 1;
       display: flex;
@@ -65,12 +65,11 @@ section {
         display: flex;
         p {
           width: 100px;
+          height: 40px;
           font-size: 24px;
           font-family: SourceHanSansCN-Regular;
           font-weight: 400;
-          line-height: 14px;
           margin-left: 51px;
-          padding-bottom: 26px;
         }
       }
     }

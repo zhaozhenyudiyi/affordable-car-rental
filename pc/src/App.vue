@@ -11,11 +11,7 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import "./../static/css/reset.css";
-=======
-import '../static/css/reset.css'
->>>>>>> upstream/master
 export default {
   name: "App",
    beforeCreate() {
