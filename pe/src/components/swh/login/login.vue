@@ -24,9 +24,9 @@
         <footer>
             <div>
                 <router-link to="/registered"><button class="aa">注册</button></router-link>
-                <router-link to="/login"><button  @click="phone" class="log" style="color:#000000;">登录</button></router-link>
+                <a><button  @click="phone" class="log">登录</button></a>
             </div>
-            <p>登录或者注册即同意平价分时租车<router-link to="/shop">用户服务协议</router-link></p>
+            <p>登录或者注册即同意平价分时租车<router-link to="/login">用户服务协议</router-link></p>
         </footer>
      </div>
  </div>
@@ -40,18 +40,21 @@ export default {
  }
  },
  methods: {
-      phone(){ 
-    var phone = document.getElementById('phone').value;
-    var pwd = document.getElementById('pwd').value;
-    if(!(/^1[3456789]\d{9}$/.test(phone))){ 
-        alert("手机号码不正确，请重填");  
-        return false; 
-    } else if(!/^[0-9A-Za-z]{6,15}$/.test(pwd)){
-        alert('密码不正确');
-    }else{
-        alert('登录成功');
+     
+    phone(){ 
+        if(window.location.href.split('#')[1] == '/login1'){
+            var phone = document.getElementById('phone').value;
+        var pwd = document.getElementById('pwd').value;
+        if(!(/^1[3456789]\d{9}$/.test(phone))){ 
+            alert("手机号码不正确，请重填");  
+            return false; 
+        } else if(!/^[0-9A-Za-z]{6,15}$/.test(pwd)){
+            alert('密码不正确');
+        }else{
+            alert('登录成功');
+        }
+        }
     }
-}
  },
  components: {
 
@@ -66,10 +69,8 @@ export default {
         z-index: 3;
     }
     .aa{
-      color:red;
-      background:rgba(245,245,245,1);
-      opacity:.4;
-      
+      background:rgba(245,245,245,.4);
+      color:rgba(255,255,255,1);
     }
     .login{
         position: fixed;
@@ -174,15 +175,7 @@ export default {
                     a:last-child{
                         button{
                             left: 2.47rem;
-                            background-color:#FFC600;
                             z-index: 333;
-                            color: #000000;
-                        }
-                    }
-                    a:frist-child{
-                        button{
-                            left: 0;
-                            background-color:#7c7e7d;
                         }
                     }
                 }

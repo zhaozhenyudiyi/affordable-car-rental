@@ -11,10 +11,15 @@ import Shop from '../components/zzy/shop/shop'
 import Login from './../components/swh/login/login'
 import Registered from './../components/swh/registered/registered'
 
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/',
+      redirect:'/login'
+    },
     {
       path: '/comments',
       name: 'Pcomments',
@@ -60,5 +65,6 @@ export default new Router({
       name: 'start',
       component: Start
     },
+    
   ]
 })
