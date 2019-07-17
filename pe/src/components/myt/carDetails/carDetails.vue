@@ -1,19 +1,16 @@
 <template>
   <div>
+    <div class="kong"></div>
   <div class="big">
-      <div class="header">
-     <router-link to=""><img src="./img/形状 17 拷贝.png" alt=""></router-link>
-     <p>车辆 详情</p>  
-   </div>
    <div class="price">
      <ul>
-       <li>
-         <span>价格排序</span>
-         <img src="./img/形状 626@2x.png">
-         </li>
-         <li>
-         <span>车辆排序</span>
-         <img src="./img/形状 626 拷贝@2x.png">
+       <li v-for="(item,ind) in prt" @click="dian(ind)">
+         <span :class="{ac:ind == numbe}">{{ item.title }}</span>
+         <img src="./img/形状 626@2x.png"
+          v-show="ind == numbe?true:false">
+         <img src="./img/形状 626 拷贝@2x.png"
+          v-show="ind == numbe?false:true"
+         >
          </li>
      </ul>
    </div>
@@ -41,6 +38,7 @@
               display: flex;
              align-items: center;
              justify-content: space-between;
+             margin-top: -0.25rem;
              "><span class="arr">{{item.price}}</span><span class="ren">{{item.ren}}</span><a class="atomit" href="#">{{item.atomit}}</a></p>
            </div>
          
@@ -56,6 +54,16 @@
 export default {
   data() {
     return {
+       
+       prt:[
+         {title:"价格排序",
+          image:"./img/形状 626@2x.png" 
+           },
+         {title:"车辆排序",
+          image:"./img/形状 626 拷贝@2x.png"
+         }
+       ], 
+      
        list:[
           {type:"价格不限"},
           {type:"￥150以下"},
@@ -63,6 +71,7 @@ export default {
           {type:"￥300以上"}
        ],
        num:0 ,
+       numbe:0,
        car:[
          {
          img:require("./img/pic1@2x.png"),
@@ -118,6 +127,10 @@ export default {
     }
   },
   methods: {
+    dian(ind){
+      this.numbe=ind;
+      console.log(ind);
+    },
      tab(index){
         this.num=index;
         console.log(index);
@@ -172,22 +185,31 @@ function sortR(arr,price){
 </script>
 
 <style scoped lang="less">
+.ac{
+  color: #FFC600;
+}
+.kong{
+  width: 100%;
+  height: .88rem;
+  // border:1px red solid;
+}
  .big{
     background:#303133;
     color: #fff;
     width: 100%; 
     overflow: auto;
-    height: 13.34rem;
+    height: 12.46rem;
     .header {
       width: 60%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: .6rem;
+      // padding-top: .6rem;
       
       img{
         width: .43rem;
         height: .43rem;
+        margin-bottom: .18rem;
       }
       p{
       font-size: .36rem;
@@ -288,7 +310,7 @@ function sortR(arr,price){
        }
        .atomit{
         display: inline-block;
-        width:1rem;
+        width:1.2rem;
         height:.29rem;
         border:1px solid rgba(102,102,102,1);
         border-radius:.05rem;

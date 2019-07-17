@@ -8,21 +8,25 @@ import VueAxios from 'vue-axios';
 // import Swiper from 'swiper'; 
 // import Mint from 'mint-ui';
 // import Vant from 'vant';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
+
+
 // import 'swiper/dist/css/swiper.min.css';
 // import 'mint-ui/lib/style.css'; 
 // import 'vant/lib/vant-css/index.css';
-
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 Vue.use(VueAxios, axios)
-// Vue.use(Mint);
-// Vue.use(Vant);
-// Vue.use(Swiper);
+//ElementUI
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
+
+
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
-
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,

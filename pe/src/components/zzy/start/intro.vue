@@ -10,9 +10,10 @@
         </div>
         <div class="swiper-slide">
           <img src="../start/img/3.png" alt />
+          <div class="pas" @click="pass">开走你的车</div>
         </div>
       </div>
-      <!-- 如果需要分页器 -->
+      <!-- 如果F需要分页器 -->
       <div class="swiper-pagination"></div>
     </div>
     <div class="pass" @click="pass">跳过</div>
@@ -28,7 +29,7 @@ export default {
   },
   methods: {
     pass() {
-      this.$router.push("/start");
+      this.$router.push("/login");
     }
   },
   components: {},
@@ -60,7 +61,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 2.15rem;
+    bottom: 1.15rem;
     /deep/.swiper-pagination-bullet {
       background-color: rgba(255, 255, 255, 0.5);
       width: 0.2rem;
@@ -73,6 +74,24 @@ export default {
       background-color: rgba(255, 255, 255, 0.8);
     }
   }
+}
+.pas {
+  width: 1.91rem;
+  height: 0.34rem;
+  font-size: 0.36rem;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 30px;
+  text-align: center;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 2.14rem;
+  width: 2.94rem;
+  height: 0.7rem;
+  background: rgba(255, 198, 0, 1);
+  border-radius: 0.35rem;
+  z-index: 99999999999999999999999;
 }
 .pass {
   position: fixed;
