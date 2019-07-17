@@ -20,11 +20,10 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style>
-@import "../static/css/reset.css";
-=======
+
+
 <style scoped lang="less">
+@import "../static/css/reset.css";
 #app {
   width: 100%;
   height: 100%;
@@ -51,5 +50,4 @@ section {
     overflow-y: auto;
   }
 }
->>>>>>> zhaozhenyudiyi/master
 </style>
