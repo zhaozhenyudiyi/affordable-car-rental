@@ -13,7 +13,7 @@
           </div> 
         
         <div class="biaoge">
-          <table border="2">
+          <table border="2" cellspacing="0">
     <tr class="hrt" v-for="(item,inde) in lt">
         <th>{{item.name}}</th>
         <th>{{item.Contact}}</th>
@@ -24,24 +24,37 @@
         <th>{{item.qu}}</th>
         <th>{{item.huan}}</th>
         <th>{{item.operation}}</th>
-    </tr>
-    <tr v-for="(item,index) in searc" :key="index" v-show="ias">
-        <td>{{item.name }}</td>
-        <td>{{item.phone}}</td>
-        <td>{{item.carType}}</td>
-        <td>{{item.carPhone}}</td>
-        <td>{{item.LeasinMode}}</td>
-        <td>{{item.rent}}</td>
-        <td>{{item.pCarTime}}</td>
-        <td>{{item.returnTime}}</td>
+    </tr>                                   
+    <router-link class="ai" :to="{ path:'/hou'}"
+    >
+    <tr v-for="(item,index) in searc.slice((this.tl-1)*this.to,this.tl*this.to)" :key="index" v-show="item.bol"
+
+    >
+        <td @click="f2(index)">{{item.name}}</td>
+        <td @click="f2(index)">{{item.phone}}</td>
+        <td @click="f2(index)">{{item.carType}}</td>
+        <td @click="f2(index)">{{item.carPhone}}</td>
+        <td @click="f2(index)">{{item.LeasinMode}}</td>
+        <td @click="f2(index)">{{item.rent}}</td>
+        <td @click="f2(index)">{{item.pCarTime}}</td>
+        <td @click="f2(index)">{{item.returnTime}}</td>
         <td class="operat"><span @click="fn(index)"
         :class="{active:index == num}">完成</span><span @click="f1(index)"
         :class="{active:index == nt}">删除</span></td>
     </tr>
-    
+    </router-link>
 </table>
         </div>
+     <div class="pageContainer">
+  <ul class="pagesInner">
+   <li class="page" v-for="(item, index) in pages" :key="index"
+   :class="{actived:item === currentPage}" 
+   @click="select(item)">
+    <span>{{item}}</span>
+   </li>
+  </ul>
 
+ </div>
       </div> 
       </div>
        </div>
@@ -53,6 +66,10 @@ export default {
   data() {
    
     return { 
+      currentPage:1,
+      totlePages:null,//总页数
+      to:7,
+      tl:1,
       ias:true,
       lt:[
         {name:"客户姓名",
@@ -77,6 +94,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"耿耿",
          phone:'12002389009',
@@ -86,6 +104,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"星河",
          phone:'15002389009',
@@ -95,6 +114,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"于海",
          phone:'16002389009',
@@ -104,6 +124,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"你好",
          phone:'17002389009',
@@ -113,6 +134,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"张环",
          phone:'18002389009',
@@ -122,6 +144,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"李朗",
          phone:'19002389009',
@@ -131,6 +154,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"问责一",
          phone:'134552389009',
@@ -140,6 +164,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"耿毛",
          phone:'15756798080',
@@ -149,6 +174,7 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
         },
            {name:"孟子",
          phone:'16576598080',
@@ -158,25 +184,218 @@ export default {
          rent:"50/小时",
          pCarTime:"2019-8-20",
          returnTime:"2019-9-20",
+         bol:true
+        },
+          {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+          {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+          {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
+        },
+         {name:"孟子",
+         phone:'16576598080',
+         carType:"雷克萨斯",
+         carPhone:"豫A999999",
+         LeasinMode:'时租',
+         rent:"50/小时",
+         pCarTime:"2019-8-20",
+         returnTime:"2019-9-20",
+         bol:true
         },
       ],
       num:0,
       nt:0,
       key:"",
       searc:[],
+      a:null,
     }
   },
   methods: {
-   fn(index){
+    //点击完成
+   fn(index,e){
      this.num=index;
+     e = e || window.event;
+			e.preventDefault();
    },
-   f1(index){
+   //点击删除
+   f1(index,e){
+      e = e || window.event;
+			e.preventDefault();
      this.nt=index;
-     this.ias=!this.ias;
-   }
+     setTimeout(()=>{
+       this.a[index].bol = !this.a[index].bol;
+     },200)
+     console.log(index);
+   },
+   f2(id,e){
+      e = e || window.event;
+			e.preventDefault();
+      this.a=this.searc.slice((this.tl-1)*this.to,this.tl*this.to);
+      console.log(this.a[id]);
+      this.$router.push({
+        path:"/hou",
+        query:{
+          id:id,
+          p:this.a,
+        }
+      })
+   },
+   //分页的
+   select(item) {
+    if (item === this.currentPage) return
+    if (typeof item === 'string') return
+    this.currentPage = item
+    this.tl = item;
+    this.a = this.searc.slice((this.tl-1)*this.to,this.tl*this.to);
+  }
   },
 
   watch:{
+    //过滤所搜索到的值
     key:function(newValue,oldValue){
       var that = this;
       if(newValue!=oldValue){
@@ -192,26 +411,25 @@ export default {
       }
     } 
   },
-  //通过计算属性过滤数据
   computed:{
-    //根据input的value值过滤值
-  //  lit:function(){
-  //    var _this=this;
-  //    var arrList=[];//声明一个空数组来存放数据
-  //    for(var i=0;i<this.list.length;i++){
-  //       //判断输入框中的值是否可以匹配到数据，如果匹配成功
-  //        if(this.list[i].name.search(this.searchVal)!=-1){
-  //           //向空数组中添加数据
-  //          arrList.push(this.list[i]);
-
-  //        }
-  //    }
-  //    return arrList//返回
-  //  }
+     pages(){
+       const c=this.currentPage;
+       const t=this.totlePages;
+       if(c<5){
+         let nub = [];
+         for(let i = 1;i<t;i++){
+           nub.push(i);
+         }
+         return nub;
+       }
+     }
   },
 mounted(){
  this.searc=this.list;
+ this.a = this.searc.slice((this.tl-1)*this.to,this.tl*this.to);
+ this.totlePages = Math.ceil(this.list.length / 7);
 },
+
   components: {
 
   }
@@ -219,6 +437,31 @@ mounted(){
 </script>
 
 <style scoped lang="less">
+.ai{
+  display: contents;
+}
+.pageContainer{
+      margin-left: 343px;
+      margin-top: 30px;
+}
+.page{
+  width: 28px;
+  height: 28px;
+  float: left;
+  border:1px solid rgba(102,102,102,1);
+  margin-left: 10px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+}
+.actived {
+  border-color: #3399FF;
+  background-color:#3399FF;
+  color: #fff;
+}
+table{
+  width: 1000px;
+}
 .active{
   background:#FFC600;
   color: white;
@@ -253,6 +496,7 @@ tr td{
 tr th{
   background: #E8E8E8;
   height: 50px;
+  width:212px;
 }
  .right{
   margin-top: 50px;
