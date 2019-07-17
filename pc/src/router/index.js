@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import hollowWord from '@/components/hollowWord'
+import tb from '@/zzy/tb'
 
 Vue.use(Router)
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     { 
       path: '/',
-      name: 'hollowWord',
-      component: hollowWord
+      name: 'tb',
+      component: tb
     }
   ]
 })

@@ -4,6 +4,7 @@
     <slot name="left-img" class="left-img"></slot>
     <slot name="right-img" class="right-img"></slot>
     <span class="txt">{{txt}}</span>
+    <div class="clear"></div>
   </div>
 </template>
 
@@ -19,13 +20,20 @@ export default {
 </script>
 
 <style scoped lang=less>
+.clear{
+  clear: both;
+}
 .header {
+  overflow: hidden;
+  height: .88rem;
+
+
   width: 100%;
   display: flex;
   align-items: center;
   font-size: 0.34rem;
   position: relative;
-  top: 0.8rem;
+  top: 0;
   .txt {
     position: absolute;
     left: 50%;

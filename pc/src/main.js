@@ -14,6 +14,7 @@ import VueAxios from 'vue-axios';
 // import 'mint-ui/lib/style.css'; 
 // import 'vant/lib/vant-css/index.css';
 
+Vue.prototype.$axios = axios
 Vue.use(VueAxios, axios)
 // Vue.use(Mint);
 // Vue.use(Vant);

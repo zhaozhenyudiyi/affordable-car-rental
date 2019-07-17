@@ -16,6 +16,7 @@ import Mywallet from "../components/chw/mine/my_wallet.vue"
 import Myorder from "../components/chw/mine/my_order.vue"
 import Paysuccess from "../components/chw/paysuccess/pay_success.vue"
 
+
 import StoreDetails from "../components/myt/StoreDetails/StoreDetails.vue"
 import CarDetails from "../components/myt/carDetails/carDetails.vue"
 
