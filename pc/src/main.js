@@ -3,14 +3,14 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 // import Swiper from 'swiper'; 
 // import Mint from 'mint-ui';
 // import Vant from 'vant';
- 
-
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 // import 'swiper/dist/css/swiper.min.css';
 // import 'mint-ui/lib/style.css'; 
 // import 'vant/lib/vant-css/index.css';
