@@ -69,7 +69,7 @@ export default {
         z-index: 3;
     }
     .aa{
-      background:rgba(245,245,245,.4);
+      background:rgba(245,245,245,.2);
       color:rgba(255,255,255,1);
     }
     .login{

@@ -22,10 +22,6 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-<<<<<<< HEAD
-      path:'/',
-      redirect:'/login'
-=======
       path: '/paysuccess',
       name: 'Paysuccess',
       component: Paysuccess,
@@ -59,7 +55,6 @@ export default new Router({
       path:"/carDetails",
       name:"CarDetails",
       component:CarDetails
->>>>>>> 4a47dd152cf5140a41327d79ce9b85e34564e464
     },
     {
       path: '/comments',
