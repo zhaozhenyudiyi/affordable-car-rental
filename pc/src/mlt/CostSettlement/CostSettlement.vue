@@ -469,16 +469,16 @@ table{
 .bit{
     .header{
      width: 100%;
-     height: 100px;
+    //  height: 100px;
      background: #293345;
  }
  .center{
      display: flex;
  }
  .left{
-    width: 210px;
-    height:900px;
-    background: yellow;
+    // width: 210px;
+    // height:900px;
+    // background: yellow;
  }
 tr td{
   text-align: center;

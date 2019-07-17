@@ -103,19 +103,19 @@ export default {
     margin-top: 27px;
 }
 .bit{
-    .header{
-     width: 100%;
-     height: 100px;
-     background: #293345;
- }
+//     .header{
+//     //  width: 100%;
+//     //  height: 100px;
+//     //  background: #293345;
+//  }
  .center{
      display: flex;
  }
- .left{
-    width: 210px;
-    height:900px;
-    background: yellow;
- }
+//  .left{
+//     width: 210px;
+//     height:900px;
+//     background: yellow;
+//  }
  .right{
   margin-top: 50px;
   margin-left: 50px;
