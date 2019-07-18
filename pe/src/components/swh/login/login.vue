@@ -43,6 +43,7 @@
       </footer>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -51,7 +52,6 @@ export default {
     return {};
   },
   methods: {
-
     //   window.location.pathname
     phone() {
       var phone = document.getElementById("phone").value;

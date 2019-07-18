@@ -99,7 +99,7 @@
         </div>
     </div>
     <div class="choice">
-      <input type="button" value="立即选车">
+      <input type="button" value="立即选车" @click="junp">
     </div>
     <Recommend></Recommend>
   </div>
@@ -151,7 +151,11 @@ export default {
         return this.$refs.mySwiper.swiper
       }
     },
-  methods: {},
+  methods: {
+    junp(){
+      this.$router.push("/carDetails")
+    }
+  },
   components: {
     // Banner,
     // swiper,
@@ -242,6 +246,7 @@ export default {
     #door {
     display: inline-block;
     width: .64rem;
+    height: 100%;
     color: black;
     font-size: 0.23rem;
     border-radius: 38%;
@@ -253,6 +258,7 @@ export default {
   #store {
     display: inline-block;
     width: .62rem;
+     height: 100%;
     color: black;
     font-size: 0.23rem;
     border-radius: .17rem;

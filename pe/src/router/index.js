@@ -16,6 +16,7 @@ import Mywallet from "../components/chw/mine/my_wallet.vue"
 import Myorder from "../components/chw/mine/my_order.vue"
 import Paysuccess from "../components/chw/paysuccess/pay_success.vue"
 
+
 import StoreDetails from "../components/myt/StoreDetails/StoreDetails.vue"
 import CarDetails from "../components/myt/carDetails/carDetails.vue"
 
@@ -32,6 +33,7 @@ import Shop from '../components/zzy/shop/shop'
 import Login from './../components/swh/login/login'
 
 import Registered from './../components/swh/registered/registered'
+
 
 Vue.use(Router)
 
@@ -73,7 +75,7 @@ export default new Router({
           component: Longrent,
           children:[
             {
-              path: '/YearSent',
+              path: '/',
               name: 'YearSent',
               component: YearSent
             },
@@ -173,7 +175,7 @@ export default new Router({
     },
     {
       path: '/registered',
-      name: 'Registered',
+      name: 'registered',
       component: Registered
     },
     {
@@ -181,5 +183,6 @@ export default new Router({
       name: 'start',
       component: Start
     },
+    
   ]
 })

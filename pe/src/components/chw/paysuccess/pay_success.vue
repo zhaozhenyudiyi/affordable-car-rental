@@ -19,8 +19,8 @@
         <span>  {{list.telephone}}</span>
       </div>
     </div>
-    <router-link to='/mine' class="backfirst">
-    <div >回到首页</div>
+    <router-link to='/pages' class="backfirst">
+    <div class="black" @click="block">回到首页</div>
     </router-link>
   </div>
 </template>
@@ -46,7 +46,10 @@ export default {
   },
   methods: {
     back() {
-      this.$router.back();
+      this.$router.back("/pages");
+    },
+    block(){
+      this.$router.back("/pages");
     },
     background(){
      
@@ -59,6 +62,9 @@ export default {
 </script>
 
 <style scoped lang=less>
+.black{
+  color:black;
+}
 .paysuccess {
   width: 100%;
   height: 100%;
