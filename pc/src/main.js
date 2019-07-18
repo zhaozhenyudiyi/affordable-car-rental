@@ -25,11 +25,8 @@ Vue.use(VueAxios,axios);
 
 Vue.prototype.$axios = axios
 Vue.use(VueAxios, axios)
-//ElementUI
 
 
-
-Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 new Vue({

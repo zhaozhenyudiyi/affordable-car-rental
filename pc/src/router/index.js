@@ -10,9 +10,9 @@ import CostSettlement from '../mlt/CostSettlement/CostSettlement.vue'
 import Hou from '../mlt/hou/hou.vue'
 
 
-import CarManage from '@/components/car-manage/car-manage.vue'
-import CarUse from '@/components/car-manage/car-use.vue'
-import aaa from '@/components/aaa.vue'
+// import CarManage from '@/components/car-manage/car-manage.vue'
+// import CarUse from '@/components/car-manage/car-use.vue'
+// import aaa from '@/components/aaa.vue'
 
 import Login from '../components/QSS/Login/login.vue'
 import Index from '../components/QSS/index/index.vue'
@@ -51,11 +51,11 @@ export default new Router({
       name: 'tb',
       component: tb
     },
-    {
-      path: '/aaa',
-      name: 'aaa',
-      component: aaa
-    },
+    // {
+    //   path: '/aaa',
+    //   name: 'aaa',
+    //   component: aaa
+    // },
     {
       path: '/car-manage',
       name: 'CarManage',
