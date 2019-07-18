@@ -240,7 +240,7 @@ export default {
     position: absolute;
     right: 0.29rem;
     #door {
-      display: inline-block;
+    display: inline-block;
     width: .64rem;
     color: black;
     font-size: 0.23rem;
