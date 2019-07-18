@@ -20,10 +20,8 @@ Vue.use(VueAxios,axios);
 // Vue.use(Mint);
 // Vue.use(Vant);
 // Vue.use(Swiper);
-import axios from 'axios';
-import VueAxios from 'vue-axios';
 
-/
+
 
 Vue.prototype.$axios = axios
 Vue.use(VueAxios, axios)
