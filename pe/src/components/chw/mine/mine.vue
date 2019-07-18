@@ -55,37 +55,37 @@ export default {
       list2: [
         {
           to: "/my_wallet",
-          url: "../../../static/img-mine/icon-01.png",
+          url: "../../../static/img-mine/ICON-1.png",
           txt: "我的钱包"
         },
         {
           to: "/my_order",
-          url: "../../../static/img-mine/icon-02.png",
+          url: "../../../static/img-mine/ICON-2.png",
           txt: "我的订单"
         },
         {
           to: "/mine",
-          url: "../../../static/img-mine/icon-03.png",
+          url: "../../../static/img-mine/ICON-3.png",
           txt: "用户反馈"
         },
         {
           to: "/mine",
-          url: "../../../static/img-mine/icon-04.png",
+          url: "../../../static/img-mine/ICON-4.png",
           txt: "客户中心"
         },
         {
           to: "/mine",
-          url: "../../../static/img-mine/icon-05.png",
+          url: "../../../static/img-mine/ICON-5.png",
           txt: "我的收藏"
         },
         {
           to: "/mine",
-          url: "../../../static/img-mine/icon-06.png",
+          url: "../../../static/img-mine/ICON-6.png",
           txt: "企业服务"
         },
         {
           to: "/mine",
-          url: "../../../static/img-mine/icon-07.png",
+          url: "../../../static/img-mine/ICON-7.png",
           txt: "设置"
         }
       ]
@@ -108,7 +108,8 @@ export default {
   .header {
     width: 100%;
     height: 4.23rem;
-    background: url("./img-mine/banner-01.png");
+    background: url("./img-mine/banner-01.png") no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,7 +154,7 @@ export default {
       margin-left:.37rem;
       li {
         a {
-          height: 0.92rem;
+          height: 0.85rem;
           display: flex;
           align-items: center;
           text-decoration: none;
@@ -173,10 +174,11 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    margin:.35rem auto;
+    /* position:absolute;
     bottom:.37rem;
     left:50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     a {
       display: flex;
       align-items: center;
