@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <header></header>
-    <section>
-      <div class="div"></div>
-      <aside>
-        <router-view />
-      </aside>
-    </section>
+    <router-view />
   </div>
 </template>
 
