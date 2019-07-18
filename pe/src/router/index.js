@@ -34,6 +34,7 @@ import Login from './../components/swh/login/login'
 
 import Registered from './../components/swh/registered/registered'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -182,5 +183,6 @@ export default new Router({
       name: 'start',
       component: Start
     },
+    
   ]
 })

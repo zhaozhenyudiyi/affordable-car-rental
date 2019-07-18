@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+import Reservation from './../components/swh/reservation/reservation.vue'
+
 import tb from '@/zzy/tb'
 
 //myt
@@ -79,6 +82,7 @@ export default new Router({
           component: Member,
         }
       ]
+
     },
   ]
 })

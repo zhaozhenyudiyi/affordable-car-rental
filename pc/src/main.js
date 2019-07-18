@@ -6,17 +6,30 @@ import router from './router';
 
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+// import Swiper from 'swiper'; 
+// import Mint from 'mint-ui';
+// import Vant from 'vant';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+ 
+Vue.use(ElementUI);
+// import 'swiper/dist/css/swiper.min.css';
+// import 'vant/lib/vant-css/index.css';
 
-// import ElementUI from 'element-ui';
-// import 'element-ui/lib/theme-chalk/index.css';
-// Vue.use(ElementUI);
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios,axios);
+// Vue.use(Mint);
+// Vue.use(Vant);
+// Vue.use(Swiper);
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+
+/
 
 Vue.prototype.$axios = axios
 Vue.use(VueAxios, axios)
 //ElementUI
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+
+
 
 Vue.use(ElementUI);
 
@@ -25,5 +38,5 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
 })
