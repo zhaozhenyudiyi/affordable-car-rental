@@ -31,22 +31,31 @@
     <div v-else class="div">
       <div class="basic">
         <div class="one">
-          <div class="two">
-            <p>客户姓名：{{xq.Basic_name}}</p>
-            <p>联系方式：{{xq.Basic_phone}}</p>
-            <p>证件类型：{{ xq.Basic_currency }}</p>
-            <p>证件号码：{{ xq.Basic_currency }}</p>
-            <p>积分：{{ xq.Basic_currency }}</p>
-            <p>平驾币：{{ xq.Basic_currency }}</p>
+          <h3>预订详细信息</h3>
+          <div class="info_">
+            <div class="two">
+            <p>客户姓名：{{xq.name_}}</p>
+            <p>联系方式：{{xq.phone_}}</p>
+            <p>证件类型：{{ xq.style_}}</p>
+            <p>证件号码：{{ xq.id}}</p>
+            <p>积分：{{ xq.num1}}</p>
+            <p>平驾币：{{ xq.num2}}</p>
           </div>
           <div class="free">
-            <p>车辆型号：{{xq.Basic_type}}</p>
-            <p>车牌号码：{{xq.Basic_number}}</p>
-            <p>租用方式：{{ xq.Basic_integral}}</p>
-            <p>车型：{{ xq.Basic_integral}}</p>
-            <p>取车时间：{{ xq.Basic_integral}}</p>
-            <p>还车时间：{{ xq.Basic_integral}}</p>
+            <p>车辆型号：{{xq.car_}}</p>
+            <p>车牌号码：{{xq.car_phone}}</p>
+            <p>租用方式：{{ xq.type_}}</p>
+            <p>车型：{{ xq.car_style}}</p>
+            <p>取车时间：{{ xq.time1}}</p>
+            <p>还车时间：{{ xq.time2}}</p>
           </div>
+          </div>
+          
+          <div class="type">
+            <p><span>×</span>状态：未取车</p>
+            <router-link to='/reservation'><button>完成</button></router-link>
+            <router-link to='/reservation'><button>删除</button></router-link>
+        </div>
         </div>
       </div>
     </div>
@@ -70,7 +79,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"石小龙",
@@ -79,7 +100,19 @@ export default {
         "price":"500/月",
         "car":"昂科拉",
         "time":"2019.07.21 05:00",
-        "type":"已还车"
+        "type":"已还车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"李帅",
@@ -88,7 +121,19 @@ export default {
         "price":"500/月",
         "car":"福克斯",
         "time":"2019.09.24 08:00",
-        "type":"已还车"
+        "type":"已还车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"永辉",
@@ -97,7 +142,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"永辉",
@@ -106,7 +163,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"永辉",
@@ -115,7 +184,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"永辉",
@@ -124,7 +205,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"永辉",
@@ -133,7 +226,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"永辉",
@@ -142,7 +247,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"永辉",
@@ -151,7 +268,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     },
     {
         "name":"永辉",
@@ -160,7 +289,19 @@ export default {
         "price":"50/时",
         "car":"吉利帝豪",
         "time":"2019.09.30 09:00",
-        "type":"未领车"
+        "type":"未领车",
+        "name_":"马**",
+          "phone_":"130****3964",
+          "style_":"二代身份证",
+          "id":"41262********1259",
+          "num1":"100",
+          "num2":"2000",
+          "car_":"劳斯莱斯幻影",
+          "car_phone":"豫F-Z7776",
+          "type_":"时租",
+          "car_style":"高级",
+          "time1":"2019.05.06 8:00",
+          "time2":"2019.07.06 8:00"
     }
       ],
       table: [],
@@ -187,7 +328,7 @@ export default {
       this.table = [];
       if (this.input != "") {
         this.tableData.forEach((a, b, c) => {
-          if (a.id.indexOf(this.input) != -1) {
+          if (a.phone.indexOf(this.input) != -1) {
             this.table.push(a);
           }
         });
@@ -215,7 +356,7 @@ export default {
 
 <style scoped lang="less">
 section {
-  width: 100%;
+  margin: 0 48px;
   height: 100%;
   font-size: 0;
   .ries {
@@ -278,9 +419,7 @@ section {
     font-size: 0;
     .basic {
       width: 100%;
-      padding: 24px 0 0 54px;
-      border-top: 1px solid #e8e8e8;
-      border-bottom: 1px solid #e8e8e8;
+      padding: 24px 0 0 48px;
       margin-top: 18px;
       h3 {
         font-size: 18px;
@@ -289,16 +428,70 @@ section {
         color: rgba(51, 51, 51, 1);
       }
       .one {
-        width: 100%;
+        width: 1134px;
         font-size: 14px;
         color: #333333;
-        display: flex;
-        div {
-          flex: 1;
+        h3{
+                height: 54px;
+                line-height: 54px;
+                background:rgba(232,232,232,1);
+                width: 100%;
+                padding-left: 16px;
+          }
+        div.info_{
+          display: flex;
+          div{
+            flex: 1;
+          }
           p {
             margin: 5px 0;
             color: #333333;
           }
+        }
+        .type{
+            margin-top: 71px;
+            p{
+                font-size: 16px;
+                color:rgba(102,102,102,1);
+                span{
+                    width: 28px;
+                    height: 28px;
+                    background: #f56c6d;
+                    border-radius: 50%;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    color:#ffffff;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+            a{
+                button{
+                    margin-top: 29px;
+                    border: 0;
+                    width:114px;
+                    height:43px;
+                    border-radius:10px;
+                    font-size: 24px;
+                }
+            }
+            a:first-of-type{
+                button{
+                    margin-right: 30px;
+                    color: #ffffff;
+                    background:rgba(255,198,0,1);
+                }
+            }
+            a:last-of-type{
+                button{
+                    color:rgba(255,204,0,1);
+                    background: #ffffff;
+                    border: 1px solid rgba(255,204,0,1);
+                }
+            }
         }
       }
     }
