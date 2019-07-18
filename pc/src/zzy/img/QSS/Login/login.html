@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>pc</title>
+  <style>
+      *{
+          margin: 0;
+          padding: 0;
+      }
+      body,html{
+          width: 100%;
+          height: 100%;
+      }
+    .login {
+      width: 100%;
+      height: 100%;
+      background: url(./img/登录背景.png) no-repeat;
+      background-size: 100%;
+    }
+
+    .Matte {
+      position: relative;
+      z-index: 4;
+      width: 1200px;
+      height: 627px;
+      background: rgba(0, 0, 0, 1);
+      opacity: 0.5;
+      position: fixed;
+      left: 50%;
+      margin-left: -600px;
+      top: 50%;
+      margin-top: -313.5px;
+      border-radius: 10px;
+      /* z-index: -99; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      z-index: 5;
+      position: absolute;
+      /* margin-left: 294px; */
+      left: 130px;
+      top: 100px;
+    }
+
+    img {
+      width: 539px;
+      height: 380px;
+    }
+
+    .right {
+      z-index: 5;
+      position: absolute;
+     right: 115px;
+     top: 60px;
+     /* margin-top: 32px; */
+    }
+    .right .top{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        align-items: center;
+        margin-bottom: 74px;
+    }
+    .right .top h2{
+        font-size: 40px;
+        color: #f1d507;
+        margin-left: 24px;
+    }
+    .right .top img{
+        width: 95px;
+        height: 60px;
+    }
+    form .ZH input{
+        width: 432px;
+        height: 70px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        border: 2px solid #ffffff;
+        font-size: 16px;
+        color: #ffffff;
+        background: rgba(0, 0, 0, 1);
+        opacity: 0.5;
+        margin-bottom: 30px;
+    }
+    form .MM input{
+        width: 432px;
+        height: 70px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        border: 2px solid #ffffff;
+        font-size: 16px;
+        color: #ffffff;
+        background: rgba(0, 0, 0, 1);
+        opacity: 0.5;
+        margin-bottom: 30px;
+    }
+    form .forget{
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    form .forget div input{
+        width: 21px;
+        height: 21px;
+        border: none;
+        border: 2px solid #ffffff;
+    }
+    form .forget div{
+        /* line-height: 25px; */
+        display: flex;
+        align-items: center;
+    }
+    form .forget div span{
+        margin-left: 18px;
+    }
+    form .DL input{
+        width: 432px;
+        height: 80px;
+        background: #ffc600;
+        border: none;
+        border-radius: 10px;
+        font-size: 30px;
+        color: #fefefe;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="login">
+      <div class="Matte">
+
+        
+      </div>
+    <div class="left">
+      <img src="./img/插画.png" />
+    </div>
+    <div class="right">
+      <div class="top">
+        <img src="./img/登录页LOGO.png" />
+        <h2>平价租车</h2>
+      </div>
+      <form action>
+        <div class="ZH">
+          <input type="text" value="账号" name="num" />
+        </div>
+        <div class="MM">
+          <input type="password" value="密码" name="password" />
+        </div>
+        <div class="forget">
+            <div>
+                <input type="checkbox" value="记住密码"/><span>记住密码</span>
+            </div>
+          <a href>忘记密码？</a>
+        </div>
+        <div class="DL">
+          <input type="button" value="登录" />
+        </div>
+      </form>
+    </div>
+    
+  </div>
+
+</body>
+
+</html>

@@ -74,7 +74,7 @@ export default new Router({
           component: Longrent,
           children:[
             {
-              path: '/YearSent',
+              path: '/',
               name: 'YearSent',
               component: YearSent
             },
@@ -174,7 +174,7 @@ export default new Router({
     },
     {
       path: '/registered',
-      name: 'Registered',
+      name: 'registered',
       component: Registered
     },
     {

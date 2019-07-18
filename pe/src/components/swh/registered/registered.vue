@@ -63,6 +63,7 @@ export default {
     }
     .log{
        background-color:#4a524e;
+       color:white;
     }
     .registered{
         position: fixed;

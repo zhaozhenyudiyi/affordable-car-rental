@@ -4,7 +4,7 @@
   <div class="big">
    <div class="price">
      <ul>
-       <li v-for="(item,ind) in prt" @click="dian(ind)">
+       <li v-for="(item,ind) in prt" @click="dian(ind)" :key="ind">
          <span :class="{ac:ind == numbe}">{{ item.title }}</span>
          <img src="./img/形状 626@2x.png"
           v-show="ind == numbe?true:false">

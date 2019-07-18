@@ -2,7 +2,7 @@
 <template>
   <div class="paysuccess">
     <Myheader txt="支付成功">
-      <span slot="left-img" class="left-img" @click="back">＜</span>
+      <img src="./../images/2.png" slot="left-img" class="left-img" @click="back" alt="">
     </Myheader>
     <div class="pay_img"></div>
     <div class="pay_num">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <router-link to='/pages' class="backfirst">
-    <div class="black">回到首页</div>
+    <div class="black" @click="block">回到首页</div>
     </router-link>
   </div>
 </template>
@@ -46,7 +46,10 @@ export default {
   },
   methods: {
     back() {
-      this.$router.back();
+      this.$router.back("/pages");
+    },
+    block(){
+      this.$router.back("/pages");
     },
     background(){
      
@@ -67,6 +70,7 @@ export default {
   height: 100%;
   background-color: #363b3e;
   font-size: 0.28rem;
+  overflow: hidden;
   .pay_img {
     width: 6.81rem;
     height: 3.82rem;
