@@ -4,7 +4,6 @@ import Router from 'vue-router'
 import Domestic from '../components/QSS/Parity/domestic/domestic'
 import Freeride from '../components/QSS/Parity/Freeride/Freeride.vue'
 import Timesharing from '../components/QSS/Parity/Timesharing/Timesharing'
-import Testdrive from '../components/QSS/Parity/testdrive/testdrive'
 import Longrent from '../components/QSS/Parity/Longrent/Longrent'
 import Pages from '../components/QSS/Parity/pagas/pagas.vue'
 import YearSent from '../components/QSS/Parity/Longrent/year_sent/year_sent.vue'
@@ -50,27 +49,22 @@ export default new Router({
           component: Domestic
         },
         {
-          path: '/domestic',
+          path: 'domestic',
           name: 'Domestic',
           component: Domestic
         },
         {
-          path: '/freeride',
+          path: 'freeride',
           name: 'Freeride',
           component: Freeride
         },
         {
-          path: '/timesharing',
+          path: 'timesharing',
           name: 'Timesharing',
           component: Timesharing
         },
         {
-          path: '/testdrive',
-          name: 'Testdrive',
-          component: Testdrive
-        },
-        {
-          path: '/longrent',
+          path: 'longrent',
           name: 'Longrent',
           component: Longrent,
           children:[
@@ -80,12 +74,12 @@ export default new Router({
               component: YearSent
             },
             {
-              path: '/year_sent',
+              path: 'year_sent',
               name: 'YearSent',
               component: YearSent
             },
             {
-              path: '/bestlong_sent',
+              path: 'bestlong_sent',
               name: 'BestLong',
               component: BestLong
             }
