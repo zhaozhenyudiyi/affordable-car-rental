@@ -339,11 +339,14 @@ export default {
     this.tableData.forEach((a, b, c) => {
       this.table.push(a);
     });
-  },
+  }
 };
 </script>
 
 <style scoped lang="less">
+/deep/.number {
+  border-radius: 0%;
+}
 section {
   width: 100%;
   height: 100%;
@@ -355,6 +358,15 @@ section {
     display: flex;
     margin: 64px 0 0 43px;
     align-items: center;
+    /deeo/.el-pagination {
+      /deep/.is-background {
+        /deep/.el-pager {
+          /deep/li {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
     /deep/.el-input {
       width: 682px;
       height: 62px;
@@ -388,7 +400,7 @@ section {
   }
   /deep/.el-pagination {
     position: absolute;
-    bottom: -60px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
   }

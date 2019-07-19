@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import CarManage from './../components/chw/car-manage/car-manage.vue'
+import CarUse from './../components/chw/car-manage/car-use.vue'
+
+
 import Reservation from './../components/swh/reservation/reservation.vue'
 
 import tb from '@/zzy/tb'
@@ -10,9 +14,6 @@ import tb from '@/zzy/tb'
 import CostSettlement from '../mlt/CostSettlement/CostSettlement.vue'
 import Hou from '../mlt/hou/hou.vue'
 
-
-// import CarManage from '@/components/car-manage/car-manage.vue'
-// import CarUse from '@/components/car-manage/car-use.vue'
 
 import Login from '../components/QSS/Login/login.vue'
 import Index from '../components/QSS/index/index.vue'
@@ -25,6 +26,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+  
     {
       path: '/',
       name: 'Login',
@@ -52,16 +54,15 @@ export default new Router({
           name: 'Index',
           component: Index
         },
-        // {
-        //   path: '/car-manage',
-        //   name: 'CarManage',
-        //   component: CarManage
-        // },
-        // {
-        //   path: '/car-use',
-        //   name: 'CarUse',
-        //   component: CarUse
-        // },
+            { path: '/car-manage',
+      name: 'CarManage',
+      component: CarManage
+    },
+    {
+      path: '/car-use',
+      name: 'CarUse',
+      component: CarUse
+    },
         {
           path: '/reservation',
           name: 'reservation',
