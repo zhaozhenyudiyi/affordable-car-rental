@@ -370,6 +370,7 @@ export default {
        this.a[index].bol = !this.a[index].bol;
      },200)
      console.log(index);
+     
    },
    f2(id,e){
       e = e || window.event;
@@ -440,7 +441,7 @@ mounted(){
   display: contents;
 }
 .pageContainer{
-      margin-left: 343px;
+      margin-left: 482px;
       margin-top: 30px;
 }
 .page{
@@ -459,7 +460,8 @@ mounted(){
   color: #fff;
 }
 table{
-  width: 1000px;
+  width: 1134px;
+  height: 54px;
 }
 .active{
   background:#FFC600;
@@ -490,8 +492,8 @@ tr td{
 }
 tr th{
   background: #E8E8E8;
-  height: 50px;
-  width:212px;
+  height: 54px;
+  // width:212px;
 }
  .right{
   margin-top: 50px;
@@ -504,6 +506,7 @@ tr th{
    display: flex;
    justify-content: space-around;
    align-items: center;
+   width: 170px;
  }
 .ipt{
   display: flex;

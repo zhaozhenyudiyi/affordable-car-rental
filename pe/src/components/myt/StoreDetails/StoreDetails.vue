@@ -2,83 +2,85 @@
   <div>
     <div class="kong"></div>
     <div class="big">
-   <div class="banner">
-     <img src="./img/图层 516.png">
-   </div>
+      <div class="banner">
+        <img src="./img/图层 516.png" />
+      </div>
     </div>
+
+    <div class="top">
+      <div class="xia">
+        <p>动物园自助点</p>
+        <div class="star">
+          <ul>
+            <li>
+              <img src="./img/icon2.png" />
+            </li>
+            <li>
+              <img src="./img/icon2.png" />
+            </li>
+            <li>
+              <img src="./img/icon2.png" />
+            </li>
+            <li>
+              <img src="./img/icon2.png" />
+            </li>
+            <li>
+              <img src="./img/icon2.png" />
+            </li>
+          </ul>
+          <span style="margin-right: 3.20rem; margin-left:.16rem;">5.0</span>
+
+          <div class="ping">
+            <span>{{evaluate}}人评价</span>
+            <img src="./img/icon5.png" />
+          </div>
+        </div>
+        <div class="lit">
+          <ul class="ht">
+            <li>
+              <img src="./img/icon3.png" />
+              <span class="let">营业中</span>
+              <span class="rit">9:00-19:00</span>
+            </li>
+            <li>
+              <img src="./img/矢量智能对象.png" />
+              <span style=" margin-left:.16rem">{{flow}}</span>
+              <img style=" margin-left:.7rem" src="./img/形状 16.png" />
+              <span style=" margin-left:.16rem">{{phone}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="jing">
+          <div class="tit">
+            <span>精品评价</span>
+            <a href="#">
+              更多
+              <img src="./img/icon5.png" />
+            </a>
+          </div>
+          <ul class="time" v-for="(item,index) in transfer ">
+            <li>
+              <div class="bao">
+                <span>{{item.tlt}}</span>
+                <span></span>
+                <span style="margin-left: 1.40rem;">{{item.time}}</span>
+                <ul style="    float: right;
+                  margin-top: -0.33rem;
+                  margin-left: .90rem">
+                  <li v-for="(ite,ind) in image">
+                    <img :src="ite.img" />
+                  </li>
+                </ul>
+              </div>
+              <p>
+                {{item.p}}
+              </p>
+            </li>
+          </ul>
     
-  <div class="top">
- <div class="xia">
-  <p>动物园自助点</p>
-  <div class="star">
-   <ul>
-     <li>
-       <img src="./img/icon2.png">
-     </li>
-     <li>
-       <img src="./img/icon2.png">
-     </li>
-     <li>
-       <img src="./img/icon2.png">
-     </li>
-     <li>
-       <img src="./img/icon2.png">
-     </li>
-     <li>
-       <img src="./img/icon2.png">
-     </li>
-   </ul>
-   <span style="margin-right: 3.20rem; margin-left:.16rem;">5.0</span>
-
- <div class="ping">
-   <span>{{evaluate}}人评价</span>
-   <img src="./img/icon5.png">
- </div>
-  </div>
-  <div class="lit">
-  <ul class="ht">
-    <li>
-      <img src="./img/icon3.png">
-      <span class="let">营业中</span>
-      <span class="rit">9:00-19:00</span>
-    </li>
-    <li>
-      <img src="./img/矢量智能对象.png">
-      <span style=" margin-left:.16rem">{{flow}}</span>
-      <img style=" margin-left:.7rem" src="./img/形状 16.png">
-      <span style=" margin-left:.16rem">{{phone}}</span>
-    </li>
-  </ul>
-  </div>
-   <div class="jing">
-     <div class="tit">
-       <span>精品评价</span>
-       <a href="#">更多
-         <img src="./img/icon5.png">
-       </a>
-     </div>
-   
-   <ul class="time">
-      <li v-for="(item,index) in transfer ">
-      <span>{{ item.tlt }}</span>
-      <span></span>
-      <span style="margin-left: 1.40rem;">{{ item.time }}</span>
-      <ul  style="    float: right;
-    margin-top: -0.33rem;
-    margin-left: .90rem">
-     <li v-for="(ite,inde) in image">
-       <img :src="ite.img">
-     </li>
-   </ul>
-   <p>{{item.p}}</p>
-
-      </li>
-    </ul>
-
-   </div>
-  </div>
-   
- </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -108,151 +110,146 @@ export default {
       ]
     }
   },
-  methods: {
-
-  },
-  components: {
-
-  }
-}
+  methods: {},
+  components: {}
+};
 </script>
 
 <style scoped lang='less'>
-.kong{
+.kong {
   width: 100%;
-  height: .88rem;
+  height: 0.88rem;
 }
-.bao{
+.bao {
   width: 100%;
 }
-  .big{
-    background:#303133;
-    color: #fff;
-    width: 100%; 
-    height: 4.8rem;
-    .header {
-      width: 60%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      // padding-top: .6rem;
-     
-      img{
-        width: .43rem;
-        height: .43rem;
-        margin-bottom: .18rem;
-      }
-      p{
-      font-size: .36rem;
-    }
-    }
-    .banner{
-      width: 100%;
-      height: 3.6rem;
-      margin-top: .3rem;
-      img{
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  .top{
-    width: 100%; 
-    background: #384043;
-    margin-top: -2.13rem;
-  .xia{
-    width: 95%;
-    margin:-1.62rem auto;
-    color: white;
-    overflow: hidden;
-    .star{
-          font-size: .32rem;
-          display: flex;
-          // align-items: center;
-          // justify-content: space-between;
-          // border-bottom: 1px #ccc solid;
-          span{
-            font-size: .28rem;
-            // float: left;
-          }
-    }
-    p{
-      font-size: .32rem;
-      padding-top: .9rem;
-    }
-    ul li{
-      float: left;
-      img{
-        width: .26rem;
-        height: .25rem;
-      }
-    }
-  }
-  .ping{
+.big {
+  background: #303133;
+  color: #fff;
+  width: 100%;
+  height: 4.8rem;
+  .header {
+    width: 60%;
     display: flex;
     align-items: center;
-    img{
-      width: .43rem;
-      height: .43rem;
+    justify-content: space-between;
+    // padding-top: .6rem;
+
+    img {
+      width: 0.43rem;
+      height: 0.43rem;
+      margin-bottom: 0.18rem;
+    }
+    p {
+      font-size: 0.36rem;
     }
   }
-  .lit{
+  .banner {
+    width: 100%;
+    height: 3.6rem;
+    margin-top: 0.3rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.top {
+  width: 100%;
+  background: #384043;
+  margin-top: -2.13rem;
+  .xia {
+    width: 95%;
+    margin: -1.62rem auto;
+    color: white;
+    overflow: hidden;
+    .star {
+      font-size: 0.32rem;
+      display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+      // border-bottom: 1px #ccc solid;
+      span {
+        font-size: 0.28rem;
+        // float: left;
+      }
+    }
+    p {
+      font-size: 0.32rem;
+      padding-top: 0.9rem;
+    }
+    ul li {
+      float: left;
+      img {
+        width: 0.26rem;
+        height: 0.25rem;
+      }
+    }
+  }
+  .ping {
+    display: flex;
+    align-items: center;
+    img {
+      width: 0.43rem;
+      height: 0.43rem;
+    }
+  }
+  .lit {
     width: 100%;
     height: 1.75rem;
   }
-  .ht{
-    li{
+  .ht {
+    li {
       width: 100%;
-      height: .9rem;
-      font-size: .28rem;
+      height: 0.9rem;
+      font-size: 0.28rem;
       display: flex;
       align-items: center;
       border-bottom: 1px #ccc solid;
-      img{
-        width: .3rem;
-        height: .3rem;
+      img {
+        width: 0.3rem;
+        height: 0.3rem;
       }
-      .let{
-       margin-left: .16rem;
+      .let {
+        margin-left: 0.16rem;
       }
-      .rit{
-        margin-left:.66rem;
+      .rit {
+        margin-left: 0.66rem;
       }
     }
   }
-  .jing{
+  .jing {
     width: 100%;
-    margin-top: .46rem;
-    .tit{
-      font-size: .32rem;
+    margin-top: 0.46rem;
+    .tit {
+      font-size: 0.32rem;
       width: 100%;
-      height: .45rem;
-      span{
-        float:left;
+      height: 0.45rem;
+      span {
+        float: left;
       }
-      a{
+      a {
         display: inline-block;
         float: right;
-        color:white;
-        font-size: .28rem;
-        img{
-          width:.24rem;
-          height:.24rem;
+        color: white;
+        font-size: 0.28rem;
+        img {
+          width: 0.24rem;
+          height: 0.24rem;
           float: right;
-          margin-top: .10rem;
+          margin-top: 0.1rem;
         }
       }
     }
-    
-    .time li{
-     padding-top: .36rem;
-     font-size: .28rem;
-     p{
-       font-size: .26rem;
-       padding-top: 0.06rem;
-     }
-   }
-   
+
+    .time li {
+      padding-top: 0.36rem;
+      font-size: 0.28rem;
+      p {
+        font-size: 0.26rem;
+        padding-top: 0.06rem;
+      }
+    }
   }
-  }
+}
 </style>

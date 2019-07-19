@@ -4,7 +4,7 @@
     <p>
       <span>用车城市</span>
       <router-link to="/intro" class="a">
-        <span>郑州</span>
+        <span @click="dd">郑州</span>
         <img src="./img/icon1.png" alt />
       </router-link>
     </p>
@@ -45,6 +45,9 @@ export default {
     };
   },
   methods: {
+    dd(){
+       this.$router.push("/carDetails");
+    },
     click(index) {
       let li = document.getElementsByClassName("li");
       li[this.num].classList.remove("click");
