@@ -1,5 +1,271 @@
+[
 {
     "car_massage": {
+        "car_url":"../../../../static/image/dz01.jpg",
+        "car_name":"雪佛兰",
+        "car_num": "豫F-5g652",
+        "car_type": "高级",
+        "car_manufacture": "美国福特汽车公司",
+        "insurance_company": "平安保险",
+        "road_bridge_paytime": "2019.01.20",
+        "register_time": "2016.09.30",
+        "engine_number": "24664k",
+        "engine_num": "LSGJR52U85SII0284",
+        "chassis_num": "245365",
+        "two_warranty": "2019.09.21",
+        "issue_time": "2019.05.26"
+    },
+    "use_record": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "err_record": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ]
+},
+{
+    "car_massage": {
+        "car_url": "../../../../static/image/dz01.jpg",
+        "car_name": "雪佛兰",
+        "car_num": "豫F-5g652",
+        "car_type": "高级",
+        "car_manufacture": "美国福特汽车公司",
+        "insurance_company": "平安保险",
+        "road_bridge_paytime": "2019.01.20",
+        "register_time": "2016.09.30",
+        "engine_number": "24664k",
+        "engine_num": "LSGJR52U85SII0284",
+        "chassis_num": "245365",
+        "two_warranty": "2019.09.21",
+        "issue_time": "2019.05.26"
+    },
+    "use_record": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "err_record": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ]
+},
+{
+    "car_massage": {
+        "car_url": "../../../../static/image/dz01.jpg",
+        "car_name": "雪佛兰",
+        "car_num": "豫F-5g652",
+        "car_type": "高级",
+        "car_manufacture": "美国福特汽车公司",
+        "insurance_company": "平安保险",
+        "road_bridge_paytime": "2019.01.20",
+        "register_time": "2016.09.30",
+        "engine_number": "24664k",
+        "engine_num": "LSGJR52U85SII0284",
+        "chassis_num": "245365",
+        "two_warranty": "2019.09.21",
+        "issue_time": "2019.05.26"
+    },
+    "use_record": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "err_record": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ]
+},{
+    "car_massage": {
+        "car_url": "../../../../static/image/dz01.jpg",
+        "car_name": "雪佛兰",
+        "car_num": "豫F-5g652",
+        "car_type": "高级",
+        "car_manufacture": "美国福特汽车公司",
+        "insurance_company": "平安保险",
+        "road_bridge_paytime": "2019.01.20",
+        "register_time": "2016.09.30",
+        "engine_number": "24664k",
+        "engine_num": "LSGJR52U85SII0284",
+        "chassis_num": "245365",
+        "two_warranty": "2019.09.21",
+        "issue_time": "2019.05.26"
+    },
+    "use_record": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "err_record": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ]
+},
+{
+    "car_massage": {
+        "car_url": "../../../../static/image/dz01.jpg",
+        "car_name": "雪佛兰",
         "car_num": "豫F-5g652",
         "car_type": "高级",
         "car_manufacture": "美国福特汽车公司",
@@ -62,3 +328,4 @@
         }
     ]
 }
+]

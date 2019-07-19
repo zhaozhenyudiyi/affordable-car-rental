@@ -7,66 +7,270 @@
     ],
     "car_massage_list":[
         {
-            "photo_url":"https://i01piccdn.sogoucdn.com/71f7f9da4b60a1a7",
+            "photo_url":"../../../../static/image/dz01.jpg",
             "name":"大众朗逸",
-            "tel":"豫F  ACD51",
+            "tel":"豫F  DZ001",
             "foul_play":"1"
         },
         {
-            "photo_url": "https://i02piccdn.sogoucdn.com/c5e3cc096f747fc4",
+            "photo_url": "../../../../static/image/p1.jpg",
             "name": "雪佛兰",
-            "tel": "豫A  21XA6",
+            "tel": "豫A  XFL01",
             "foul_play": "0"
         },
         {
-            "photo_url": "https://i04piccdn.sogoucdn.com/98fca386de821fd6",
+            "photo_url": "../../../../static/image/k1.png",
             "name": "凯迪拉克",
-            "tel": "豫F  AXC32",
+            "tel": "豫F  KDLK1",
             "foul_play": "5"
         },
         {
-            "photo_url": "https://i01piccdn.sogoucdn.com/d6dafb75616f0a2b",
+            "photo_url": "../../../../static/image/a1.jpg",
             "name": "奥迪Q2L",
-            "tel": "豫C  ACD51",
+            "tel": "豫C  AD001",
             "foul_play": "0"
-        },
+        }
+       
+    ],
+    "all_car_massage_list": [
         {
-            "photo_url": "https://i02piccdn.sogoucdn.com/716761e875e76fa6",
-            "name": "宝马3系",
-            "tel": "豫F  ACD51",
-            "foul_play": "0"
-        },
-        {
-            "photo_url": "https://i01piccdn.sogoucdn.com/71f7f9da4b60a1a7",
+            "photo_url": "../../../../static/image/dz01.jpg",
             "name": "大众朗逸",
-            "tel": "豫F  ACD51",
+            "tel": "豫F  DZ001",
             "foul_play": "1"
         },
         {
-            "photo_url": "https://i02piccdn.sogoucdn.com/c5e3cc096f747fc4",
+            "photo_url": "../../../../static/image/p1.jpg",
             "name": "雪佛兰",
-            "tel": "豫A  21XA6",
+            "tel": "豫A  XFL01",
             "foul_play": "0"
         },
         {
-            "photo_url": "https://i04piccdn.sogoucdn.com/98fca386de821fd6",
+            "photo_url": "../../../../static/image/k1.png",
             "name": "凯迪拉克",
-            "tel": "豫F  AXC32",
+            "tel": "豫F  KDLK1",
             "foul_play": "5"
         },
         {
-            "photo_url": "https://i01piccdn.sogoucdn.com/d6dafb75616f0a2b",
+            "photo_url": "../../../../static/image/a1.jpg",
             "name": "奥迪Q2L",
-            "tel": "豫C  ACD51",
+            "tel": "豫C  AD001",
             "foul_play": "0"
         },
         {
-            "photo_url": "https://i02piccdn.sogoucdn.com/716761e875e76fa6",
+            "photo_url": "../../../../static/image/b1.jpg",
             "name": "宝马3系",
-            "tel": "豫F  ACD51",
+            "tel": "豫F  BM001",
             "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/b2.jpg",
+            "name": "宝马3系",
+            "tel": "豫F  BM002",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/b3.jpg",
+            "name": "宝马3系",
+            "tel": "豫F  BMoo4",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/b4.jpg",
+            "name": "宝马3系",
+            "tel": "豫F  BM004",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/b5.jpg",
+            "name": "宝马3系",
+            "tel": "豫F  BM005",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/b6.jpg",
+            "name": "宝马3系",
+            "tel": "豫F  BM006",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/b7.jpg",
+            "name": "宝马3系",
+            "tel": "豫F  BM007",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a1.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD001",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a2.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD002",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a3.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD003",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a4.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD004",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a5.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD005",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a6.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD006",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a7.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD007",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a8.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD008",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/a9.jpg",
+            "name": "奥迪Q2L",
+            "tel": "豫C  AD009",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/k1.png",
+            "name": "凯迪拉克",
+            "tel": "豫F  KDLK1",
+            "foul_play": "5"
+        },
+        {
+            "photo_url": "../../../../static/image/k2.jpg",
+            "name": "凯迪拉克",
+            "tel": "豫F   KDLK2",
+            "foul_play": "5"
+        },
+        {
+            "photo_url": "../../../../static/image/k3.jpg",
+            "name": "凯迪拉克",
+            "tel": "豫F   KDLK3",
+            "foul_play": "5"
+        },
+        {
+            "photo_url": "../../../../static/image/k4.jpg",
+            "name": "凯迪拉克",
+            "tel": "豫F   KDLK4",
+            "foul_play": "5"
+        },
+        {
+            "photo_url": "../../../../static/image/k5.jpg",
+            "name": "凯迪拉克",
+            "tel": "豫F   KDLK5",
+            "foul_play": "5"
+        },
+        {
+            "photo_url": "../../../../static/image/p1.jpg",
+            "name": "雪佛兰",
+            "foul_play": "XFL01"
+        },
+        {
+            "photo_url": "../../../../static/image/p2.jpg",
+            "name": "雪佛兰",
+            "tel": "豫A XFL02",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/p7.jpg",
+            "name": "雪佛兰",
+            "tel": "豫A XFL03",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/p4.jpg",
+            "name": "雪佛兰",
+            "tel": "豫A XFL04",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/p8.jpg",
+            "name": "雪佛兰",
+            "tel": "豫A XFL05",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/p6.jpg",
+            "name": "雪佛兰",
+            "tel": "豫A XFL06",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/p7.jpg",
+            "name": "雪佛兰",
+            "tel": "豫A  XFL07",
+            "foul_play": "0"
+        },
+        {
+            "photo_url": "../../../../static/image/dz01.jpg",
+            "name": "大众朗逸",
+            "tel": "豫F DZ003",
+            "foul_play": "1"
+        },
+        {
+            "photo_url": "../../../../static/image/dz02.jpg",
+            "name": "大众朗逸",
+            "tel": "豫F  DZ002",
+            "foul_play": "1"
+        },
+        {
+            "photo_url": "../../../../static/image/dz03.jpg",
+            "name": "大众朗逸",
+            "tel": "豫F  DZ004",
+            "foul_play": "1"
+        },
+        {
+            "photo_url": "../../../../static/image/dz04.jpg",
+            "name": "大众朗逸",
+            "tel": "豫F  DZ005",
+            "foul_play": "1"
+        },
+        {
+            "photo_url": "../../../../static/image/dz05.jpg",
+            "name": "大众朗逸",
+            "tel": "豫F DZ006",
+            "foul_play": "1"
+        },
+        {
+            "photo_url": "../../../../static/image/dz06.jpg",
+            "name": "大众朗逸",
+            "tel": "豫F  DZ007",
+            "foul_play": "1"
+        },
+        {
+            "photo_url": "../../../../static/image/dz07.jpg",
+            "name": "大众朗逸",
+            "tel": "豫F DZ008",
+            "foul_play": "1"
+        },
+        {
+            "photo_url": "../../../../static/image/dz08.jpg",
+            "name": "大众朗逸",
+            "tel": "豫F DZ009",
+            "foul_play": "1"
         }
-        
-       
     ]
 }
