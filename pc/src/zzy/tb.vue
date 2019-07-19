@@ -112,7 +112,7 @@ header {
   display: flex;
   .ck {
     background-color: #fff;
-    flex: 1;
+    // flex: 1;
     overflow: auto;
     overflow-y: auto;
     padding-bottom: 50px;
