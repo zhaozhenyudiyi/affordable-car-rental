@@ -3,19 +3,16 @@
     <div class="PartyHeader"></div>
     <ul>
       <li>
-        <router-link to="domestic">国内租</router-link>
+        <router-link to="/pages/domestic">国内租</router-link>
       </li>
       <li>
-        <router-link to="freeride">分时租</router-link>
+        <router-link to="/pages/freeride">分时租</router-link>
       </li>
       <li>
-        <router-link to="timesharing">顺风车</router-link>
+        <router-link to="/pages/timesharing">顺风车</router-link>
       </li>
       <li>
-        <router-link to="testdrive">试驾</router-link>
-      </li>
-      <li>
-        <router-link to="longrent">长租</router-link>
+        <router-link to="/pages/longrent">长租</router-link>
       </li>
     </ul>
     <router-view></router-view>
@@ -28,7 +25,10 @@ export default {
     return {};
   },
   methods: {},
-  components: {}
+  components: {},
+  mounted() {
+    this.$router.push('/pages/domestic');
+  },
 };
 </script>
 

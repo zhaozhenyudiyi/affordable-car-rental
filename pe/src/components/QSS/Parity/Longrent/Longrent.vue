@@ -2,10 +2,10 @@
   <div class="longrent">
     <ul>
       <li>
-        <router-link to="year_sent">年租</router-link>
+        <router-link to="/pages/longrent/year_sent" >年租</router-link>
       </li>
       <li>
-        <router-link to="bestlong_sent">超值长租</router-link>
+        <router-link to="/pages/longrent/bestlong_sent">超值长租</router-link>
       </li>
     </ul>
     <router-view></router-view>
@@ -18,7 +18,10 @@ export default {
     return {};
   },
   methods: {},
-  components: {}
+  components: {},
+  mounted() {
+    this.$router.push('/pages/longrent/year_sent');
+  },
 };
 </script>
 
@@ -41,6 +44,10 @@ export default {
         padding-bottom: .28rem;
         margin-bottom: .49rem;
       }
+      // .one-link{
+      //   color: #333333;
+      //   border-bottom: .04rem solid #333333;
+      // }
       .router-link-active{
         color: #333333;
         border-bottom: .04rem solid #333333;

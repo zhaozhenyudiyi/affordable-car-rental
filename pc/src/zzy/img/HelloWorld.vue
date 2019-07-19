@@ -1,18 +1,22 @@
+
 <template>
   <div>
-      <Freeride></Freeride>
+
   </div>
 </template>
 
 <script>
-import Freeride from '../Freeride/Freeride'
 export default {
   data() {
-    return {}
+    return {
+
+    }
   },
-  methods: {},
+  methods: {
+
+  },
   components: {
-    Freeride
+
   }
 }
 </script>

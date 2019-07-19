@@ -39,27 +39,6 @@
 
 
 
-    <!-- </Banner> -->
-   <!-- <div class="swiper-container auto">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="../domestic/img/banner1.png" alt />
-        </div>
-        <div class="swiper-slide">
-          <img src="../domestic/img/banner2.png" alt />
-        </div>
-        <div class="swiper-slide">
-          <img src="../domestic/img/banner1.png" alt />
-        </div>
-        <div class="swiper-slide">
-          <img src="../domestic/img/banner2.png" alt />
-        </div>
-      </div>
-      
-      <div class="swiper-pagination"></div>
-    </div> -->
-
-
 
     <div class="sent">
       <span class="left">租</span>
@@ -99,7 +78,7 @@
         </div>
     </div>
     <div class="choice">
-      <input type="button" value="立即选车">
+      <input type="button" value="立即选车" @click="junp">
     </div>
     <Recommend></Recommend>
   </div>
@@ -108,15 +87,12 @@
 <script>
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.css";
-// import Banner from "../banner/banner";
 import Recommend from '../recommend/recommend'
 export default {
   name: 'carrousel',
   data() {
     return {
       value: 0,
-      // switch1: false,
-      // switch2: false,
       value1:'a',
       option: [
         { text: "郑州", value: 0 },
@@ -131,19 +107,6 @@ export default {
       overlay: false,
       flay1:true,
       flay2:true,
-      // swiperOption: {
-      //     loop:true,//是否循环播放
-      //     autoplay:{
-      //         delay:1000,//轮播的速度
-      //         disableOnInteraction : false//用户操作swiper之后，是否禁止autoplay
-      //     },
-      //     effect : 'slide',
-      //     pagination : {
-      //       el: '.swiper-pagination',
-      //       type: 'bullets',  
-      //     },
-          
-      //   }
     };
   },
   computed: {
@@ -151,10 +114,12 @@ export default {
         return this.$refs.mySwiper.swiper
       }
     },
-  methods: {},
+  methods: {
+    junp(){
+      this.$router.push("/carDetails")
+    }
+  },
   components: {
-    // Banner,
-    // swiper,
     Recommend
   },
   mounted() {
@@ -240,8 +205,9 @@ export default {
     position: absolute;
     right: 0.29rem;
     #door {
-      display: inline-block;
+    display: inline-block;
     width: .64rem;
+    height: 100%;
     color: black;
     font-size: 0.23rem;
     border-radius: 38%;
@@ -253,6 +219,7 @@ export default {
   #store {
     display: inline-block;
     width: .62rem;
+     height: 100%;
     color: black;
     font-size: 0.23rem;
     border-radius: .17rem;
