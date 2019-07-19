@@ -1,6 +1,8 @@
 <template>
   <div class="parity">
-    <div class="PartyHeader"></div>
+    <div class="PartyHeader">
+      ddddddddd
+    </div>
     <ul>
       <li>
         <router-link to="/pages/domestic">国内租</router-link>
@@ -34,11 +36,16 @@ export default {
 
 <style scoped lang='less'>
 .parity {
+  display: flex;
+  flex-direction: column;
+height: 100%;
+
   //    padding: 0 .34rem;
   .PartyHeader {
     height: 0.88rem;
-    background: black;
+    background: red;
     padding: 0 0.34rem;
+    font-size: .24rem;
   }
   ul {
     display: flex;
