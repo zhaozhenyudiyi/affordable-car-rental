@@ -65,16 +65,20 @@
     </div>
     <div class="time">
         <div class="star">
+          <!-- <van-button type="primary" @click="showPopup"> -->
           <p class="math">07月8日</p>
           <p class="clock">周一17：00</p>
+        <!-- </van-button> -->
         </div>
         <div class="day">
           <span>2天</span>
           <img src="./img/形状 4.png">
         </div>
         <div class="end">
+          <!-- <van-button type="primary" @click="showPopup"> -->
           <p class="math">07月10日</p>
           <p class="clock">周三17：00</p>
+        <!-- </van-button> -->
         </div>
     </div>
     <div class="choice">
@@ -117,7 +121,10 @@ export default {
   methods: {
     junp(){
       this.$router.push("/carDetails")
-    }
+    },
+     showPopup() {
+      this.show = true;
+    },
   },
   components: {
     Recommend
@@ -144,7 +151,9 @@ export default {
 <style scoped lang='less'>
 .Banner {
   width: 100%;
-  height: 2.55rem;
+  // height: 2.55rem;
+  flex:1;
+  overflow: auto;
   /deep/.swiper-pagination-bullet{
     background:#ffc600;
   }
