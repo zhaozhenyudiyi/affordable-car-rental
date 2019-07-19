@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="tis">
     <ul class="Time_list">
-      <li v-for="(item,index) in TimeCar_list":key="index">
+      <li v-for="(item,index) in TimeCar_list" :key="index">
         <div class="top">
           <div class="Tleft">
             <p class="star_area">{{ item.star_area }}</p>
@@ -94,6 +94,10 @@ export default {
 </script>
 
 <style scoped lang='less'>
+.tis{
+  flex:1;
+  overflow-y: auto;
+}
 .Time_list {
   padding-left: 0.4rem;
   li {
