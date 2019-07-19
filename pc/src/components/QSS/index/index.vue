@@ -95,9 +95,11 @@ export default {
                 //柱形图圆角，初始化效果
                 barBorderRadius: [10, 10, 10, 10],
                 color: "rgba(35, 109, 183, 1)", //设置柱子颜色
+                // fontColor:"red",
                 label: {
                   show: true, //是否展示
                   position: 'top',
+                  fontColor:"red",
                   textStyle: {
                     fontWeight: "bolder",
                     fontSize: "12"
@@ -123,11 +125,8 @@ export default {
 <style scoped lang='less'>
 .data {
   width: 1329px;
-  height: 900px;
+  height: 100%;
   border: 1px solid #cccccc;
-  margin-top: 100px;
-  margin-left: 210px;
-  overflow: hidden;
   .realTime {
     width: 1134px;
     height: 158px;

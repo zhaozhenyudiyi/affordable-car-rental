@@ -39,12 +39,16 @@ export default {
       }
     }
   },
-  components: {}
+  components: {},
+     beforeCreate() {
+    this.$router.push("/ber/enquiries");
+  }
 };
 </script>
 
 <style scoped lang="less">
 section {
+  overflow-x: hidden;
   width: 100%;
   font-size: 0;
   display: flex;

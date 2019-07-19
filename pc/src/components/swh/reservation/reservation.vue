@@ -356,11 +356,13 @@ export default {
 
 <style scoped lang="less">
 section {
-  margin: 0 48px;
+  padding-bottom: 50px;;
+  width: 100%;
   height: 100%;
   font-size: 0;
+  overflow-x: hidden;
   .ries {
-    width: 100%;
+    // width: 100%;
     height: 62px;
     font-size: 0;
     display: flex;

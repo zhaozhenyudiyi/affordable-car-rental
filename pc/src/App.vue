@@ -8,9 +8,9 @@
 import "./../static/css/reset.css";
 export default {
   name: "App",
-  beforeCreate() {
-    this.$router.push("/ber/enquiries");
-  }
+  // beforeCreate() {
+  //   this.$router.push("/ber/enquiries");
+  // }
 };
 </script>
 

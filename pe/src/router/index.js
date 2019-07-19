@@ -179,7 +179,7 @@ export default new Router({
       component: Registered
     },
     {
-      path: '/start',
+      path: '/',
       name: 'start',
       component: Start
     },

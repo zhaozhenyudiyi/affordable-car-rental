@@ -14,7 +14,7 @@
         
         <div class="biaoge">
           <table border="2" cellspacing="0">
-    <tr class="hrt" v-for="(item,inde) in lt">
+    <tr class="hrt" v-for="(item,inde) in lt" :key="inde">
         <th>{{item.name}}</th>
         <th>{{item.Contact}}</th>
         <th>{{item.cart}}</th>

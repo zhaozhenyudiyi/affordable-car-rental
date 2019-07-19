@@ -12,10 +12,10 @@
         </div>
         <form action>
           <div class="ZH">
-            <input type="text" placeholder="账号" name="num" id="ZH"/>
+            <input type="text" placeholder="账号" name="num" id="ZH" />
           </div>
           <div class="MM">
-            <input type="password" placeholder="密码" name="password" id="MM"/>
+            <input type="password" placeholder="密码" name="password" id="MM" />
           </div>
           <div class="forget">
             <div>
@@ -52,8 +52,7 @@ export default {
         alert("密码不正确");
         return;
       } else {
-        alert("登录成功");
-        window.location.href = "http://localhost:8082/#/index"; 
+        this.$router.push("/tb");
       }
     }
   },
@@ -172,7 +171,7 @@ export default {
               height: 21px;
               border: none;
               border: 2px solid #ffffff;
-              border-radius:4px;
+              border-radius: 4px;
             }
             span {
               margin-left: 18px;
