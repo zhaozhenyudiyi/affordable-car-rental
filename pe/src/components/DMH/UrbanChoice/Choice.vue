@@ -1,6 +1,10 @@
 <template>
   <section>
-    <header></header>
+    <header>
+      <Myheader txt="城市列表">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img" @click="back" alt />
+      </Myheader>
+    </header>
     <div class="sou">
       <van-search
         placeholder="输入城市名称,拼音或拼音首字母"
@@ -46,7 +50,7 @@
           <span></span>
         </p>
         <ul>
-          <li v-text="item" v-for="(item, index) in Popular" :key="index"></li>
+          <li v-text="item" v-for="(item, index) in Popular" :key="index" @click="pop(index)"></li>
         </ul>
       </div>
       <div class="lists">
@@ -216,6 +220,7 @@
 </template>
 
 <script>
+import Myheader from './../../chw/header'
 import city from "./city.json";
 export default {
   data() {
@@ -260,9 +265,18 @@ export default {
     title(a){
       this.History.push(a);
       this.value = "";
+    },
+    pop(a){
+      this.$store.commit('chen',this.Popular[a]);
+      this.$router.push("/pages");
+    },
+    back(){
+      this.$router.push('/pages');
     }
   },
-  components: {},
+  components: {
+    Myheader,
+  },
   computed: {
     fn() {
       let bb = [];
@@ -295,7 +309,6 @@ export default {
 header {
   width: 100%;
   height: 0.88rem;
-  background: red;
 }
 section {
   width: 100%;
