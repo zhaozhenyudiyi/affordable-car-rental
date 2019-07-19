@@ -400,7 +400,7 @@ section {
   }
   /deep/.el-pagination {
     position: absolute;
-    bottom: 60px;
+    bottom: -60px;
     left: 50%;
     transform: translateX(-50%);
   }

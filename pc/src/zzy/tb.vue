@@ -21,7 +21,7 @@
           </router-link>
         </li>
       </ul>
-      <router-view class="ck"></router-view>
+        <router-view class="ck"></router-view>
     </div>
   </div>
 </template>
@@ -41,8 +41,16 @@ export default {
           img_src: require("./img/hy.png"),
           src: "/ber/enquiries"
         },
-        { text: "预定管理", img_src: require("./img/yd.png"), src: "/reservation" },
-        { text: "费用结算", img_src: require("./img/fy.png"), src: "/costSettlement" },
+        {
+          text: "预定管理",
+          img_src: require("./img/yd.png"),
+          src: "/reservation"
+        },
+        {
+          text: "费用结算",
+          img_src: require("./img/fy.png"),
+          src: "/costSettlement"
+        },
         { text: "车辆管理", img_src: require("./img/cl.png"), src: "" }
       ],
       num: 0
@@ -76,6 +84,7 @@ export default {
 html,
 body {
   height: 100%;
+  
 }
 header {
   background-color: #2d3647;
@@ -111,8 +120,9 @@ header {
   background-color: #3b4255;
   display: flex;
   .ck {
+    // margin:auto;
     background-color: #fff;
-    // flex: 1;
+    flex: 1;
     overflow: auto;
     overflow-y: auto;
     padding-bottom: 50px;
