@@ -27,8 +27,9 @@ export default {
 
 <style scoped lang='less'>
 .longrent {
+  flex:1;
   background: #ffffff;
-  height: 11.25rem;
+  // height: 100%;
   overflow: hidden;
   ul {
     display: flex;

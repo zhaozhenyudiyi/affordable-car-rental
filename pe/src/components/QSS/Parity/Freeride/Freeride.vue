@@ -9,10 +9,17 @@
     >
       <bm-navigation anchor="BMAP_ANCHOR_TOP_LEFT"></bm-navigation>
       <bm-geolocation anchor="BMAP_ANCHOR_TOP_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
-      <bm-marker :position="{lng: 113.62, lat: 34.75}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE">
-      <bm-label content="" :labelStyle="{color: 'red', fontSize : '24px'}" :offset="{width: -35, height: 30}"/>
-    </bm-marker>
-    
+      <bm-marker
+        :position="{lng: 113.62, lat: 34.75}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+        <bm-label
+          content
+          :labelStyle="{color: 'red', fontSize : '24px'}"
+          :offset="{width: -35, height: 30}"
+        />
+      </bm-marker>
     </baidu-map>
     <input type="button" value="我要租车" v-if="isShow" @click="isShow = !isShow" />
     <div class="car_info" v-else>
@@ -66,7 +73,19 @@ export default {
 </script>
 <style scoped lang='less'>
 .map {
+  // display: flex;
+  // flex-direction: column;
+  // height: 100%;
+  flex:1;
+  .baidu-map{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  }
   input {
+    // display: flex;
+    // flex-direction: column;
+    // height: 100%;
     width: 100%;
     height: 0.89rem;
     background: rgba(255, 198, 0, 1);
