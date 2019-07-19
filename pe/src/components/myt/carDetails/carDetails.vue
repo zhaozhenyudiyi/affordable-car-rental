@@ -41,9 +41,9 @@
              align-items: center;
              justify-content: space-between;
              margin-top: -0.25rem;
-             "><span class="arr">{{item.price}}</span><span class="ren">{{item.ren}}</span><a class="atomit" href="#">{{item.atomit}}</a></p>
+             "><span class="arr">{{item.price}}</span><span class="ren">{{item.ren}}</span
+             ><a class="atomit" href="#">{{item.atomit}}</a></p>
            </div>
-         
          </li>
        </ul>
      </div>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="out">
     <div class="swiper-container intro">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -55,11 +55,15 @@ export default {
 </script>
 
 <style scoped lang='less'>
+.out{
+  height: 100%;
+}
 .intro {
   width: 100%;
-  height: 13.32rem;
+  height: 100%;
   img {
     width: 100%;
+    height: 100%;
   }
   .swiper-pagination-bullet {
     background-color: #fff;
@@ -88,7 +92,7 @@ export default {
   font-size: 0.36rem;
   font-weight: 500;
   color: rgba(51, 51, 51, 1);
-  line-height: 30px;
+  line-height: .7rem;
   text-align: center;
   position: absolute;
   left:50%;
