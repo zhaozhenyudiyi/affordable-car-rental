@@ -5,14 +5,18 @@ import Reservation from './../components/swh/reservation/reservation.vue'
 
 import tb from '@/zzy/tb'
 
+
 //myt
 import CostSettlement from '../mlt/CostSettlement/CostSettlement.vue'
 import Hou from '../mlt/hou/hou.vue'
 
 
+// import CarManage from '@/components/car-manage/car-manage.vue'
+// import CarUse from '@/components/car-manage/car-use.vue'
 
 import Login from '../components/QSS/Login/login.vue'
 import Index from '../components/QSS/index/index.vue'
+
 import ber from './../DMH/ber/ber.vue'
 import Member from './../DMH/ber/Member/Member.vue'
 import enquiries from './../DMH/ber/enquiries/enquiries.vue'
@@ -21,51 +25,66 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    //myt从 CostSettlement 到 /hou
-    { 
-      path: '/CostSettlement',
-      name: 'CostSettlement',
-      component: CostSettlement
-    },
     {
-      path: '/hou',
-      name: 'Hou',
-      component:Hou
-
-    },
-    {
-      path:'/login',
-      name:'Login',
-      component:Login
-    },
-    {
-      path:'/index',
-      name:'Index',
-      component:Index
+      path: '/',
+      name: 'Login',
+      component: Login
     },
     {
       path: '/tb',
       name: 'tb',
-      component: tb
-    },
- 
-    {
-     path: '/ber',
-      name: 'ber',
-      component: ber,
-      children:[
+      component: tb,
+      children: [
+
+        //myt从 CostSettlement 到 /hou
         {
-          path:'enquiries',
-          name:'enquiries',
-          component:enquiries
+          path: '/CostSettlement',
+          name: 'CostSettlement',
+          component: CostSettlement
         },
         {
-          path: 'member',
-          name: 'Member',
-          component: Member,
-        }
+          path: '/hou',
+          name: 'Hou',
+          component: Hou
+        },
+        {
+          path: '/index',
+          name: 'Index',
+          component: Index
+        },
+        // {
+        //   path: '/car-manage',
+        //   name: 'CarManage',
+        //   component: CarManage
+        // },
+        // {
+        //   path: '/car-use',
+        //   name: 'CarUse',
+        //   component: CarUse
+        // },
+        {
+          path: '/reservation',
+          name: 'reservation',
+          component: Reservation,
+        },
+        {
+          path: '/ber',
+          name: 'ber',
+          component: ber,
+          children: [
+            {
+              path: 'enquiries',
+              name: 'enquiries',
+              component: enquiries
+            },
+            {
+              path: 'member',
+              name: 'Member',
+              component: Member,
+            }
+          ]
+        },
       ]
-
     },
   ]
 })
