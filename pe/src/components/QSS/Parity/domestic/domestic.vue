@@ -42,25 +42,25 @@
 
     <div class="sent">
       <span class="left">租</span>
-      <van-dropdown-menu class="change">
-        <van-dropdown-item v-model="value" :options="option" />
-      </van-dropdown-menu>
-      <p class="area">郑州动物园自助点</p>
+      <span class="change" @click="cheng">
+        {{ $store.state.option }}
+      </span>
+      <p class="area">{{ $store.state.option }}国际自助点</p>
       <div class='icon'>
         <span id="door" :class="{door:flay1}" @click="flay1 = !flay1">上门</span>
-        <span id="store":class="{store:!flay1}" @click="flay1 = false">到店</span>
+        <span id="store" :class="{store:!flay1}" @click="flay1 = false">到店</span>
       </div>
     </div>
 
     <div class="sent">
-      <span class="left">还</span></span>
-      <van-dropdown-menu class="change">
-        <van-dropdown-item v-model="value1" :options="option1" />
-      </van-dropdown-menu>
-      <p class="area">郑州动物园自助点</p>
+      <span class="left">还</span>
+      <span class="change" @click="chen">
+        {{ $store.state.option2 }}
+      </span>
+      <p class="area">{{ $store.state.option2 }}国际自助点</p>
       <div class='icon'>
         <span id="door" :class="{door:flay2}" @click="flay2 = !flay2">上门</span>
-        <span id="store":class="{store:!flay2}" @click="flay2 = false">到店</span>
+        <span id="store" :class="{store:!flay2}" @click="flay2 = false">到店</span>
       </div>
     </div>
     <div class="time">
@@ -117,6 +117,14 @@ export default {
   methods: {
     junp(){
       this.$router.push("/carDetails")
+    },
+    cheng(){
+      this.$store.commit('chengshi','option')
+      this.$router.push('/choice');
+    },
+    chen(){
+      this.$store.commit('chengshi','option2')
+      this.$router.push('/choice');
     }
   },
   components: {
