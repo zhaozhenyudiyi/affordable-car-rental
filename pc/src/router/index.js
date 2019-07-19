@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 //myt
 import CostSettlement from '../mlt/CostSettlement/CostSettlement.vue'
 import Hou from '../mlt/hou/hou.vue'
@@ -40,11 +41,6 @@ export default new Router({
       component:Index
     },
     {
-      path: '/',
-      name: 'aaa',
-      component: aaa
-    },
-    {
       path: '/aaa',
       name: 'aaa',
       component: aaa
@@ -75,6 +71,7 @@ export default new Router({
           component: Member,
         }
       ]
+
     },
-  ]
+  ] 
 })
