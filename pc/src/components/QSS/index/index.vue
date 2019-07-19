@@ -123,7 +123,7 @@ export default {
 <style scoped lang='less'>
 .data {
   width: 1329px;
-  height: 900px;
+  // height: 900px;
   border: 1px solid #cccccc;
   margin-top: 100px;
   margin-left: 210px;

@@ -27,6 +27,7 @@ export default {
 html,body,#app{
   width:100%;
   height:100%;
+  box-sizing: border-box;
   /* overflow: hidden; */
 header {
   width: 100%;
@@ -49,5 +50,6 @@ section {
     overflow-y: auto;
   }
 
+}
 }
 </style>

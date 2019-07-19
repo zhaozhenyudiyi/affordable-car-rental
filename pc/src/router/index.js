@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CarManage from '@/components/car-manage/car-manage.vue'
-import CarUse from '@/components/car-manage/car-use.vue'
-import aaa from '@/components/aaa.vue'
+import CarManage from './../components/chw/car-manage/car-manage.vue'
+import CarUse from './../components/chw/car-manage/car-use.vue'
 import Login from '../components/QSS/Login/login.vue'
 import Index from '../components/QSS/index/index.vue'
 import ber from './../DMH/ber/ber.vue'
@@ -27,16 +26,6 @@ export default new Router({
       path:'/index',
       name:'Index',
       component:Index
-    },
-    {
-      path: '/',
-      name: 'aaa',
-      component: aaa
-    },
-    {
-      path: '/aaa',
-      name: 'aaa',
-      component: aaa
     },
     {
       path: '/car-manage',
