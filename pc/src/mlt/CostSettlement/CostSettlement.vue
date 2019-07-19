@@ -404,7 +404,6 @@ export default {
           if(that.list[i].phone.indexOf(newValue)==0){
             arrT.push(that.list[i]);
             that.searc=arrT;
-           
           }
         }   
         console.log(that.searc)
@@ -475,11 +474,7 @@ table{
  .center{
      display: flex;
  }
- .left{
-    // width: 210px;
-    // height:900px;
-    // background: yellow;
- }
+ 
 tr td{
   text-align: center;
   width: 120px;

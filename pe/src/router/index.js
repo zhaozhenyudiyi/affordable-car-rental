@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-<<<<<<< HEAD
-=======
 
 import Domestic from '../components/QSS/Parity/domestic/domestic'
 import Freeride from '../components/QSS/Parity/Freeride/Freeride.vue'
@@ -13,7 +11,6 @@ import YearSent from '../components/QSS/Parity/Longrent/year_sent/year_sent.vue'
 import BestLong from '../components/QSS/Parity/Longrent/bestlong_sent/bestlong_sent.vue'
 
 
->>>>>>> zhaozhenyudiyi/master
 import Mine from "../components/chw/mine/mine.vue"
 import Mywallet from "../components/chw/mine/my_wallet.vue"
 import Myorder from "../components/chw/mine/my_order.vue"
@@ -40,8 +37,6 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-<<<<<<< HEAD
-=======
     {
       path: '/pages',
       name: 'Pages',
@@ -96,7 +91,6 @@ export default new Router({
         },
       ]
     },
->>>>>>> zhaozhenyudiyi/master
     {
       path: '/paysuccess',
       name: 'Paysuccess',
@@ -151,8 +145,6 @@ export default new Router({
       path:'/choice',
       name:'Choice',
       component:Choice
-<<<<<<< HEAD
-=======
     },
     {
       path: '/recharge',
@@ -163,7 +155,6 @@ export default new Router({
       path: '/choice',
       name: 'Choice',
       component: Choice
->>>>>>> zhaozhenyudiyi/master
     },
     {
       path: '/intro',
@@ -177,11 +168,8 @@ export default new Router({
     },
     {
       path: '/login',
-<<<<<<< HEAD
       name: 'login',
-=======
       name: 'Login',
->>>>>>> zhaozhenyudiyi/master
       component: Login
     },
     {
