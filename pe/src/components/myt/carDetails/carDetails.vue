@@ -33,7 +33,9 @@
              align-items: center;
              justify-content: space-between;
              "><span class="feng">{{item.cart}}</span><span class="hot">{{item.hot}}</span></p>
-             <p class="suv">{{ item.suv }}</p>
+             <p class="suv"><span>{{ item.suv }}</span>&nbsp;&nbsp;&nbsp;
+             <span>{{ item.l }}</span>&nbsp;&nbsp;&nbsp;<span>{{ item.count }}</span>
+             </p>
              <p style="font-size: 0;
               display: flex;
              align-items: center;
@@ -77,7 +79,9 @@ export default {
          img:require("./img/pic1@2x.png"),
          img1:require("./img/icon7.png"),
          cart:"丰田汉兰达",hot:"热",
-         suv:"SUV 2.5l 5人",
+         suv:"SUV",
+         l:'2.5l',
+         count:'5',
          price:120,
          ren:"元/人均",
          atomit:"自动还取"
@@ -86,7 +90,9 @@ export default {
          img:require("./img/pic1@2x.png"),
          img1:require("./img/icon7.png"),
          cart:"丰田汉兰达",hot:"热",
-         suv:"SUV 2.5l 5人",
+         suv:"SUV",
+         l:'2.5l',
+         count:'5',
          price:121,
          ren:"元/人均",
          atomit:"自动还取"},
@@ -94,7 +100,9 @@ export default {
          img:require("./img/pic1@2x.png"),
          img1:require("./img/icon7.png"),
          cart:"丰田汉兰达",hot:"热",
-         suv:"SUV 2.5l 5人",
+         suv:"SUV",
+         l:'2.5l',
+         count:'5',
          price:245,
          ren:"元/人均",
          atomit:"自动还取"},
@@ -102,7 +110,9 @@ export default {
          img:require("./img/pic1@2x.png"),
          img1:require("./img/icon7.png"),
          cart:"丰田汉兰达",hot:"热",
-         suv:"SUV 2.5l 5人",
+         suv:"SUV",
+         l:'2.5l',
+         count:'5',
          price:246,
          ren:"元/人均",
          atomit:"自动还取"},
@@ -110,7 +120,9 @@ export default {
          img:require("./img/pic1@2x.png"),
          img1:require("./img/icon7.png"),
          cart:"丰田汉兰达",hot:"热",
-         suv:"SUV 2.5l 5人",
+         suv:"SUV",
+         l:'2.5l',
+         count:'5',
          price:545,
          ren:"元/人均",
          atomit:"自动还取"},
@@ -118,7 +130,9 @@ export default {
          img:require("./img/pic1@2x.png"),
          img1:require("./img/icon7.png"),
          cart:"丰田汉兰达",hot:"热",
-         suv:"SUV 2.5l 5人",
+         suv:"SUV",
+         l:'2.5l',
+         count:'5',
          price:547,
          ren:"元/人均",
          atomit:"自动还取"}

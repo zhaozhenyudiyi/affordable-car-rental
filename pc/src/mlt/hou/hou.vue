@@ -22,12 +22,12 @@
               <p>日租价：</p>
               <p>定金：￥</p>
               <p>手续费：￥</p>
-              <p>车辆损失费：</p>
+              <p class="pt">车辆损失费：<input type="text" placeholder="无"></p>
               <div class="tit">
-              <span>合计:</span><span></span>
+              <span class="he">合计:</span><span></span>
               <del></del>
               </div>
-              <p>使用平价币</p>
+              <p class="inp">使用平价币</p>
           </div>
            <div class="py">
               <p>车辆型号：{{rr.carType}}</p>
@@ -37,7 +37,7 @@
               <p>取车时间：{{rr.pCarTime}}</p>
               <p>还车时间：{{rr.returnTime}}</p>
               <p>实际还车时间：</p>
-              <p>车辆损失说明：</p>
+              <p class="pt">车辆损失说明：<input type="text" placeholder="无"></p>
           </div>
 
           </div>
@@ -72,6 +72,10 @@ export default {
   methods: {
    f5(index){
      this.ni=index;
+     setTimeout(()=>{
+      this.$router.push("/CostSettlement")
+     },200)
+    
    },
 
   },
@@ -88,6 +92,18 @@ export default {
 </script>
 
 <style scoped lang="less">
+.pt input{
+  width: 145px;
+  height: 29px;
+  border: 1px rgba(102,102,102,1) solid;
+  text-indent: 6px;
+}
+.inp{
+  color: #FFC600;
+}
+.he{
+  color: #FFC600;
+}
 .bt button:nth-child(2){
   margin-left: 30px;
 }
@@ -103,19 +119,11 @@ export default {
     margin-top: 27px;
 }
 .bit{
-//     .header{
-//     //  width: 100%;
-//     //  height: 100px;
-//     //  background: #293345;
-//  }
+
  .center{
      display: flex;
  }
-//  .left{
-//     width: 210px;
-//     height:900px;
-//     background: yellow;
-//  }
+
  .right{
   margin-top: 50px;
   margin-left: 50px;
