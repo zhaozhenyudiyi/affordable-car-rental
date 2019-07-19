@@ -31,7 +31,7 @@
           <span style="margin-right: 3.20rem; margin-left:.16rem;">5.0</span>
 
           <div class="ping">
-            <span>1126人评价</span>
+            <span>{{evaluate}}人评价</span>
             <img src="./img/icon5.png" />
           </div>
         </div>
@@ -44,9 +44,9 @@
             </li>
             <li>
               <img src="./img/矢量智能对象.png" />
-              <span style=" margin-left:.16rem">郑州市花园路103号</span>
+              <span style=" margin-left:.16rem">{{flow}}</span>
               <img style=" margin-left:.7rem" src="./img/形状 16.png" />
-              <span style=" margin-left:.16rem">4006166666</span>
+              <span style=" margin-left:.16rem">{{phone}}</span>
             </li>
           </ul>
         </div>
@@ -58,72 +58,26 @@
               <img src="./img/icon5.png" />
             </a>
           </div>
-          <ul class="time">
+          <ul class="time" v-for="(item,index) in transfer ">
             <li>
               <div class="bao">
-                <span>15639619820</span>
+                <span>{{item.tlt}}</span>
                 <span></span>
-                <span style="margin-left: 1.40rem;">07-06 10:30</span>
+                <span style="margin-left: 1.40rem;">{{item.time}}</span>
                 <ul style="    float: right;
-    margin-top: -0.33rem;
-    margin-left: .90rem">
-                  <li>
-                    <img src="./img/icon2.png" />
-                  </li>
-                  <li>
-                    <img src="./img/icon2.png" />
-                  </li>
-                  <li>
-                    <img src="./img/icon2.png" />
-                  </li>
-                  <li>
-                    <img src="./img/icon2.png" />
-                  </li>
-                  <li>
-                    <img src="./img/icon2.png" />
+                  margin-top: -0.33rem;
+                  margin-left: .90rem">
+                  <li v-for="(ite,ind) in image">
+                    <img :src="ite.img" />
                   </li>
                 </ul>
               </div>
               <p>
-                这次使用体验非常好，店里的客服服务也非常到位，
-                有因为 是第一次使用车，
-                有很多不懂得地方都是客服小姐姐一步步 的指导的。
-                价位也非常划算，总之本次服务非常满意，五星好评
+                {{item.p}}
               </p>
             </li>
           </ul>
-          <ul class="time">
-            <li>
-              <span>15639619820</span>
-              <span></span>
-              <span style="margin-left: 1.40rem;">07-06 10:30</span>
-              <ul style="    float: right;
-    margin-top: -0.33rem;
-    margin-left: .90rem">
-                <li>
-                  <img src="./img/icon2.png" />
-                </li>
-                <li>
-                  <img src="./img/icon2.png" />
-                </li>
-                <li>
-                  <img src="./img/icon2.png" />
-                </li>
-                <li>
-                  <img src="./img/icon2.png" />
-                </li>
-                <li>
-                  <img src="./img/icon2.png" />
-                </li>
-              </ul>
-              <p>
-                这次使用体验非常好，店里的客服服务也非常到位，
-                有因为 是第一次使用车，
-                有很多不懂得地方都是客服小姐姐一步步 的指导的。
-                价位也非常划算，总之本次服务非常满意，五星好评
-              </p>
-            </li>
-          </ul>
+    
         </div>
       </div>
     </div>
@@ -133,7 +87,28 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+    flow:"郑州市花园路103号",
+    evaluate:"1126",
+    phone:13185854476,
+    transfer:[
+      {tlt:15639619820,
+       time:"07-06  10:30",
+       p:'这次使用体验非常好，店里的客服服务也非常到位，有因为 是第一次使用车，有很多不懂得地方都是客服小姐姐一步步 的指导的。价位也非常划算，总之本次服务非常满意，五星好评'
+      },
+      {tlt:15639619820,
+       time:"07-06  10:30",
+       p:'这次使用体验非常好，店里的客服服务也非常到位，有因为 是第一次使用车，有很多不懂得地方都是客服小姐姐一步步 的指导的。价位也非常划算，总之本次服务非常满意，五星好评'
+      }
+      ],
+      image:[
+        { img:require("./img/icon2.png")},
+        { img:require("./img/icon2.png")},
+        { img:require("./img/icon2.png")},
+        { img:require("./img/icon2.png")},
+        { img:require("./img/icon2.png")},
+      ]
+    }
   },
   methods: {},
   components: {}
