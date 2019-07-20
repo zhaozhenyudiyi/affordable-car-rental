@@ -43,7 +43,7 @@ export default {
         },
         { text: "预定管理", img_src: require("./img/yd.png"), src: "/reservation" },
         { text: "费用结算", img_src: require("./img/fy.png"), src: "/costSettlement" },
-        { text: "车辆管理", img_src: require("./img/cl.png"), src: "" }
+        { text: "车辆管理", img_src: require("./img/cl.png"), src: "/car-manage" }
       ],
       num: 0
     };
