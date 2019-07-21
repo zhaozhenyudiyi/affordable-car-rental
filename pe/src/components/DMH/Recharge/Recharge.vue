@@ -1,6 +1,10 @@
 <template>
   <section>
-    <header></header>
+    <header>
+      <Myheader txt="充值">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img" @click="back" />
+      </Myheader>
+    </header>
     <div class="picture">
       <div>
         <img src="./img/1000.png" alt />
@@ -99,7 +103,11 @@
               <span v-text="textali()">{{ Ali }}</span>
             </p>
           </div>
-          <van-button type="primary" class="immediately">立即支付</van-button>
+
+          <van-button type="primary" class="immediately" @click="pri">立即支付</van-button>
+          <van-popup v-model="showw" class="a">
+            支付成功
+          </van-popup>
         </div>
       </van-popup>
     </div>
@@ -115,11 +123,13 @@
 </template>
 
 <script>
+import Myheader from "./../../chw/header";
 export default {
   data() {
     return {
       //双向数据绑定
       show: false,
+      showw: false, //弹出层
       value: "",
       coin: [
         { name: "100", vg: false },
@@ -170,10 +180,21 @@ export default {
       this.coin.forEach(element => {
         element.vg = false;
       });
+    },
+    back() {
+      this.$router.push("/my_wallet");
+    },
+    pri() {
+      this.showw = true;
+      setTimeout(() => {
+        this.$router.push("/pages");
+      }, 300);
     }
   },
   mounted() {},
-  components: {},
+  components: {
+    Myheader
+  },
   updated() {}
 };
 </script>
@@ -182,7 +203,6 @@ export default {
 header {
   width: 100%;
   height: 0.88rem;
-  background: red;
 }
 section {
   width: 100%;
@@ -422,6 +442,14 @@ section {
         font-size: 0.24rem;
       }
     }
+  }
+  .a{
+    color: #fff;
+    font-size: .40rem;
+    text-align: center;
+    padding: .2rem .3rem;
+    background: #333333;
+    border-radius: .2rem;
   }
 }
 </style>

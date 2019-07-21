@@ -41,10 +41,17 @@
 export default {
   data() {
     return {
+      Qu:'',
+      Huan:''
     };
   },
   methods: {},
-  components: {}
+  components: {},
+  mounted() {
+    this.Qu = localStorage.getItem("qu");
+    // this.Qu.split(',');
+    console.log(this.Qu);
+  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="tis">
     <ul class="Time_list">
-      <li v-for="(item,index) in TimeCar_list":key="index">
+      <li v-for="(item,index) in TimeCar_list" :key="index">
         <div class="top">
           <div class="Tleft">
             <p class="star_area">{{ item.star_area }}</p>
@@ -97,11 +97,7 @@ export default {
     console.log(this.getstarT);
     this.getendT = localStorage.getItem("endTIme");
     console.log(this.getendT);
-    this.$axios.get().then(res=>{
-
-    }).catch(err=>{
-      
-    })
+    
   },
 };
 </script>
