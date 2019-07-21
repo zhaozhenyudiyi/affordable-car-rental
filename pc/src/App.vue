@@ -27,7 +27,7 @@ export default {
 #app {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden;}
 *{
   margin:0;
   padding:0;
@@ -35,7 +35,7 @@ export default {
 html,body,#app{
   width:100%;
   height:100%;
-  /* overflow: hidden; */
+  /* overflow: hidden; */}
 header {
   width: 100%;
   height: 100px;
