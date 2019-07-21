@@ -73,7 +73,14 @@ export default {
      }
   },
   methods: {},
-  components: {}
+  components: {},
+  mounted() {
+     this.$axios.get().then(res=>{
+
+    }).catch(err=>{
+      
+    })
+  },
 }
 </script>
 
