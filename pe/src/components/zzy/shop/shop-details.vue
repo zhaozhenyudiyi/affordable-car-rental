@@ -4,6 +4,33 @@
       <li @click="fn">
         <p>正道中环百货门店<span>0.81km</span></p>
         <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
+      </li>  <li @click="fn">
+        <p>正道中环百货门店<span>0.81km</span></p>
+        <div>郑州市金水区花园路59号（花园路与红 专路交叉口向北200米路西）</div>
       </li>    
     </ul>
   </div>
@@ -19,7 +46,10 @@ export default {
       this.$router.push('/StoreDetails')
     }
   },
-  components: {}
+  components: {},
+  mounted() {
+    this.axios.git('')
+  },
 };
 </script>
 

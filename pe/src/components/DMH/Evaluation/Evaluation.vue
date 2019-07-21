@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     store(){
-      this.$router.push('/StoreDetails');
+      this.$router.push('/pages');
     }
   },
   components: {Myheader,}

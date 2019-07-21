@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class='wallet-bi'>
-      <h4>我的平驾币 2030枚</h4>
+      <h4>我的平驾币 {{ $store.state.zhi }}枚</h4>
       <p>说明：</p>
       <ol>
         <li>1. 平驾币=1元</li>

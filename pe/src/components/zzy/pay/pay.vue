@@ -1,9 +1,13 @@
 <template>
   <section>
-    <header></header>
+    <header>
+      <Myheader txt="车辆订单">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img" @click="back" alt />
+      </Myheader>
+    </header>
     <div class="picture">
       <div>
-        <img src="./img/1000.png" alt />
+        <img src="./../../QSS/Parity/domestic/img/pic3 拷贝.png" alt />
       </div>
     </div>
     <div class="food">
@@ -104,7 +108,7 @@
                   <span v-text="textali()">{{ Ali }}</span>
                 </p>
               </div>
-              <van-button type="primary" class="immediately">确认付款</van-button>
+              <van-button type="primary" class="immediately" @click="fnn">确认付款</van-button>
             </div>
           </van-popup>
         </div>
@@ -119,6 +123,7 @@
 </template>
 
 <script>
+import Myheader from './../../chw/header'
 export default {
   data() {
     return {
@@ -169,6 +174,12 @@ export default {
       this.coin.forEach(element => {
         element.vg = false;
       });
+    },
+    back(){
+      this.$router.push('/carDetails');
+    },
+    fnn(){
+      this.$router.push('/paysuccess');
     }
   },
   mounted() {
@@ -184,7 +195,9 @@ export default {
     //     console.log(error);
     //   });
   },
-  components: {},
+  components: {
+    Myheader,
+  },
   updated() {}
 };
 </script>

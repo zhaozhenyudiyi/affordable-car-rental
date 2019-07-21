@@ -5,7 +5,8 @@ export default new vuex.Store({
     state:{
         option:'郑州',
         option2:'上海',
-        dir:''
+        dir:'',
+        zhi:195,
     },
     mutations:{
         chengshi(state ,val){
@@ -17,6 +18,9 @@ export default new vuex.Store({
             }else{
                 state.option2 = a;
             }
+        },
+        zhi(state,a){
+            state.zhi += a-0;
         }
     }
 })

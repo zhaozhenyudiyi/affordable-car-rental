@@ -32,20 +32,19 @@
           <router-link to="/registered">
             <button class="zc">注册</button>
           </router-link>
-          <router-link to="/pages">
-            <button @click="phone">登录</button>
-          </router-link>
+          <a>
+            <button @click="phone" class="log">登录</button>
+          </a>
         </div>
         <p>
           登录或者注册即同意平价分时租车
-          <router-link to="/shop">用户服务协议</router-link>
+          <router-link to="/login">用户服务协议</router-link>
         </p>
       </footer>
     </div>
   </div>
 
 </template>
-
 <script>
 export default {
   data() {
@@ -54,16 +53,16 @@ export default {
   methods: {
     //   window.location.pathname
     phone() {
-      // var phone = document.getElementById("phone").value;
-      // var pwd = document.getElementById("pwd").value;
-      // if (!/^1[3456789]\d{9}$/.test(phone)) {
-      //   alert("手机号码不正确，请重填");
-      //   return false;
-      // } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
-      //   alert("密码不正确");
-      // } else {
+      var phone = document.getElementById("phone").value;
+      var pwd = document.getElementById("pwd").value;
+      if (!/^1[3456789]\d{9}$/.test(phone)) {
+        alert("手机号码不正确，请重填");
+        return false;
+      } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
+        alert("密码不正确");
+      } else {
         this.$router.push("/pages");
-      // }
+      }
     }
   },
   components: {}
@@ -71,10 +70,18 @@ export default {
 </script>
 
 <style scoped lang="less">
-.zc{
-  background-color: rgba(245, 245, 245, 0.4);
-  color: rgba(255, 255, 255, 1);
-}
+.log{
+        left: 0;
+        background-color:#FFC600;
+        z-index: 3;
+        font-size: .36rem;
+        color: #000;
+
+    }
+    .zc{
+      background-color:rgba(245, 245, 245, .4);
+      color:rgba(255,255,255,1);
+    }
 .inp{
   font-size: .36rem;
 }
@@ -177,21 +184,23 @@ export default {
             border: 0;
           }
         }
-        a:last-child {
-          button {
-            left: 2.47rem;
-            background-color: #ffc600;
-            z-index: 333;
-            color: #000000;
-          }
-        }
-        a:frist-child {
-          button {
-            left: 0;
-            background-color: #7c7e7d;
-            color: #000000;
-          }
-        }
+        a{
+                        position: relative;
+                        button{
+                            width:3.15rem;
+                            height:.88rem;
+                            box-shadow:-9px 0px 16px 0px rgba(51,51,51,0.18);
+                            border-radius:.44rem;
+                            font-size: .36rem;
+                            position: absolute;
+                            border: 0;
+                        }
+                    }
+                    a:last-child{
+                        button{
+                            left: 2.47rem;
+                        }
+                    }
       }
       p {
         font-size: 0.12rem;

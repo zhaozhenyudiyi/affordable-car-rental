@@ -97,11 +97,7 @@ export default {
     console.log(this.getstarT);
     this.getendT = localStorage.getItem("endTIme");
     console.log(this.getendT);
-    this.$axios.get().then(res=>{
-
-    }).catch(err=>{
-      
-    })
+    
   },
 };
 </script>

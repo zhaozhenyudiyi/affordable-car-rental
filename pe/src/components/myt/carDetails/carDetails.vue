@@ -26,7 +26,7 @@
         </ul>
         <div class="photo">
           <ul>
-            <li v-for="(item,inde) in detai" :key="inde">
+            <li v-for="(item,inde) in detai" :key="inde" @click="det(inde)">
               <img :src="item.img" />
               <img src="./img/icon7.png" />
               <div class="shang">
@@ -194,6 +194,9 @@ export default {
         }
         this.numd = lll;
       }
+    },
+    det(a){
+      this.$router.push('/pay');
     },
     back(){
       this.$router.push('/pages')

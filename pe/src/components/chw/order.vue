@@ -4,7 +4,7 @@
     <li v-for="(item,index) in list" :key="index">
       <div class="order_num">
         <p>订单编号:{{item.serialNumber}}</p>
-        <p>{{item.everconfirmed}}</p>
+        <p @click="fn">{{item.everconfirmed}}</p>
       </div>
       <div class="car_information">
         <img :src="item.car_img" alt />
@@ -47,7 +47,11 @@ export default {
         console.log(err);
       });
   },
-  methods: {},
+  methods: {
+    fn(){
+      this.$router.push('/comments');
+    }
+  },
   components: {}
 };
 </script>

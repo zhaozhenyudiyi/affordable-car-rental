@@ -73,7 +73,7 @@
         </div>
       </aside>
       <div class="but">
-        <van-button type="primary" class="button">提交</van-button>
+        <van-button type="primary" class="button" @click="fn">提交</van-button>
       </div>
     </section>
   </div>
@@ -107,6 +107,9 @@ export default {
   methods: {
    store(){
      this.$router.push('/StoreDetails');
+   },
+   fn(){
+     this.$router.push('/evaluation');
    }
   },
   components: { Myheader,}

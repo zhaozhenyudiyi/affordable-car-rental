@@ -67,27 +67,26 @@ export default {
     yzm() {
       let num = Math.floor(Math.random() * (999999 - 100000) + 100000);
       this.num = num;
-      //   if (/^1[3456789]\d{9}$/.test(this.tel)) {
-      //     console.log(this.tel);
-      //     this.axios
-      //       .get(
-      //         "http://172.25.1.67:8080/message/send?tel=" +
-      //           this.tel +
-      //           "&verificationCode=" +
-      //           this.num
-      //       )
-      //       .then(response=> {
-      //         console.log(response);
-      //       })
-      //       .catch(error=> {
-      //         // console.log(error);
-      //       });
-      //   }
-      //   if(this.timer){
-      //       this.timer = !this.timer;
-      //   }
+        if (/^1[3456789]\d{9}$/.test(this.tel)) {
+          console.log(this.tel);
+          this.axios
+            .get(
+              "http://172.25.1.67:8080/message/send?tel=" +
+                this.tel +
+                "&verificationCode=" +
+                this.num
+            )
+            .then(response=> {
+              console.log(response);
+            })
+            .catch(error=> {
+              // console.log(error);
+            });
+        }
+        if(this.timer){
+            this.timer = !this.timer;
+        }
 
-      //   this.timer =!this.timer
       let time = setInterval(() => {
         this.yzm_text = this.down +'秒';
         this.down--;
@@ -99,7 +98,6 @@ export default {
           this.timer = !this.timer;
         }
       }, 1000);
-      // console.log()
       this.timer = !this.timer;
     }
   },

@@ -42,11 +42,11 @@ export default {
     return {
       list1: [
         {
-          money: "0元",
+          money: (this.$store.state.zhi*.5) + '元',
           address: "账户余额"
         },
         {
-          money: "0元",
+          money: this.$store.state.zhi + '平价币',
           address: "平驾币"
         },
         {
