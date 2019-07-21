@@ -3,7 +3,6 @@
   <div class="my_wallet">
     <Myheader txt="我的钱包">
       <img src="./../images/2.png" slot="left-img" class="left-img" @click="back" alt="">
-      <!-- <span slot="left-img" class="left-img" @click="back">＜</span> -->
     </Myheader>
     <div class="wallet-ligo">
       <div>
@@ -25,7 +24,7 @@
       <p class='jf'>说明：</p>
       <p class=jf>1积分=1元，每单最高可使积分冲抵40%租车费用</p>
     </div>
-    <router-link to='mine'>
+    <router-link to='/recharge'>
       <div class='cz_btn'>充值</div>
     </router-link>
   </div>
@@ -39,7 +38,7 @@ export default {
   },
   methods: {
     back() {
-      this.$router.back();
+      this.$router.push('/mine');
     }
   },
   components: {
@@ -48,7 +47,7 @@ export default {
 };
 </script>
 
-<style scoped lang=less >
+<style scoped lang="less" >
 .my_wallet {
   width: 100%;
   height: 100%;
@@ -56,13 +55,12 @@ export default {
   background-color: #363b3e;
   overflow: hidden;
   .wallet-ligo {
-    margin-top:.88rem;
     width: 6.85rem;
     height: 3.86rem;
     border-radius: .4rem;
     overflow: hidden;
     background: url("./img-mine/banner.png");
-    margin: 1.28rem .31rem .2rem .31rem;
+    margin: .28rem .31rem .2rem .31rem;
     display: flex;
     justify-content: center;
     align-items: center;

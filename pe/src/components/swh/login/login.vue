@@ -32,7 +32,7 @@
           <router-link to="/registered">
             <button> <span class="zc">注册</span></button>
           </router-link>
-          <router-link to="/login">
+          <router-link to="/pages">
             <button @click="phone">登录</button>
           </router-link>
         </div>
@@ -54,16 +54,16 @@ export default {
   methods: {
     //   window.location.pathname
     phone() {
-      var phone = document.getElementById("phone").value;
-      var pwd = document.getElementById("pwd").value;
-      if (!/^1[3456789]\d{9}$/.test(phone)) {
-        alert("手机号码不正确，请重填");
-        return false;
-      } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
-        alert("密码不正确");
-      } else {
+      // var phone = document.getElementById("phone").value;
+      // var pwd = document.getElementById("pwd").value;
+      // if (!/^1[3456789]\d{9}$/.test(phone)) {
+      //   alert("手机号码不正确，请重填");
+      //   return false;
+      // } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
+      //   alert("密码不正确");
+      // } else {
         this.$router.push("/pages");
-      }
+      // }
     }
   },
   components: {}
