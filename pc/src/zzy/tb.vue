@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="out">
     <header>
       <div class="head-left">
         <img src="./img/LOGO.png" alt />你好，欢迎进入平驾租车后台管理系统
@@ -21,8 +21,8 @@
           </router-link>
         </li>
       </ul>
+      <router-view class="ck"></router-view>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -31,11 +31,20 @@ export default {
   data() {
     return {
       fenlei: [
-        { text: "首页", img_src: require("./img/sy.png"), src: "/ber" },
-        { text: "会员管理", img_src: require("./img/hy.png"), src: "" },
-        { text: "预定管理", img_src: require("./img/yd.png"), src: "" },
-        { text: "费用结算", img_src: require("./img/fy.png"), src: "" },
-        { text: "车辆管理", img_src: require("./img/cl.png"), src: "" }
+        {
+          text: "首页",
+          img_src: require("./img/sy.png"),
+          src: "/index"
+        },
+        {
+          text: "会员管理",
+          img_src: require("./img/hy.png"),
+          src: "/ber/enquiries"
+        },
+        { text: "预定管理", img_src: require("./img/yd.png"), src: "/reservation" },
+        { text: "费用结算", img_src: require("./img/fy.png"), src: "/costSettlement" },
+        { text: "车辆管理", img_src: require("./img/cl.png"), src: "/CarManage" }
+
       ],
       num: 0
     };
@@ -46,21 +55,31 @@ export default {
       li[this.num].classList.remove("on");
       li[index].classList.add("on");
       this.num = index;
-      //   console.log();npm 
+      //   console.log();npm
     }
   },
-  components: {
-     
-  },
+  components: {},
   mounted() {
-    this.$axios.get('http://172.25.1.199:8080/user/findAll')
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-  },
+
+  //   this.$axios.get('http://172.25.1.199:8080/user/findAll')
+  // .then(function (response) {
+  //   console.log(response);
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // })
+  
+
+    // this.$axios
+    //   .get("")
+    //   .then(function(response) {
+    //     console.log(response);
+    //   })
+    //   .catch(function(error) {
+    //     console.log(error);
+    //   });
+    this.$router.push("/index");
+  }
 };
 </script>
 
@@ -68,60 +87,74 @@ export default {
 html,
 body {
   height: 100%;
-}
-header {
-  background-color: #2d3647;
-  color: white;
-  height: 100px;
-  width: 100%;
-  padding: 42px;
-  display: flex;
-  // flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  // background-color: rgb(155, 31, 31);
-  .head-left {
-    display: flex;
-    align-items: center;
-    img {
-      margin-right: 8px;
-      width: 93px;
-      height: 56px;
+  .out {
+    display:flex;
+    flex-direction: column;
+    header {
+      background-color: #2d3647;
+      color: white;
+      height: 100px;
+      width: 100%;
+      padding: 42px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .head-left {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 8px;
+          width: 93px;
+          height: 56px;
+        }
+      }
+      .header-right {
+        display: flex;
+        align-items: center;
+        .img {
+          margin: 0 45px 0 19px;
+        }
+      }
     }
-  }
-  .header-right {
-    display: flex;
-    align-items: center;
-    .img {
-      margin: 0 45px 0 19px;
-    }
-  }
-}
-.left {
-  height: 653.5px;
-  width: 210px;
-  background-color: #3b4255;
-  li {
-    box-sizing: border-box;
-  }
-  .li {
-    box-sizing: border-box;
-    height: 58px;
-    color: white;
-    display: flex;
-    align-items: center;
-    img {
-      margin-left: 40px;
-      margin-right: 10px;
-      width: 17px;
-    }
-  }
-  .on {
-    box-sizing: border-box;
-    border-left: 4px solid #ffc600;
-    background-color: #293038;
-    img {
-      margin-left: 36px;
+    .left {
+      overflow: auto;
+      flex: 1;
+      background-color: #3b4255;
+      display: flex;
+      .ck {
+        // margin:auto;
+        background-color: #fff;
+        flex: 1;
+        overflow: auto;
+        overflow-y: auto;
+        padding-bottom: 50px;
+      }
+      ul {
+        width: 210px;
+        li {
+          box-sizing: border-box;
+        }
+        .li {
+          box-sizing: border-box;
+          height: 58px;
+          color: white;
+          display: flex;
+          align-items: center;
+          img {
+            margin-left: 40px;
+            margin-right: 10px;
+            width: 17px;
+          }
+        }
+        .on {
+          box-sizing: border-box;
+          border-left: 4px solid #ffc600;
+          background-color: #293038;
+          img {
+            margin-left: 36px;
+          }
+        }
+      }
     }
   }
 }

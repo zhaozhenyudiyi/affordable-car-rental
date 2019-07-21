@@ -33,14 +33,14 @@ div {
 .out {
   overflow: hidden;
   background: url("./img/bg.png") center center;
-  background-size: 100%;
+  background-size: 130%;
   animation: bg 3.5s linear;
 }
 @keyframes bg {
   fr1om {
   }
   to {
-    background-size: 110%;
+    background-size: 140%;
   }
 }
 .in {
@@ -55,6 +55,7 @@ div {
 
   .logo {
     width: 3rem;
+
     margin-bottom: 4.51rem;
   }
   .in-in {

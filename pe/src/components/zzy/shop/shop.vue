@@ -1,10 +1,14 @@
 <template>
   <div class="out">
-    <div class="head"></div>
+    <div class="head">
+       <Myheader txt="门店">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img"  @click="header"  />
+      </Myheader>
+    </div>
     <p>
       <span>用车城市</span>
       <router-link to="/intro" class="a">
-        <span @click="dd">郑州</span>
+        <span @click="dd">{{ $store.state.option }}</span>
         <img src="./img/icon1.png" alt />
       </router-link>
     </p>
@@ -24,6 +28,7 @@
 </template>
 
 <script>
+import Myheader from './../../chw/header';
 import dedetails from "./shop-details";
 export default {
   data() {
@@ -45,8 +50,8 @@ export default {
     };
   },
   methods: {
-    dd(){
-       this.$router.push("/carDetails");
+    dd() {
+      this.$router.push("/carDetails");
     },
     click(index) {
       let li = document.getElementsByClassName("li");
@@ -54,17 +59,27 @@ export default {
       li[index].classList.add("click");
       this.num = index;
     //   console.log();
+    },
+    header(){
+      this.$router.push('/pages/freeride')
     }
   },
   components: {
-    dedetails
+    dedetails,
+    Myheader,
   }
 };
 </script>
 
 <style scoped lang='less'>
+* {
+  border: none;
+}
 .out {
-  min-height: 13.34rem;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
   background: url("./img/bg.jpg");
   background-color: #2b2d2c;
   .head {
@@ -75,7 +90,7 @@ export default {
     width: 7.5rem;
   }
   p {
-    background: url("./img/bg.jpg");
+    // background: url("./img/bg.jpg");
     position: fixed;
     top: 0.88rem;
     width: 100%;
@@ -88,13 +103,13 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 0.3rem;
-    .a{
+    .a {
       display: flex;
       align-items: center;
     }
     span {
       color: #fff;
-      margin-right: .05rem;
+      margin-right: 0.05rem;
     }
 
     img {
@@ -103,14 +118,16 @@ export default {
     }
   }
   .ul {
+    height: 100%;
     margin-top: 1.88rem;
-    overflow: hidden;
+    overflow: auto;
+    // background: url("./img/bg.jpg");
+
     .area {
       position: fixed;
       float: left;
-      background: url("./img/bg.jpg");
-
-      width: 2.27rem;
+      // background: url("./img/bg.jpg");
+      width: 2.25rem;
       li {
         line-height: 0.85rem;
         padding-left: 0.3rem;

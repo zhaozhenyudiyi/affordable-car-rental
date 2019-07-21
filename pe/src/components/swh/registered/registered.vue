@@ -106,113 +106,113 @@ export default {
 </script>
 
 <style scoped lang="less">
-    .aa{
-        left: 0;
-        background-color:#FFC600;
-        z-index: 3;
-    }
-    .log{
-      background-color:rgba(245, 245, 245, .4);
-      color:rgba(255,255,255,1);
-    }
-    .registered{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-size: 100%;
-        img{
-            width: 100%;
-            height: 100%;
+.aa {
+  left: 0;
+  background-color: #ffc600;
+  z-index: 3;
+}
+.log {
+  background-color: rgba(245, 245, 245, 0.4);
+  color: rgba(255, 255, 255, 1);
+}
+.registered {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap {
+    margin: 0 0.96rem 0 0.91rem;
+    font-size: 0;
+    form {
+      overflow: hidden;
+      position: absolute;
+      top: 5.24rem;
+      div {
+        width: 5.63rem;
+        height: 1.17rem;
+        border-bottom: 1px solid rgba(153, 153, 153, 1);
+        font-size: 0;
+        display: flex;
+        position: relative;
+        img {
+          width: 0.44rem;
+          height: 0.44rem;
+          position: absolute;
+          bottom: 0.19rem;
+          left: 0.38rem;
         }
-        .wrap{
-            margin: 0 .96rem 0 .91rem;
-            font-size: 0;
-            form{
-                overflow: hidden;
-                position: absolute;
-                top:5.24rem;
-                div{
-                   width: 5.63rem;
-                   height: 1.17rem;
-                   border-bottom:1px solid rgba(153,153,153,1);
-                   font-size: 0;
-                   display: flex;
-                   position: relative;
-                   img{
-                       width: .44rem;
-                       height: .44rem;
-                       position: absolute;
-                       bottom: .19rem;
-                       left: .38rem;
-                   }
-                   input{
-                       background: transparent;
-                       position: absolute;
-                       bottom:.19rem;
-                       left: 1.15rem;
-                       font-size: .28rem;
-                       color: #ffffff;
-                       border:0;
-                   }
-                   input::-webkit-input-placeholder{
-                       color: #ffffff;
-                       font-size: .28rem;
-                   }
-                   button{
-                       background: #FFC600;
-                       width: 1.8rem;
-                       height: .55rem;
-                       border-radius: .44rem;
-                       color: #000000;
-                       font-size: .23rem;
-                       position: absolute;
-                       left: 3.63rem;
-                       bottom: .13rem;
-                       border: 0;
-                   }
-                }
-                p{
-                    color: #ffffff;
-                    margin-top: .27rem;
-                    margin-left: 4.4rem;
-                    font-size: .23rem;
-                   }
-            }
-            footer{
-                position: absolute;
-                bottom:-.1rem;
-                font-size: 0;
-                div{
-                    width: 5.63rem;
-                    height: .88rem;
-                    display: flex;
-                    margin-bottom: .14rem;
-                    a{
-                        position: relative;
-                        button{
-                            width:3.15rem;
-                            height:.88rem;
-                            box-shadow:-9px 0px 16px 0px rgba(51,51,51,0.18);
-                            border-radius:.44rem;
-                            font-size: .36rem;
-                            position: absolute;
-                            border: 0;
-                        }
-                    }
-                    a:last-child{
-                        button{
-                            left: 2.47rem;
-                        }
-                    }
-                }
-                p{
-                    font-size: .12rem;
-                    text-align: center;
-                    a{
-                        color: #ffffff;
-                    }
-                }
-            }
+        input {
+          background: transparent;
+          position: absolute;
+          bottom: 0.19rem;
+          left: 1.15rem;
+          font-size: 0.28rem;
+          color: #ffffff;
+          border: 0;
         }
+        input::-webkit-input-placeholder {
+          color: #ffffff;
+          font-size: 0.28rem;
+        }
+        button {
+          background: #ffc600;
+          width: 1.8rem;
+          height: 0.55rem;
+          border-radius: 0.44rem;
+          color: #000000;
+          font-size: 0.23rem;
+          position: absolute;
+          left: 3.63rem;
+          bottom: 0.13rem;
+          border: 0;
+        }
+      }
+      p {
+        color: #ffffff;
+        margin-top: 0.27rem;
+        margin-left: 4.4rem;
+        font-size: 0.23rem;
+      }
     }
+    footer {
+      position: absolute;
+      bottom: -0.1rem;
+      font-size: 0;
+      div {
+        width: 5.63rem;
+        height: 0.88rem;
+        display: flex;
+        margin-bottom: 0.14rem;
+        a {
+          position: relative;
+          button {
+            width: 3.15rem;
+            height: 0.88rem;
+            box-shadow: -9px 0px 16px 0px rgba(51, 51, 51, 0.18);
+            border-radius: 0.44rem;
+            font-size: 0.36rem;
+            position: absolute;
+            border: 0;
+          }
+        }
+        a:last-child {
+          button {
+            left: 2.47rem;
+          }
+        }
+      }
+      p {
+        font-size: 0.12rem;
+        text-align: center;
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
 </style>

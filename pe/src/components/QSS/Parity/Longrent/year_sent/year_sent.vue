@@ -3,7 +3,7 @@
     <div class="back_point">
       <div class="back_left">
         <span>取还城市</span>
-        <input type="text" value="郑州" />
+        <input type="text" :value="$store.state.option" />
       </div>
       <div class="back_right">
         <span>取还点</span>
@@ -41,10 +41,17 @@
 export default {
   data() {
     return {
+      Qu:'',
+      Huan:''
     };
   },
   methods: {},
-  components: {}
+  components: {},
+  mounted() {
+    this.Qu = localStorage.getItem("qu");
+    // this.Qu.split(',');
+    console.log(this.Qu);
+  },
 };
 </script>
 

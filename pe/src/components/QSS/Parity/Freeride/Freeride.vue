@@ -7,19 +7,52 @@
       class="baidu-map"
       @click="getClickInfo"
     >
-      <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
-      <bm-geolocation anchor="BMAP_ANCHOR_TOP_LEFT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
-      <bm-marker :position="{lng: 113.62, lat: 34.75}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE">
-      <bm-label content="" :labelStyle="{color: 'red', fontSize : '24px'}" :offset="{width: -35, height: 30}"/>
-    </bm-marker>
+      <bm-navigation anchor="BMAP_ANCHOR_TOP_LEFT"></bm-navigation>
+      <bm-geolocation anchor="BMAP_ANCHOR_TOP_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
+      <bm-marker
+        :position="{lng: 113.65, lat: 34.78}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.6, lat: 34.75}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.65, lat: 34.73}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.28, lat: 34.82}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.6, lat: 34.87}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.67, lat: 34.75}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
     </baidu-map>
     <input type="button" value="我要租车" v-if="isShow" @click="isShow = !isShow" />
-    <div class="car_info" v-else>
+    <div class="car_info" v-else @click="info">
       <div class="tit">
-        <h3>郑州动物园自助点</h3>
+        <h3>{{ $store.state.option }}国际自助点</h3>
         <img src="./img/icon.png" @click="isShow = true" />
       </div>
-      <p class="dizhi">郑州市花园路103号（郑州市动物园对面路西地面停车场）</p>
+      <p class="dizhi">{{ $store.state.option }}市花园路103号</p>
       <div class="bottom">
         <img src="./img/pic2@2x.png" />
         <div class="right">
@@ -41,17 +74,19 @@ export default {
     return {
       center: { lng: 0, lat: 0 },
       zoom: 3,
-      isShow: true
+      isShow: true,
+      // getT:'',
     };
   },
   mounted() {
     //this.enableScrollTheelZoom(true);
+   
   },
   methods: {
     handler({ BMap, map }) {
       // console.log(BMap, map);
-      this.center.lng = 113.62;
-      this.center.lat = 34.75;
+      this.center.lng = 113.65;
+      this.center.lat = 34.78;
       this.zoom = 15;
     },
     getClickInfo(e) {
@@ -59,13 +94,31 @@ export default {
       // console.log(e.point.lat);
       this.center.lng = e.point.lng;
       this.center.lat = e.point.lat;
+    },
+    info(){
+      this.$router.push('/shop')
     }
   }
 };
 </script>
 <style scoped lang='less'>
+.BMapLabel{
+  display: none;
+}
 .map {
+  // display: flex;
+  // flex-direction: column;
+  // height: 100%;
+  flex:1;
+  .baidu-map{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  }
   input {
+    // display: flex;
+    // flex-direction: column;
+    // height: 100%;
     width: 100%;
     height: 0.89rem;
     background: rgba(255, 198, 0, 1);
