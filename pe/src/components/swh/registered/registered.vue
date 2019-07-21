@@ -43,7 +43,7 @@ export default {
       yzm_num: "",
       num: "",
       yzm_text: "获取验证码",
-      down: 10,
+      down: 60,
       timer: false
     };
   },
@@ -95,7 +95,7 @@ export default {
           clearInterval(time);
           console.log("aaa");
           this.yzm_text = "获取验证码";
-          this.down = 10;
+          this.down = 60;
           this.timer = !this.timer;
         }
       }, 1000);

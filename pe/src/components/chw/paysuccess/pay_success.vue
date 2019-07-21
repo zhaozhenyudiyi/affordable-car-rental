@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="black">回到首页</div>
+    <div class="black" @click="block">回到首页</div>
   
   </div>
 </template>
@@ -45,8 +45,10 @@ export default {
       });
   },
   methods: {
-    
     block(){
+ this.$router.back("/pages");
+    },
+    back(){
       this.$router.back("/pages");
     },
     background(){
