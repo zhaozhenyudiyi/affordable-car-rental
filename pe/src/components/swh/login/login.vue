@@ -76,7 +76,6 @@ export default {
         z-index: 3;
         font-size: .36rem;
         color: #000;
-
     }
     .zc{
       background-color:rgba(245, 245, 245, .4);

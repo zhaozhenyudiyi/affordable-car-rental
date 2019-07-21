@@ -87,6 +87,7 @@ export default {
       //       this.timer = !this.timer;
       //   }
 
+
       let time = setInterval(() => {
         this.yzm_text = this.down +'秒';
         this.down--;

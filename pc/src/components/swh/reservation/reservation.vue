@@ -531,7 +531,7 @@ section {
     margin: 72px 0 0 48px;
     position: relative;
     /deep/.el-table {
-      height: 480px;
+      // height: 480px;
       .cell {
         text-align: center;
       }
