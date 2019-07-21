@@ -1,6 +1,10 @@
 <template>
   <div>
-    <header></header>
+    <header>
+       <Myheader txt="提交评价">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img"  @click="store"  />
+      </Myheader>
+    </header>
     <section>
       <div class="list">
         <img :src="imgs" alt />
@@ -76,6 +80,7 @@
 </template>
 
 <script>
+import Myheader from './../../chw/header'
 export default {
   data() {
     return {
@@ -99,8 +104,12 @@ export default {
       comment: ""
     };
   },
-  methods: {},
-  components: {}
+  methods: {
+   store(){
+     this.$router.push('/StoreDetails');
+   }
+  },
+  components: { Myheader,}
 };
 </script>
 
@@ -108,7 +117,6 @@ export default {
 header {
   width: 100%;
   height: 0.88rem;
-  background: green;
 }
 section {
   width: 100%;

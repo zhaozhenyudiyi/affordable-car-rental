@@ -47,12 +47,12 @@
       </bm-marker>
     </baidu-map>
     <input type="button" value="我要租车" v-if="isShow" @click="isShow = !isShow" />
-    <div class="car_info" v-else>
+    <div class="car_info" v-else @click="info">
       <div class="tit">
-        <h3>郑州动物园自助点</h3>
+        <h3>{{ $store.state.option }}国际自助点</h3>
         <img src="./img/icon.png" @click="isShow = true" />
       </div>
-      <p class="dizhi">郑州市花园路103号（郑州市动物园对面路西地面停车场）</p>
+      <p class="dizhi">{{ $store.state.option }}市花园路103号</p>
       <div class="bottom">
         <img src="./img/pic2@2x.png" />
         <div class="right">
@@ -94,6 +94,9 @@ export default {
       // console.log(e.point.lat);
       this.center.lng = e.point.lng;
       this.center.lat = e.point.lat;
+    },
+    info(){
+      this.$router.push('/shop')
     }
   }
 };
