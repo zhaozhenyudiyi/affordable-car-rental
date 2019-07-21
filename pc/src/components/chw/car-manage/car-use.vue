@@ -1,9 +1,9 @@
 
 <template>
   <div class="car-use">
-    <form action="" class='search'>
-      <input type="search" placeholder="请输入需要查询的车辆车牌号"/>
-      <button @click="goto()">查询车辆</button>
+    <form action class="search">
+      <input type="search" placeholder="请输入需要查询的车辆车牌号" v-model="searchmas" />
+      <button @click="goto">查询车辆</button>
     </form>
     <div class="use-manage">
       <div>
@@ -15,9 +15,9 @@
             <p>未使用</p>
             <img :src="list.car_url" alt />
 
-            <p class="asd">雪佛兰</p>
+            <p class="asd">{{list.car_name}}</p>
             <p class="asd">
-              <span class="money">500</span>/月
+              <span class="money">{{list.use_money}}</span>/月
             </p>
           </div>
           <div class="txt2">
@@ -39,43 +39,52 @@
       </div>
       <div class="mas-1 mas">
         <UseNav>
-          <p slot="txt1">使用记录</p>
-          <span slot="txt2">近一个月</span>
-          <span slot="txt3">近三个月</span>
-          <span slot="txt4">近六个月</span>
-        </UseNav>
-        <el-table :data="list2.use_record" style="width: 100%,display:flex" height="135">
-          <el-table-column prop="customer" label="客户" flex="1"></el-table-column>
-          <el-table-column prop="contact" label="联系方式" flex="1"></el-table-column>
-          <el-table-column prop="lease" label="租赁方式" flex="1"></el-table-column>
-          <el-table-column prop="id_number" label="证件号码" flex="1"></el-table-column>
-          <el-table-column prop="take_time" label="取车时间" flex="1"></el-table-column>
-          <el-table-column prop="return_time" label="还车时间" flex="1"></el-table-column>
-          <el-table-column prop="charge" label="收取费用（元）" flex="1"></el-table-column>
-        </el-table>
-      </div>
-      <div class="mas-2 mas">
-        <UseNav>
-          <p slot="txt1">违规记录</p>
-          <span slot="txt2">近一个月</span>
-          <span slot="txt3">近三个月</span>
-          <span slot="txt4">近六个月</span>
+          <p
+            :slot="item.slot"
+            @click="aaa(index)"
+            v-for="(item,index) in p_list"
+            :class="{p_active:index==isShow}"
+            :key="index"
+          >{{item.txt}}</p>
+          <span
+            :slot="item.slot"
+            @click="bbb(index)"
+            v-for="(item,index) in span_list"
+            :class="{span_active:index==toShow}"
+            :key="index"
+          >{{item.txt}}</span>
         </UseNav>
         <el-table
-          :data="list2.err_record"
-          style="width: 100%,display:flex, justify-content:center"
-          height="144"
+          :data="list2"
+          style="width: 100% ,display:flex,justify-content:center"
+          height="250"
+          v-show="bool"
         >
-          <el-table-column prop="err_people" label="违规客户" flex="1"></el-table-column>
-          <el-table-column prop="err_tel" label="联系方式" flex="1"></el-table-column>
-          <el-table-column prop="err_event" label="违规事件" flex="1"></el-table-column>
-          <el-table-column prop="err_time" label="违规时间" flex="1"></el-table-column>
-          <el-table-column prop="err_location" label="违规地点" flex="1"></el-table-column>
-          <el-table-column prop="err_damages" label="违规惩罚" flex="1"></el-table-column>
+          <el-table-column prop="customer" label="客户" width="140"></el-table-column>
+          <el-table-column prop="contact" label="联系方式" width="140"></el-table-column>
+          <el-table-column prop="lease" label="租赁方式" width="140"></el-table-column>
+          <el-table-column prop="id_number" label="证件号码" width="190"></el-table-column>
+          <el-table-column prop="take_time" label="取车时间" width="190"></el-table-column>
+          <el-table-column prop="return_time" label="还车时间" width="180"></el-table-column>
+          <el-table-column prop="charge" label="收取费用（元）" flex="1"></el-table-column>
+        </el-table>
+        <el-table
+          :data="list2"
+          style="width: 100%,display:flex, justify-content:center"
+          height="250"
+          v-show="!bool"
+        >
+          <el-table-column prop="err_people" label="违规客户" width="140"></el-table-column>
+          <el-table-column prop="err_tel" label="联系方式" width="140"></el-table-column>
+          <el-table-column prop="err_event" label="违规事件" width="140"></el-table-column>
+          <el-table-column prop="err_time" label="违规时间" width="190"></el-table-column>
+          <el-table-column prop="err_location" label="违规地点" width="190"></el-table-column>
+          <el-table-column prop="err_damages" label="违规惩罚" width="180"></el-table-column>
           <el-table-column prop="err_damage_people" label="违规处理人员" flex="1"></el-table-column>
         </el-table>
       </div>
     </div>
+    <div v-show="aa_show" class="kong">你输入的车辆品牌不存在</div>
   </div>
 </template>
 
@@ -85,17 +94,63 @@ import UseNav from "./use-nav";
 export default {
   data() {
     return {
+      p_list: [
+        {
+          txt: "使用记录",
+          slot: "txt1-1"
+        },
+        {
+          txt: "违章记录",
+          slot: "txt1-2"
+        }
+      ],
+      span_list: [
+        {
+          txt: "近一个月",
+          slot: "txt2"
+        },
+        {
+          txt: "近三个月",
+          slot: "txt3"
+        },
+        {
+          txt: "近六个月",
+          slot: "txt4"
+        }
+      ],
+      searchmas: "",
+      toShow: 0,
+      isShow: 0,
+      bool: true,
       list: [],
-      list2: []
+      list2: [],
+      list2_1: [],
+      list3: [],
+      list4: [],
+      list5: [],
+      list6: [],
+      list7: [],
+      ggg: "",
+      result: "",
+      aa_show: false,
+      car_tel: ["豫A-xfl01", "豫A-bm001", "豫A-ad001", "豫A-kdlk1", "豫A-dz001"]
     };
   },
   mounted() {
     this.axios
       .get("./../../../../static/js/car-use-err-massage.json")
       .then(res => {
-        this.list = res.data[0].car_massage;
-        this.list2 = res.data[0];
-        console.log(res.data[0]);
+        this.ggg = res.data;
+        this.result = this.ggg[0];
+        this.list = this.result.car_massage;
+        this.list2 = this.result.use_record_1;
+        this.list2_1 = this.result.use_record_1;
+        this.list3 = this.result.use_record_2;
+        this.list4 = this.result.use_record_3;
+        this.list5 = this.result.err_record_1;
+        this.list6 = this.result.err_record_2;
+        this.list7 = this.result.err_record_3;
+        // console.log(res.data[0]);
       })
       .catch(err => {
         console.log(err);
@@ -103,7 +158,106 @@ export default {
   },
   methods: {
     goto() {
-      this.$router.replace("/car-manage");
+      console.log(this.result);
+      if (this.car_tel[0] == this.searchmas) {
+        this.result = this.ggg[0];
+        this.list = this.result.car_massage;
+        this.list2 = this.result.use_record_1;
+        this.list2_1 = this.result.use_record_1;
+        this.list3 = this.result.use_record_2;
+        this.list4 = this.result.use_record_3;
+        this.list5 = this.result.err_record_1;
+        this.list6 = this.result.err_record_2;
+        this.list7 = this.result.err_record_3;
+        this.aa_show = false;
+        console.log(this.result);
+      } else if (this.car_tel[1] == this.searchmas) {
+        this.result = this.ggg[1];
+        this.list = this.result.car_massage;
+        this.list2 = this.result.use_record_1;
+        this.list2_1 = this.result.use_record_1;
+        this.list3 = this.result.use_record_2;
+        this.list4 = this.result.use_record_3;
+        this.list5 = this.result.err_record_1;
+        this.list6 = this.result.err_record_2;
+        this.list7 = this.result.err_record_3;
+        this.aa_show = false;
+      } else if (this.car_tel[2] == this.searchmas) {
+        this.result = this.ggg[2];
+        this.list = this.result.car_massage;
+        this.list2 = this.result.use_record_1;
+        this.list2_1 = this.result.use_record_1;
+        this.list3 = this.result.use_record_2;
+        this.list4 = this.result.use_record_3;
+        this.list5 = this.result.err_record_1;
+        this.list6 = this.result.err_record_2;
+        this.list7 = this.result.err_record_3;
+        this.aa_show = false;
+      } else if (this.car_tel[3] == this.searchmas) {
+        this.result = this.ggg[3];
+        this.list = this.result.car_massage;
+        this.list2 = this.result.use_record_1;
+        this.list2_1 = this.result.use_record_1;
+        this.list3 = this.result.use_record_2;
+        this.list4 = this.result.use_record_3;
+        this.list5 = this.result.err_record_1;
+        this.list6 = this.result.err_record_2;
+        this.list7 = this.result.err_record_3;
+        this.aa_show = false;
+      } else if (this.car_tel[4] == this.searchmas) {
+        this.result = this.ggg[4];
+        this.list = this.result.car_massage;
+        this.list2 = this.result.use_record_1;
+        this.list2_1 = this.result.use_record_1;
+        this.list3 = this.result.use_record_2;
+        this.list4 = this.result.use_record_3;
+        this.list5 = this.result.err_record_1;
+        this.list6 = this.result.err_record_2;
+        this.list7 = this.result.err_record_3;
+        this.aa_show = false;
+      } else if (this.searchmas == "") {
+         this.aa_show = true;
+        document.getElementsByClassName('kong')[0].innerHTML="输入不能为空"
+      } else {
+        this.aa_show = true;
+          document.getElementsByClassName('kong')[0].innerHTML="你输入的车辆品牌不存在"
+      }
+    },
+    aaa(index) {
+      this.isShow = index;
+      // console.log(this.isShow);
+      if (this.isShow == 1) {
+        this.bool = false;
+        this.list2 = this.list5;
+        this.toShow = 0;
+      } else {
+        this.bool = true;
+        this.list2 = this.list2_1;
+        this.toShow = 0;
+      }
+    },
+    bbb(index) {
+      this.toShow = index;
+      // console.log(this.toShow)
+      if (this.toShow == 0) {
+        if (this.isShow == 0) {
+          this.list2 = this.list2_1;
+        } else {
+          this.list2 = this.list5;
+        }
+      } else if (this.toShow == 1) {
+        if (this.isShow == 0) {
+          this.list2 = this.list3;
+        } else {
+          this.list2 = this.list6;
+        }
+      } else {
+        if (this.isShow == 0) {
+          this.list2 = this.list4;
+        } else {
+          this.list2 = this.list7;
+        }
+      }
     }
   },
   components: {
@@ -142,6 +296,17 @@ export default {
       color: #fff;
     }
   }
+  .kong {
+    width: 85%;
+    height: 530px;
+    /* border: 1px solid #ccc; */
+    background-color: #fff;
+    position: absolute;
+    text-align: center;
+    line-height: 400px;
+    font-size:30px;
+    bottom: 0;
+  }
   .use-manage {
     margin: 0 49px;
     div {
@@ -172,17 +337,11 @@ export default {
             width: 261px;
             height: 126px;
           }
-          p:nth-of-type(2) {
-            position: absolute;
-            top: 130px;
-            left: 120px;
+          /* p:nth-of-type(2) {
             text-align: center;
             font-size: 15px;
-          }
-          p:last-of-type {
-            position: absolute;
-            top: 150px;
-            left: 120px;
+          } */
+          p {
             text-align: center;
             font-size: 15px;
             span {
@@ -195,10 +354,14 @@ export default {
     }
     .mas {
       width: 100%;
+      /* border:1px solid #ccc; */
+      /deep/.el-table {
+        border: 1px solid #ccc;
+      }
       /deep/.el-table th {
         text-align: center;
         background-color: #ccc;
-        color: rgb(20, 19, 19);
+        color: rgb(61, 60, 60);
         font-size: 17px;
       }
       /deep/.el-table td {

@@ -1,9 +1,10 @@
 [
 {
     "car_massage": {
-        "car_url":"../../../../static/image/dz01.jpg",
-        "car_name":"雪佛兰",
-        "car_num": "豫F-5g652",
+        "car_url": "../../../../static/image/p4.jpg",
+        "car_name": "雪佛兰",
+        "use_money":"500",
+        "car_num": "豫A-xfl01",
         "car_type": "高级",
         "car_manufacture": "美国福特汽车公司",
         "insurance_company": "平安保险",
@@ -15,7 +16,7 @@
         "two_warranty": "2019.09.21",
         "issue_time": "2019.05.26"
     },
-    "use_record": [
+    "use_record_1": [
         {
             "customer": "何玲",
             "contact": "1335891583",
@@ -35,7 +36,119 @@
             "charge": "1000"
         }
     ],
-    "err_record": [
+    "use_record_2": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "use_record_3": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "封旭",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "冯巩",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "err_record_1": [
         {
             "err_people": "上官世杰",
             "err_tel": "13084227569",
@@ -57,6 +170,136 @@
         {
             "err_people": "何炅",
             "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_2": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_3": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "唐糖",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "原曲",
+            "err_tel": "13303880597",
             "err_event": "违规停车",
             "err_time": "2019:04:26 15:20",
             "err_location": "东明路丰产路交叉口",
@@ -65,14 +308,17 @@
         }
     ]
 },
+
+
 {
     "car_massage": {
-        "car_url": "../../../../static/image/dz01.jpg",
-        "car_name": "雪佛兰",
-        "car_num": "豫F-5g652",
+        "car_url": "../../../../static/image/b1.jpg",
+        "car_name": "宝马",
+        "use_money": "500",
+        "car_num": "豫A-bm001",
         "car_type": "高级",
-        "car_manufacture": "美国福特汽车公司",
-        "insurance_company": "平安保险",
+        "car_manufacture": "德国宝马汽车公司",
+        "insurance_company": "太平保险",
         "road_bridge_paytime": "2019.01.20",
         "register_time": "2016.09.30",
         "engine_number": "24664k",
@@ -81,7 +327,7 @@
         "two_warranty": "2019.09.21",
         "issue_time": "2019.05.26"
     },
-    "use_record": [
+    "use_record_1": [
         {
             "customer": "何玲",
             "contact": "1335891583",
@@ -101,7 +347,119 @@
             "charge": "1000"
         }
     ],
-    "err_record": [
+    "use_record_2": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "use_record_3": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "封旭",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "冯巩",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "err_record_1": [
         {
             "err_people": "上官世杰",
             "err_tel": "13084227569",
@@ -123,6 +481,136 @@
         {
             "err_people": "何炅",
             "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_2": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_3": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "唐糖",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "原曲",
+            "err_tel": "13303880597",
             "err_event": "违规停车",
             "err_time": "2019:04:26 15:20",
             "err_location": "东明路丰产路交叉口",
@@ -131,14 +619,16 @@
         }
     ]
 },
+
 {
     "car_massage": {
-        "car_url": "../../../../static/image/dz01.jpg",
-        "car_name": "雪佛兰",
-        "car_num": "豫F-5g652",
+        "car_url": "../../../../static/image/a2.jpg",
+        "car_name": "奥迪",
+        "use_money": "500",
+        "car_num": "豫A-ad001",
         "car_type": "高级",
-        "car_manufacture": "美国福特汽车公司",
-        "insurance_company": "平安保险",
+        "car_manufacture": "德国奥迪汽车公司",
+        "insurance_company": "民生保险",
         "road_bridge_paytime": "2019.01.20",
         "register_time": "2016.09.30",
         "engine_number": "24664k",
@@ -147,7 +637,7 @@
         "two_warranty": "2019.09.21",
         "issue_time": "2019.05.26"
     },
-    "use_record": [
+    "use_record_1": [
         {
             "customer": "何玲",
             "contact": "1335891583",
@@ -167,7 +657,120 @@
             "charge": "1000"
         }
     ],
-    "err_record": [
+    "use_record_2": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "use_record_3": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "封旭",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "冯巩",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+       
+    ],
+    "err_record_1": [
         {
             "err_people": "上官世杰",
             "err_tel": "13084227569",
@@ -194,45 +797,9 @@
             "err_location": "东明路丰产路交叉口",
             "err_damages": "罚款50",
             "err_damage_people": "邓超"
-        }
-    ]
-},{
-    "car_massage": {
-        "car_url": "../../../../static/image/dz01.jpg",
-        "car_name": "雪佛兰",
-        "car_num": "豫F-5g652",
-        "car_type": "高级",
-        "car_manufacture": "美国福特汽车公司",
-        "insurance_company": "平安保险",
-        "road_bridge_paytime": "2019.01.20",
-        "register_time": "2016.09.30",
-        "engine_number": "24664k",
-        "engine_num": "LSGJR52U85SII0284",
-        "chassis_num": "245365",
-        "two_warranty": "2019.09.21",
-        "issue_time": "2019.05.26"
-    },
-    "use_record": [
-        {
-            "customer": "何玲",
-            "contact": "1335891583",
-            "lease": "月租",
-            "id_number": "410621******1246",
-            "take_time": "2019.03.10 8:20",
-            "return_time": "2019.05.10 8:20",
-            "charge": "1000"
-        },
-        {
-            "customer": "何军",
-            "contact": "1535891583",
-            "lease": "月租",
-            "id_number": "417721******1246",
-            "take_time": "2019.02.10 8:20",
-            "return_time": "2019.03.10 8:20",
-            "charge": "1000"
-        }
+        }      
     ],
-    "err_record": [
+    "err_record_2": [
         {
             "err_people": "上官世杰",
             "err_tel": "13084227569",
@@ -254,6 +821,107 @@
         {
             "err_people": "何炅",
             "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_3": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "唐糖",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "原曲",
+            "err_tel": "13303880597",
             "err_event": "违规停车",
             "err_time": "2019:04:26 15:20",
             "err_location": "东明路丰产路交叉口",
@@ -262,11 +930,12 @@
         }
     ]
 },
+
 {
     "car_massage": {
-        "car_url": "../../../../static/image/dz01.jpg",
-        "car_name": "雪佛兰",
-        "car_num": "豫F-5g652",
+        "car_url": "../../../../static/image/k2.jpg",
+        "car_name": "凯迪拉克",
+        "car_num": "豫A-kdlk1",
         "car_type": "高级",
         "car_manufacture": "美国福特汽车公司",
         "insurance_company": "平安保险",
@@ -278,7 +947,7 @@
         "two_warranty": "2019.09.21",
         "issue_time": "2019.05.26"
     },
-    "use_record": [
+    "use_record_1": [
         {
             "customer": "何玲",
             "contact": "1335891583",
@@ -298,7 +967,119 @@
             "charge": "1000"
         }
     ],
-    "err_record": [
+    "use_record_2": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "use_record_3": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "封旭",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "冯巩",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "err_record_1": [
         {
             "err_people": "上官世杰",
             "err_tel": "13084227569",
@@ -320,6 +1101,445 @@
         {
             "err_people": "何炅",
             "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_2": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_3": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "唐糖",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "原曲",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ]
+},
+
+{
+    "car_massage": {
+        "car_url": "../../../../static/image/dz01.jpg",
+        "car_name": "大众",
+        "car_num": "豫F-dz001",
+        "car_type": "高级",
+        "car_manufacture": "美国福特汽车公司",
+        "insurance_company": "平安保险",
+        "road_bridge_paytime": "2019.01.20",
+        "register_time": "2016.09.30",
+        "engine_number": "24664k",
+        "engine_num": "LSGJR52U85SII0284",
+        "chassis_num": "245365",
+        "two_warranty": "2019.09.21",
+        "issue_time": "2019.05.26"
+    },
+    "use_record_1": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "use_record_2": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "use_record_3": [
+        {
+            "customer": "何玲",
+            "contact": "1335891583",
+            "lease": "月租",
+            "id_number": "410621******1246",
+            "take_time": "2019.03.10 8:20",
+            "return_time": "2019.05.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "何军",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "朱建勇",
+            "contact": "1535892283",
+            "lease": "月租",
+            "id_number": "417721******1226",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "展白",
+            "contact": "1511891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1500"
+        },
+        {
+            "customer": "王亮",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "封旭",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        },
+        {
+            "customer": "冯巩",
+            "contact": "1535891583",
+            "lease": "月租",
+            "id_number": "417721******1246",
+            "take_time": "2019.02.10 8:20",
+            "return_time": "2019.03.10 8:20",
+            "charge": "1000"
+        }
+    ],
+    "err_record_1": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_2": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        }
+    ],
+    "err_record_3": [
+        {
+            "err_people": "上官世杰",
+            "err_tel": "13084227569",
+            "err_event": "闯红灯",
+            "err_time": "2019:03:20 13:20",
+            "err_location": "未来路花园路交叉口",
+            "err_damages": "罚款100",
+            "err_damage_people": "徐晓华"
+        },
+        {
+            "err_people": "何玲",
+            "err_tel": "13303894567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:20 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "何炅",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "朱二军",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "宋朝",
+            "err_tel": "13303800567",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "马娟",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "唐糖",
+            "err_tel": "13303880597",
+            "err_event": "违规停车",
+            "err_time": "2019:04:26 15:20",
+            "err_location": "东明路丰产路交叉口",
+            "err_damages": "罚款50",
+            "err_damage_people": "邓超"
+        },
+        {
+            "err_people": "原曲",
+            "err_tel": "13303880597",
             "err_event": "违规停车",
             "err_time": "2019:04:26 15:20",
             "err_location": "东明路丰产路交叉口",
