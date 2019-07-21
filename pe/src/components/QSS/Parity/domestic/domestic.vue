@@ -1,10 +1,6 @@
 <template>
   <div class="Banner">
 <div class="swiper-container auto">
-<<<<<<< HEAD
-    <div class="swiper-container auto">
-=======
->>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="./img/banner1.png" alt />
@@ -41,12 +37,8 @@
       </div>
     </div>
     <div class="time">
-<<<<<<< HEAD
-
         <div class="star" @click="fn" v-if='show1'>
-=======
-<div class="star" @click="fn" v-if='show1'>
->>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
+
           <p class="math">07月8日</p>
           <p class="clock">17：00</p>
         </div>
@@ -122,15 +114,15 @@ export default {
        time3:'',
        reduce:'',
        ST:'',
-<<<<<<< HEAD
+// <<<<<<< HEAD
        ET:'',
        me:true,
-=======
-       ET:''
+// =======
+       ET:'',
 
       flay1: true,
       flay2: true
->>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
+// >>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
 
     };
   },
@@ -205,15 +197,15 @@ export default {
       effect: "slide",
       direction: "horizontal", // 垂直切换选项
       loop: false, // 循环模式选项
-<<<<<<< HEAD
+// <<<<<<< HEAD
       autoplay:{
       delay:1000,
-      disableOnInteraction : false
-=======
+      disableOnInteraction : false},
+// =======
       autoplay: {
         delay: 1000,
         disableOnInteraction: false
->>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
+// >>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
       },
       // 如果需要分页器
       pagination: {
@@ -227,12 +219,12 @@ export default {
 <style scoped lang='less'>
 .Banner {
   width: 100%;
-<<<<<<< HEAD
+// <<<<<<< HEAD
   flex:1;
-=======
+// =======
   flex: 1;
 
->>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
+// >>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
   overflow: auto;
   /deep/.swiper-pagination-bullet {
     background: #ffc600;
@@ -378,10 +370,10 @@ export default {
   .van-popup--center{
     width:65%;
   }
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 
->>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
+// >>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
 }
 .choice {
   text-align: center;
@@ -394,9 +386,9 @@ export default {
     border-radius: 0.45rem;
   }
 }
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 
->>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
+// >>>>>>> 93d46c7750c95d385bc8b091346e98a4ba970a5d
 </style>
 

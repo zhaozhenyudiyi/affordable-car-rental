@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 
 import Domestic from '../components/QSS/Parity/domestic/domestic'
 import Freeride from '../components/QSS/Parity/Freeride/Freeride.vue'
@@ -12,7 +12,7 @@ import YearSent from '../components/QSS/Parity/Longrent/year_sent/year_sent.vue'
 import BestLong from '../components/QSS/Parity/Longrent/bestlong_sent/bestlong_sent.vue'
 
 
->>>>>>> 4c6cc2f41de30bff5d8adcafd742f6086e082c2f
+// >>>>>>> 4c6cc2f41de30bff5d8adcafd742f6086e082c2f
 import Mine from "../components/chw/mine/mine.vue"
 import Mywallet from "../components/chw/mine/my_wallet.vue"
 import Myorder from "../components/chw/mine/my_order.vue"
@@ -38,8 +38,8 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
       path: '/pages',
       name: 'Pages',
       component: Pages,
@@ -89,7 +89,7 @@ export default new Router({
       ]
     },
     {
->>>>>>> 4c6cc2f41de30bff5d8adcafd742f6086e082c2f
+// >>>>>>> 4c6cc2f41de30bff5d8adcafd742f6086e082c2f
       path: '/paysuccess',
       name: 'Paysuccess',
       component: Paysuccess,

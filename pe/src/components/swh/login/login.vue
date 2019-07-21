@@ -32,7 +32,7 @@
           <router-link to="/registered">
             <button class="zc">注册</button>
           </router-link>
-          <router-link to="/login">
+          <router-link to="/domestic">
             <button @click="phone" class="log">登录</button>
           </router-link>
         </div>

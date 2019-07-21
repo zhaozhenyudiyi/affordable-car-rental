@@ -22,7 +22,7 @@
           <router-link to="/registered">
             <button class="aa" @click="res()" style="color:#000000">注册</button>
           </router-link>
-          <router-link to="/login">
+          <router-link to="/domestic">
             <button class="log">登录</button>
           </router-link>
         </div>
