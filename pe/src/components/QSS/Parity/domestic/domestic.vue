@@ -1,6 +1,6 @@
 <template>
   <div class="Banner">
-    <div class="swiper-container auto">
+<div class="swiper-container auto">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="./img/banner1.png" alt />
@@ -39,22 +39,34 @@
       </div>
     </div>
     <div class="time">
-      <div class="star">
-        <!-- <van-button type="primary" @click="showPopup"> -->
-        <p class="math">07月8日</p>
-        <p class="clock">周一17：00</p>
-        <!-- </van-button> -->
-      </div>
-      <div class="day">
-        <span>2天</span>
-        <img src="./img/形状 4.png" />
-      </div>
-      <div class="end">
-        <!-- <van-button type="primary" @click="showPopup"> -->
-        <p class="math">07月10日</p>
-        <p class="clock">周三17：00</p>
-        <!-- </van-button> -->
-      </div>
+<div class="star" @click="fn" v-if='show1'>
+          <p class="math">07月8日</p>
+          <p class="clock">17：00</p>
+        </div>
+        <div class="star" @click="fn" v-else>
+          <p class="math">{{ time1[1] }}月{{ time1[2] }}</p>
+          <p class="clock">{{ time1[3] }}:{{ time1[4] }}</p>
+        </div>
+        
+        <van-popup v-model="show">
+          <van-datetime-picker v-model="currentDate" type="datetime" @confirm="confirm" @change="change" />
+        </van-popup>
+        <div class="day">
+          <span>{{ reduce }}</span>
+          <img src="./img/形状 4.png">
+        </div>
+
+        <div class="end" @click='fn1' v-if='show3'>
+          <p class="math">07月10日</p>
+          <p class="clock">17：00</p>
+        </div>
+        <div class="end" @click='fn1' v-else>
+          <p class="math">{{ time3[1] }}月{{ time3[2] }}</p>
+          <p class="clock">{{ time3[3] }}:{{ time3[4] }}</p>
+        </div>
+        <van-popup v-model="show2">
+          <van-datetime-picker v-model="currentDate" type="datetime" @confirm="confirm1" @change="change1" />
+        </van-popup>
     </div>
     <div class="choice">
       <input type="button" value="立即选车" @click="junp" />
@@ -84,8 +96,30 @@ export default {
         { text: "上海", value: "c" }
       ],
       overlay: false,
+
+      flay1:true,
+      flay2:true,
+      show:false,
+      show1:true,
+      minHour: 10,
+      maxHour: 20,
+      minDate: new Date(),
+      maxDate: new Date(2019, 10, 1),
+      currentDate: new Date(),
+      time:'',
+      time1:'',
+      //结束时间
+       show2:false,
+       show3:true,
+       time2:'',
+       time3:'',
+       reduce:'',
+       ST:'',
+       ET:''
+
       flay1: true,
       flay2: true
+
     };
   },
   computed: {
@@ -101,10 +135,51 @@ export default {
       this.$store.commit("chengshi", "option");
       this.$router.push("/choice");
     },
+
+    fn(){
+      this.show = !this.show;
+    },
+    showPopup() {
+      this.show = true;
+    },
+    confirm(val) {
+      // console.log(val.toLocaleString()) // 打印出了时间
+      this.show = false;
+      this.time1 = this.time;
+      // console.log(this.time1);
+      this.show1 = false;
+      this.ST = this.time1[1]+'-'+this.time1[2];
+      localStorage.setItem("starTime",this.ST);
+      console.log(this.ST);
+    },
+    change(e) {
+      // console.log(e.getValues());
+      this.time = e.getValues(); // 打印出了选中的时间，是个数组
+    },
+     fn1() {
+      this.show2 = !this.show2;
+    },
+    confirm1(val) {
+      // console.log(val.toLocaleString()) // 打印出了时间
+      this.show2 = false;
+      this.time3 = this.time2;
+      // console.log(this.time3);
+      this.show3 = false;
+      this.reduce = parseInt(this.time3[2]) - parseInt(this.time1[2])+'天';
+      this.ET = this.time3[1]+'-'+this.time3[2];
+      localStorage.setItem("endTIme",this.ET);
+      console.log(this.ET);
+    },
+    change1(e) {
+      // console.log(e.getValues());
+      this.time2 = e.getValues(); // 打印出了选中的时间，是个数组
+    },
+
     chen() {
       this.$store.commit("chengshi", "option2");
       this.$router.push("/choice");
     }
+
   },
   components: {
     Recommend
@@ -121,7 +196,7 @@ export default {
       },
       // 如果需要分页器
       pagination: {
-        el: ".swiper-pagination"
+      el: ".swiper-pagination"
       }
     });
   }
@@ -131,8 +206,8 @@ export default {
 <style scoped lang='less'>
 .Banner {
   width: 100%;
-  // height: 2.55rem;
   flex: 1;
+
   overflow: auto;
   /deep/.swiper-pagination-bullet {
     background: #ffc600;
@@ -274,6 +349,10 @@ export default {
       color: #999999;
     }
   }
+  .van-popup--center{
+    width:65%;
+  }
+
 }
 .choice {
   text-align: center;
@@ -286,5 +365,6 @@ export default {
     border-radius: 0.45rem;
   }
 }
+
 </style>
 

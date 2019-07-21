@@ -28,9 +28,9 @@
         </ul>
       </section>
       <footer>
-        <div>
+        <div class="inp">
           <router-link to="/registered">
-            <button> <span class="zc">注册</span></button>
+            <button class="zc">注册</button>
           </router-link>
           <router-link to="/pages">
             <button @click="phone">登录</button>
@@ -72,7 +72,11 @@ export default {
 
 <style scoped lang="less">
 .zc{
-    color:#fff;
+  background-color: rgba(245, 245, 245, 0.4);
+  color: rgba(255, 255, 255, 1);
+}
+.inp{
+  font-size: .36rem;
 }
 .login {
   position: fixed;
@@ -168,7 +172,7 @@ export default {
             height: 0.88rem;
             box-shadow: -9px 0px 16px 0px rgba(51, 51, 51, 0.18);
             border-radius: 0.44rem;
-            font-size: 0.23rem;
+            font-size: 0.36rem;
             position: absolute;
             border: 0;
           }

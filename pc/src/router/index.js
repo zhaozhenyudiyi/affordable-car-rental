@@ -26,7 +26,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-  
+
     {
       path: '/',
       name: 'Login',
@@ -54,15 +54,16 @@ export default new Router({
           name: 'Index',
           component: Index
         },
-            { path: '/car-manage',
-      name: 'CarManage',
-      component: CarManage
-    },
-    {
-      path: '/car-use',
-      name: 'CarUse',
-      component: CarUse
-    },
+        {
+          path: '/CarManage',
+          name: 'CarManage',
+          component: CarManage
+        },
+        {
+          path: '/caruse',
+          name: 'CarUse',
+          component: CarUse
+        },
         {
           path: '/reservation',
           name: 'reservation',

@@ -43,13 +43,13 @@ export default {
         el: ".swiper-pagination"
       }
     });
-  this.axios.get('http://172.25.1.199:8080/user/findAll')
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+  // this.axios.get('')  
+  // .then(function (response) {
+  //   console.log(response);
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // });
   }
 };
 </script>

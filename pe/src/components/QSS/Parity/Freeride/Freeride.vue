@@ -10,15 +10,40 @@
       <bm-navigation anchor="BMAP_ANCHOR_TOP_LEFT"></bm-navigation>
       <bm-geolocation anchor="BMAP_ANCHOR_TOP_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
       <bm-marker
-        :position="{lng: 113.62, lat: 34.75}"
+        :position="{lng: 113.65, lat: 34.78}"
         :dragging="true"
         animation="BMAP_ANIMATION_BOUNCE"
       >
-        <bm-label
-          content
-          :labelStyle="{color: 'red', fontSize : '24px'}"
-          :offset="{width: -35, height: 30}"
-        />
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.6, lat: 34.75}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.65, lat: 34.73}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.28, lat: 34.82}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.6, lat: 34.87}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
+      </bm-marker>
+      <bm-marker
+        :position="{lng: 113.67, lat: 34.75}"
+        :dragging="true"
+        animation="BMAP_ANIMATION_BOUNCE"
+      >
       </bm-marker>
     </baidu-map>
     <input type="button" value="我要租车" v-if="isShow" @click="isShow = !isShow" />
@@ -49,17 +74,19 @@ export default {
     return {
       center: { lng: 0, lat: 0 },
       zoom: 3,
-      isShow: true
+      isShow: true,
+      // getT:'',
     };
   },
   mounted() {
     //this.enableScrollTheelZoom(true);
+   
   },
   methods: {
     handler({ BMap, map }) {
       // console.log(BMap, map);
-      this.center.lng = 113.62;
-      this.center.lat = 34.75;
+      this.center.lng = 113.65;
+      this.center.lat = 34.78;
       this.zoom = 15;
     },
     getClickInfo(e) {
@@ -75,6 +102,9 @@ export default {
 };
 </script>
 <style scoped lang='less'>
+.BMapLabel{
+  display: none;
+}
 .map {
   // display: flex;
   // flex-direction: column;
