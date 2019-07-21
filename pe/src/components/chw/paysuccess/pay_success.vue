@@ -19,9 +19,9 @@
         <span>  {{list.telephone}}</span>
       </div>
     </div>
-    <router-link to='/demostic' class="backfirst">
-    <div class="black" >回到首页</div>
-    </router-link>
+
+    <div class="black">回到首页</div>
+  
   </div>
 </template>
 
@@ -94,8 +94,8 @@ export default {
       }
     }
   }
-  .backfirst {
-   div{
+
+   .black{
       width:6.9rem;
     height:.88rem;
     border-radius: .44rem;
@@ -105,6 +105,6 @@ export default {
     background-color: #ffc600;   
     margin:1.38rem auto;
    };
-  }
+  
 }
 </style>
