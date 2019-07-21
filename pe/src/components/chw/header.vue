@@ -2,9 +2,8 @@
 <template>
   <div class="header">
     <slot name="left-img" class="left-img"></slot>
-    <slot name="right-img" class="right-img"></slot>
     <span class="txt">{{txt}}</span>
-    <div class="clear"></div>
+    <slot name="right-img" class="right-img"></slot>
   </div>
 </template>
 
@@ -19,37 +18,34 @@ export default {
 };
 </script>
 
-<style scoped lang=less>
-.clear{
-  clear: both;
-}
+<style scoped lang="less">
 .header {
-  overflow: hidden;
-  height: .88rem;
-
-
   width: 100%;
-  height:.88rem;
+  height: 0.88rem;
   display: flex;
   align-items: center;
-  font-size: 0.34rem;
-  position: relative;
-  top: 0;
-  position: fixed;
-  top: .4rem;
+  justify-content: space-between;
+  overflow: hidden;
+  font-size: 0;
   .txt {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
+    font-weight: bold;
+  font-size: 0.36rem;
+
   }
 
   .left-img {
-    width:.44rem;height:.44rem;
-    position: absolute;
-    left: 0.4rem;
-    color: #fff;
-    font-size: 0.5rem;
+    width: 0.44rem;
+    height: 0.44rem;
+    margin: .31rem;
+  }
+  .right-img {
+    width: 0.44rem;
+    height: 0.44rem;
+    margin: 0.31rem;
   }
 }
 </style>

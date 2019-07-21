@@ -22,12 +22,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: #2f3032;
-  /* background: #ffffff; */
 }
 #app {
   width: 100%;
   height: 100%;
-  /* background: #ffffff; */
-  /* background-color: #2f3032; */
+
 }
 </style>

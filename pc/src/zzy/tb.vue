@@ -41,17 +41,10 @@ export default {
           img_src: require("./img/hy.png"),
           src: "/ber/enquiries"
         },
-        {
-          text: "预定管理",
-          img_src: require("./img/yd.png"),
-          src: "/reservation"
-        },
-        {
-          text: "费用结算",
-          img_src: require("./img/fy.png"),
-          src: "/costSettlement"
-        },
+        { text: "预定管理", img_src: require("./img/yd.png"), src: "/reservation" },
+        { text: "费用结算", img_src: require("./img/fy.png"), src: "/costSettlement" },
         { text: "车辆管理", img_src: require("./img/cl.png"), src: "/CarManage" }
+
       ],
       num: 0
     };
@@ -77,14 +70,14 @@ export default {
   // })
   
 
-    this.$axios
-      .get("http://172.25.1.199:8080/user/findAll")
-      .then(function(response) {
-        console.log(response);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+    // this.$axios
+    //   .get("")
+    //   .then(function(response) {
+    //     console.log(response);
+    //   })
+    //   .catch(function(error) {
+    //     console.log(error);
+    //   });
     this.$router.push("/index");
   }
 };
