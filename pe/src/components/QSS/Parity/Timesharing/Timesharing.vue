@@ -5,7 +5,7 @@
         <div class="top">
           <div class="Tleft">
             <p class="star_area">{{ item.star_area }}</p>
-            <p class="star_time">{{ item.star_time }}</p>
+            <p class="star_time">{{ getstarT }}</p>
           </div>
           <div class="Tcenter">
             <p class="Tsale">{{ item.Tsale }}</p>
@@ -14,7 +14,7 @@
           </div>
           <div class="Tright">
             <p class="end_area">{{ item.end_area }}</p>
-            <p class="end_time">{{ item.end_time }}</p>
+            <p class="end_time">{{ getendT }}</p>
           </div>
         </div>
         <div class="bottom">
@@ -85,11 +85,24 @@ export default {
           B_img: require("./img/图层 2.png"),
           Bright: "别克GL8"
         }
-      ]
+      ],
+      getstarT:'',
+      getendT:'',
     };
   },
   methods: {},
-  components: {}
+  components: {},
+  mounted() {
+    this.getstarT = localStorage.getItem("starTime");
+    console.log(this.getstarT);
+    this.getendT = localStorage.getItem("endTIme");
+    console.log(this.getendT);
+    this.$axios.get().then(res=>{
+
+    }).catch(err=>{
+      
+    })
+  },
 };
 </script>
 

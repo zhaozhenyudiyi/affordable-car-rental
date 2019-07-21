@@ -131,9 +131,10 @@ export default {
             font-size: 16px;
             color: #ffffff;
             // color: red;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0);
             // opacity: 0.5;
             margin-bottom: 30px;
+            padding-left: 24px;
           }
           input::-webkit-input-placeholder {
             color: #ffffff;
@@ -149,9 +150,10 @@ export default {
             border: 2px solid #ffffff;
             font-size: 16px;
             color: #ffffff;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0);
             // opacity: 0.5;
             margin-bottom: 30px;
+            padding-left: 24px;
           }
           input::-webkit-input-placeholder {
             color: #ffffff;
