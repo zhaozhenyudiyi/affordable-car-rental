@@ -1,40 +1,4 @@
 <template>
-<<<<<<< HEAD
- <div class="login">
-     <img src="./img/bj.png" alt="">
-     <div class="wrap">
-         <form>
-            <div>
-                <img src="./img/ICON-1.png" alt="">
-                <input type="text" placeholder="请输入手机号" id="phone" v-model="loginForm.username">
-            </div>
-            <div>
-                <img src="./img/ICON-2.png" alt="">
-                <input type="password"  placeholder="请输入密码" id='pwd' v-model="loginForm.password">
-            </div>
-            <p>忘记密码?</p>
-         </form>
-         <div class='mengban'>
-
-         </div>
-        <section>
-            <p>使用以下账号登录</p>
-            <ul>
-                <li><img src="./img/ICON-QQ.png" alt=""></li>
-                <li><img src="./img/ICON-WB.png" alt=""></li>
-                <li><img src="./img/ICON--WX.png" alt=""></li>
-            </ul>
-        </section>
-        <footer>
-            <div>
-                <router-link to="/registered"><button class="aa">注册</button></router-link>
-                <a><button  @click="phone" class="log">登录</button></a>
-            </div>
-            <p>登录或者注册即同意平价分时租车<router-link to="/login">用户服务协议</router-link></p>
-        </footer>
-     </div>
- </div>
-=======
   <div class="login">
     <img src="./img/bj.png" alt />
     <div class="wrap">
@@ -66,75 +30,23 @@
       <footer>
         <div>
           <router-link to="/registered">
-            <button> <span class="zc">注册</span></button>
+            <button class="zc">注册</button>
           </router-link>
           <router-link to="/login">
-            <button @click="phone">登录</button>
+            <button @click="phone" class="log">登录</button>
           </router-link>
         </div>
         <p>
           登录或者注册即同意平价分时租车
-          <router-link to="/shop">用户服务协议</router-link>
+          <router-link to="/login">用户服务协议</router-link>
         </p>
       </footer>
     </div>
   </div>
 
->>>>>>> 3b2a8e5102204abd071688f84b2cccaeadd73c50
 </template>
 <script>
 export default {
-<<<<<<< HEAD
- data() {
- return {
-     loginForm:{
-         username:'',
-         password:''
-     }
- }
- },
- methods: {
-    // phone(){ 
-    //     if(window.location.href.split('#')[1] == '/login'){
-    //         var phone = document.getElementById('phone').value;
-    //     var pwd = document.getElementById('pwd').value;
-    //     if(!(/^1[3456789]\d{9}$/.test(phone))){ 
-    //         alert('手机号不正确')
-    //         return false; 
-    //     } else if(!/^[0-9A-Za-z]{6,15}$/.test(pwd)){
-    //         alert('密码不正确')
-    //     }else{
-    //         alert('登录成功');
-    //     }
-    //     }
-    // }
-    phone () {
-      let _this = this;
-      if (this.loginForm.username === '' || this.loginForm.password === '') {
-        alert('账号或密码不能为空');
-      } else {
-        this.axios({
-          method: 'post',
-          url: '/user/login',
-          data: _this.loginForm
-        }).then(res => {
-          console.log(res.data);
-          _this.userToken = 'Bearer ' + res.data.data.body.token;
-          // 将用户token保存到vuex中
-          _this.changeLogin({ Authorization: _this.userToken });
-          _this.$router.push('/home');
-          alert('登陆成功');
-        }).catch(error => {
-          alert('账号或密码错误');
-          console.log(error);
-        });
-      }
-    }
- },
- components: {
- }
-}
-=======
   data() {
     return {};
   },
@@ -155,13 +67,21 @@ export default {
   },
   components: {}
 };
->>>>>>> 3b2a8e5102204abd071688f84b2cccaeadd73c50
 </script>
 
 <style scoped lang="less">
-.zc{
-    color:#fff;
-}
+.log{
+        left: 0;
+        background-color:#FFC600;
+        z-index: 3;
+        font-size: .36rem;
+        color: #000;
+
+    }
+    .zc{
+      background-color:rgba(245, 245, 245, .4);
+      color:rgba(255,255,255,1);
+    }
 .login {
   position: fixed;
   width: 100%;
@@ -261,21 +181,23 @@ export default {
             border: 0;
           }
         }
-        a:last-child {
-          button {
-            left: 2.47rem;
-            background-color: #ffc600;
-            z-index: 333;
-            color: #000000;
-          }
-        }
-        a:frist-child {
-          button {
-            left: 0;
-            background-color: #7c7e7d;
-            color: #000000;
-          }
-        }
+        a{
+                        position: relative;
+                        button{
+                            width:3.15rem;
+                            height:.88rem;
+                            box-shadow:-9px 0px 16px 0px rgba(51,51,51,0.18);
+                            border-radius:.44rem;
+                            font-size: .36rem;
+                            position: absolute;
+                            border: 0;
+                        }
+                    }
+                    a:last-child{
+                        button{
+                            left: 2.47rem;
+                        }
+                    }
       }
       p {
         font-size: 0.12rem;

@@ -21,9 +21,6 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);
 
-<<<<<<< HEAD
-
-=======
 //地图插件
 import BaiduMap from 'vue-baidu-map'
 Vue.use(BaiduMap,{
@@ -33,7 +30,6 @@ Vue.use(BaiduMap,{
 })
 
 // Vue.use(Vant);
->>>>>>> 3b2a8e5102204abd071688f84b2cccaeadd73c50
 
 Vue.config.productionTip = false
 

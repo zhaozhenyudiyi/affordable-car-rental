@@ -1,97 +1,108 @@
 <template>
- <div class="registered">
-     <img src="./img/bj.png" alt="">
-     <div class="wrap">
-         <form>
-            <div>
-                <img src="./img/ICON-1.png" alt="">
-                <input type="text" placeholder="请输入手机号" id='phone'>
-            </div>
-            <div>
-                <img src="./img/ICON-2.png" alt="">
-                <input type="text"  placeholder="请输入验证码">
-                <button @click="btnCheck()">获取验证码</button>
-            </div>
-            <div>
-                <img src="./img/ICON-3.png" alt="">
-                <input type="password" placeholder="请输入最少6位密码" id='pwd'>
-            </div>
-        </form>
-        <footer>
-            <div>
-                <router-link to="/registered"><button class="aa" @click="res()" style="color:#000000">注册</button></router-link>
-                <router-link to="/login"><button class="log">登录</button></router-link>
-            </div>
-            <p>登录或者注册即同意平价分时租车<router-link to="/login">用户服务协议</router-link></p>
-        </footer>
-     </div>
- </div>
+  <div class="registered">
+    <img src="./img/bj.png" alt />
+    <div class="wrap">
+      <form>
+        <div>
+          <img src="./img/ICON-1.png" alt />
+          <input type="text" placeholder="请输入手机号" id="phone" v-model="tel" />
+        </div>
+        <div>
+          <img src="./img/ICON-2.png" alt />
+          <input type="text" placeholder="请输入验证码" v-model="yzm_num" />
+          <button  @click.stop="yzm" :disabled="timer">{{yzm_text}}</button>
+        </div>
+        <div>
+          <img src="./img/ICON-3.png" alt />
+          <input type="password" placeholder="请输入最少6位密码" id="pwd" />
+        </div>
+      </form>
+      <footer>
+        <div>
+          <router-link to="/registered">
+            <button class="aa" @click="res()" style="color:#000000">注册</button>
+          </router-link>
+          <router-link to="/login">
+            <button class="log">登录</button>
+          </router-link>
+        </div>
+        <p>
+          登录或者注册即同意平价分时租车
+          <router-link to="/login">用户服务协议</router-link>
+        </p>
+      </footer>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
- data() {
- return {
-     yz: "获取验证码",
-      a:true
-
- }
- },
- methods: {
-     btnCheck(){
-      if(this.a){
-        this.a=false;
-        let a=60;
-        let b=setInterval(() => {
-          this.yz=a+'s';
-          a--;
-        if(a==0){
-          this.yz="获取验证码";
-          clearInterval(b);
-          this.a=true;
+  data() {
+    return {
+      tel: "",
+      yzm_num: "",
+      num: "",
+      yzm_text: "获取验证码",
+      down: 60,
+      timer: false
+    };
+  },
+  methods: {
+    res() {
+      if (window.location.href.split("#")[1] == "/registered") {
+        var phone = document.getElementById("phone").value;
+        var pwd = document.getElementById("pwd").value;
+        if (!/^1[3456789]\d{9}$/.test(phone)) {
+          alert("手机号码不符合规范，请重填");
+          return false;
+        } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
+          alert("密码不符合规范");
+        } else if (this.yzm_num != this.num) {
+            alert('验证码不正确')
+        } else {
+          alert("注册成功");
         }
-      }, 1000);
       }
     },
-    // res() {
-    //   let shur = document.getElementsByClassName("aa")[0];
-    //   if (shur.checked == true) {
-    //     this.$axios(
-    //       "http://172.25.5.205:8080/user/saveUser?"+"phone"+"password" 
-    //      ).then(res=>{
-    //      if(res.data){
-    //          this.$router.push("/login")
-    //      }else{
-    //          alert('租车失败')
-    //      }
-    //    }
-    //    ,(err)=>{
-    //      console.log(err)
-    //    }).catch(err=>{
-    //      console.log(err);
-    //    })
-    //   }
+    yzm() {
+      let num = Math.floor(Math.random() * (999999 - 100000) + 100000);
+      this.num = num;
+      //   if (/^1[3456789]\d{9}$/.test(this.tel)) {
+      //     console.log(this.tel);
+      //     this.axios
+      //       .get(
+      //         "http://172.25.1.67:8080/message/send?tel=" +
+      //           this.tel +
+      //           "&verificationCode=" +
+      //           this.num
+      //       )
+      //       .then(response=> {
+      //         console.log(response);
+      //       })
+      //       .catch(error=> {
+      //         // console.log(error);
+      //       });
+      //   }
+      //   if(this.timer){
+      //       this.timer = !this.timer;
+      //   }
 
-     res(){ 
-         if(window.location.href.split('#')[1] == '/registered'){
-            var phone = document.getElementById('phone').value;
-            var pwd = document.getElementById('pwd').value;
-            if(!(/^1[3456789]\d{9}$/.test(phone))){ 
-                alert('手机号不正确');
-                return false;
-            } else if(!/^[0-9A-Za-z]{6,15}$/.test(pwd)){
-                alert('密码不正确');
-                return false;
-            }else{
-                alert('注册成功');
-            }
-                }
-}
- },
- components: {
-
- }
-}
+      let time = setInterval(() => {
+        this.yzm_text = this.down +'秒';
+        this.down--;
+        if (this.down < 0) {
+          clearInterval(time);
+          console.log("aaa");
+          this.yzm_text = "获取验证码";
+          this.down = 60;
+          this.timer = !this.timer;
+        }
+      }, 1000);
+      this.timer = !this.timer;
+    }
+  },
+  components: {}
+};
 </script>
 
 <style scoped lang="less">
