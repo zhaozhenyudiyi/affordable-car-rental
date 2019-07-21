@@ -1,6 +1,7 @@
 <template>
   <div class="Banner">
 <div class="swiper-container auto">
+    <div class="swiper-container auto">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="./img/banner1.png" alt />
@@ -18,7 +19,6 @@
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination"></div>
     </div>
-
     <div class="sent">
       <span class="left">租</span>
       <span class="change" @click="cheng">{{ $store.state.option }}</span>
@@ -28,7 +28,6 @@
         <span id="store" :class="{store:!flay1}" @click="flay1 = false">到店</span>
       </div>
     </div>
-
     <div class="sent">
       <span class="left">还</span>
       <span class="change" @click="chen">{{ $store.state.option2 }}</span>
@@ -39,7 +38,7 @@
       </div>
     </div>
     <div class="time">
-<div class="star" @click="fn" v-if='show1'>
+        <div class="star" @click="fn" v-if='show1'>
           <p class="math">07月8日</p>
           <p class="clock">17：00</p>
         </div>
@@ -47,15 +46,14 @@
           <p class="math">{{ time1[1] }}月{{ time1[2] }}</p>
           <p class="clock">{{ time1[3] }}:{{ time1[4] }}</p>
         </div>
-        
         <van-popup v-model="show">
           <van-datetime-picker v-model="currentDate" type="datetime" @confirm="confirm" @change="change" />
         </van-popup>
         <div class="day">
-          <span>{{ reduce }}</span>
+          <span v-if="me">2天</span>
+          <span v-else>{{ reduce }}</span>
           <img src="./img/形状 4.png">
         </div>
-
         <div class="end" @click='fn1' v-if='show3'>
           <p class="math">07月10日</p>
           <p class="clock">17：00</p>
@@ -72,6 +70,7 @@
       <input type="button" value="立即选车" @click="junp" />
     </div>
     <Recommend></Recommend>
+  </div>
   </div>
 </template>
 
@@ -116,7 +115,7 @@ export default {
        reduce:'',
        ST:'',
        ET:'',
-
+       me:true,
       flay1: true,
       flay2: true
 
@@ -146,10 +145,11 @@ export default {
       // console.log(val.toLocaleString()) // 打印出了时间
       this.show = false;
       this.time1 = this.time;
-      // console.log(this.time1);
+      console.log(this.time1);
       this.show1 = false;
       this.ST = this.time1[1]+'-'+this.time1[2];
       localStorage.setItem("starTime",this.ST);
+      localStorage.setItem("huan",this.time1);
       console.log(this.ST);
     },
     change(e) {
@@ -163,12 +163,14 @@ export default {
       // console.log(val.toLocaleString()) // 打印出了时间
       this.show2 = false;
       this.time3 = this.time2;
-      // console.log(this.time3);
+      console.log(this.time3);
       this.show3 = false;
       this.reduce = parseInt(this.time3[2]) - parseInt(this.time1[2])+'天';
       this.ET = this.time3[1]+'-'+this.time3[2];
       localStorage.setItem("endTIme",this.ET);
+      localStorage.setItem("qu",this.time3);
       console.log(this.ET);
+      this.me = false;
     },
     change1(e) {
       // console.log(e.getValues());
@@ -190,9 +192,9 @@ export default {
       effect: "slide",
       direction: "horizontal", // 垂直切换选项
       loop: false, // 循环模式选项
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: false
+      autoplay:{
+      delay:1000,
+      disableOnInteraction : false
       },
       // 如果需要分页器
       pagination: {
@@ -207,7 +209,6 @@ export default {
 .Banner {
   width: 100%;
   flex: 1;
-
   overflow: auto;
   /deep/.swiper-pagination-bullet {
     background: #ffc600;
@@ -301,6 +302,7 @@ export default {
   padding: 0 0.33rem;
   justify-content: space-between;
   margin-top: 0.39rem;
+  margin-bottom:.41rem;
   .star {
     display: flex;
     flex-direction: column;
@@ -352,7 +354,6 @@ export default {
   .van-popup--center{
     width:65%;
   }
-
 }
 .choice {
   text-align: center;
@@ -365,6 +366,5 @@ export default {
     border-radius: 0.45rem;
   }
 }
-
 </style>
 

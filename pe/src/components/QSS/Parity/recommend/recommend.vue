@@ -75,11 +75,11 @@ export default {
   methods: {},
   components: {},
   mounted() {
-     this.$axios.get().then(res=>{
+    //  this.$axios.get().then(res=>{
 
-    }).catch(err=>{
+    // }).catch(err=>{
       
-    })
+    // })
   },
 }
 </script>

@@ -935,6 +935,7 @@
     "car_massage": {
         "car_url": "../../../../static/image/k2.jpg",
         "car_name": "凯迪拉克",
+        "use_money": "500",
         "car_num": "豫A-kdlk1",
         "car_type": "高级",
         "car_manufacture": "美国福特汽车公司",
@@ -1244,6 +1245,7 @@
     "car_massage": {
         "car_url": "../../../../static/image/dz01.jpg",
         "car_name": "大众",
+        "use_money": "500",
         "car_num": "豫F-dz001",
         "car_type": "高级",
         "car_manufacture": "美国福特汽车公司",

@@ -1,5 +1,5 @@
 <template>
-  <section>
+<div class="parity">
     <div class="PartyHeader">
       <Myheader txt="平价租车">
         <img src="./../domestic/img/icon1.png" slot="left-img" class="left-img"  @click="fn"  />
@@ -11,8 +11,6 @@
         />
       </Myheader>
     </div>
-
-    <div class="parity">
       <ul>
         <li>
           <router-link to="/pages/domestic">国内租</router-link>
@@ -29,7 +27,6 @@
       </ul>
       <router-view></router-view>
     </div>
-  </section>
 </template>
 
 <script>
@@ -53,12 +50,10 @@ export default {
 </script>
 
 <style scoped lang='less'>
-section {
-  width: 100%;
-  height: 100%;
-  font-size: 0;
-}
+
 .parity {
+  display:flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   font-size: 0;
