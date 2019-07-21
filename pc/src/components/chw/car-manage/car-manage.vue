@@ -91,7 +91,7 @@ export default {
   methods: {
     fn(index) {
       this.isactive = index;
-      this.$router.push("/car-use")
+      this.$router.push("/caruse")
     },
     btnClick() {
       if(this.car_name[1]==this.searchmas){
