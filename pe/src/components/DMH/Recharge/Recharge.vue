@@ -106,7 +106,8 @@
 
           <van-button type="primary" class="immediately" @click="pri">立即支付</van-button>
           <van-popup v-model="showw" class="a">
-            支付成功
+            支付成功<br>
+            本次充值{{ this.nihao }}元
           </van-popup>
         </div>
       </van-popup>
@@ -186,6 +187,7 @@ export default {
     },
     pri() {
       this.showw = true;
+      this.$store.commit('zhi',this.nihao)
       setTimeout(() => {
         this.$router.push("/my_wallet");
       }, 300);

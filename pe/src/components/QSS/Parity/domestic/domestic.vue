@@ -115,7 +115,7 @@ export default {
        time3:'',
        reduce:'',
        ST:'',
-       ET:''
+       ET:'',
 
       flay1: true,
       flay2: true

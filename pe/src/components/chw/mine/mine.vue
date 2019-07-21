@@ -95,7 +95,7 @@ export default {
   },
   methods: {
     return_icon(){
-      this.$router.push("/carDetails")
+      this.$router.push("/pages")
     }
   },
   components: {
