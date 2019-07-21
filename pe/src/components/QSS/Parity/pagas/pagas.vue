@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="PartyHeader">
-      <Myheader txt="我的订单">
+      <Myheader txt="平价租车">
         <img src="./../domestic/img/icon1.png" slot="left-img" class="left-img"  @click="fn"  />
         <img
           src="./../domestic/img/icon2.png"

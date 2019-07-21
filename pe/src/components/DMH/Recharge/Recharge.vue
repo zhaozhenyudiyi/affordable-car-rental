@@ -187,7 +187,7 @@ export default {
     pri() {
       this.showw = true;
       setTimeout(() => {
-        this.$router.push("/pages");
+        this.$router.push("/my_wallet");
       }, 300);
     }
   },
