@@ -21,29 +21,25 @@
 
     <div class="sent">
       <span class="left">租</span>
-      <van-dropdown-menu class="change">
-        <van-dropdown-item v-model="value" :options="option" />
-      </van-dropdown-menu>
-      <p class="area">郑州动物园自助点</p>
-      <div class='icon'>
+      <span class="change" @click="cheng">{{ $store.state.option }}</span>
+      <p class="area">{{ $store.state.option }}国际自助点</p>
+      <div class="icon">
         <span id="door" :class="{door:flay1}" @click="flay1 = !flay1">上门</span>
-        <span id="store":class="{store:!flay1}" @click="flay1 = false">到店</span>
+        <span id="store" :class="{store:!flay1}" @click="flay1 = false">到店</span>
       </div>
     </div>
 
     <div class="sent">
-      <span class="left">还</span></span>
-      <van-dropdown-menu class="change">
-        <van-dropdown-item v-model="value1" :options="option1" />
-      </van-dropdown-menu>
-      <p class="area">郑州动物园自助点</p>
-      <div class='icon'>
+      <span class="left">还</span>
+      <span class="change" @click="chen">{{ $store.state.option2 }}</span>
+      <p class="area">{{ $store.state.option2 }}国际自助点</p>
+      <div class="icon">
         <span id="door" :class="{door:flay2}" @click="flay2 = !flay2">上门</span>
-        <span id="store":class="{store:!flay2}" @click="flay2 = false">到店</span>
+        <span id="store" :class="{store:!flay2}" @click="flay2 = false">到店</span>
       </div>
     </div>
     <div class="time">
-        <div class="star" @click="fn" v-if='show1'>
+<div class="star" @click="fn" v-if='show1'>
           <p class="math">07月8日</p>
           <p class="clock">17：00</p>
         </div>
@@ -73,7 +69,7 @@
         </van-popup>
     </div>
     <div class="choice">
-      <input type="button" value="立即选车" @click="junp">
+      <input type="button" value="立即选车" @click="junp" />
     </div>
     <Recommend></Recommend>
   </div>
@@ -82,24 +78,25 @@
 <script>
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.css";
-import Recommend from '../recommend/recommend'
+import Recommend from "../recommend/recommend";
 export default {
-  name: 'carrousel',
+  name: "carrousel",
   data() {
     return {
       value: 0,
-      value1:'a',
+      value1: "a",
       option: [
         { text: "郑州", value: 0 },
         { text: "北京", value: 1 },
         { text: "上海", value: 2 }
       ],
-       option1: [
-        { text: "郑州", value: 'a' },
-        { text: "北京", value: 'b' },
-        { text: "上海", value: 'c' }
+      option1: [
+        { text: "郑州", value: "a" },
+        { text: "北京", value: "b" },
+        { text: "上海", value: "c" }
       ],
       overlay: false,
+
       flay1:true,
       flay2:true,
       show:false,
@@ -119,20 +116,26 @@ export default {
        reduce:'',
        ST:'',
        ET:''
+
+      flay1: true,
+      flay2: true
+
     };
   },
   computed: {
-      swiper() {
-        return this.$refs.mySwiper.swiper
-      }
-    },
+    swiper() {
+      return this.$refs.mySwiper.swiper;
+    }
+  },
   methods: {
-    junp(){
-      this.$router.push("/carDetails")
+    junp() {
+      this.$router.push("/carDetails");
     },
-     showPopup() {
-      this.show = true;
+    cheng() {
+      this.$store.commit("chengshi", "option");
+      this.$router.push("/choice");
     },
+
     fn(){
       this.show = !this.show;
     },
@@ -171,36 +174,43 @@ export default {
       // console.log(e.getValues());
       this.time2 = e.getValues(); // 打印出了选中的时间，是个数组
     },
+
+    chen() {
+      this.$store.commit("chengshi", "option2");
+      this.$router.push("/choice");
+    }
+
   },
   components: {
     Recommend
   },
   mounted() {
-      var mySwiper = new Swiper(".auto", {
-      loop : true,
-      effect : 'slide',
+    var mySwiper = new Swiper(".auto", {
+      loop: true,
+      effect: "slide",
       direction: "horizontal", // 垂直切换选项
       loop: false, // 循环模式选项
-      autoplay:{
-      delay:1000,
-      disableOnInteraction : false
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false
       },
       // 如果需要分页器
       pagination: {
       el: ".swiper-pagination"
       }
     });
-  },
+  }
 };
 </script>
 
 <style scoped lang='less'>
 .Banner {
   width: 100%;
-  flex:1;
+  flex: 1;
+
   overflow: auto;
-  /deep/.swiper-pagination-bullet{
-    background:#ffc600;
+  /deep/.swiper-pagination-bullet {
+    background: #ffc600;
   }
 }
 .Banner img {
@@ -224,7 +234,7 @@ export default {
   width: 0.6rem;
   height: auto;
   font-size: 0.26rem;
-  margin-left: .19rem;
+  margin-left: 0.19rem;
 }
 .sent {
   font-size: 0;
@@ -232,7 +242,7 @@ export default {
   flex-direction: row;
   align-items: center;
   position: relative;
-  padding: 0 .29rem;
+  padding: 0 0.29rem;
   border-bottom: 1px solid #fafafa;
   .left {
     display: block;
@@ -249,111 +259,112 @@ export default {
   .area {
     font-size: 0.26rem;
     color: white;
-    margin-left: .38rem;
+    margin-left: 0.38rem;
   }
-  .icon{
+  .icon {
     width: 1.26rem;
-    height: .33rem;
+    height: 0.33rem;
     background: #dadada;
-    border-radius: .17rem;
+    border-radius: 0.17rem;
     position: absolute;
     right: 0.29rem;
     #door {
-    display: inline-block;
-    width: .64rem;
-    height: 100%;
-    color: black;
-    font-size: 0.23rem;
-    border-radius: 38%;
-    text-align: center;
-  }
-  .door{
-    background: #FFC600;
-  }
-  #store {
-    display: inline-block;
-    width: .62rem;
-     height: 100%;
-    color: black;
-    font-size: 0.23rem;
-    border-radius: .17rem;
-    text-align: center;
-  }
-  .store{
-    background: #FFC600;
+      display: inline-block;
+      width: 0.64rem;
+      height: 100%;
+      color: black;
+      font-size: 0.23rem;
+      border-radius: 38%;
+      text-align: center;
+    }
+    .door {
+      background: #ffc600;
+    }
+    #store {
+      display: inline-block;
+      width: 0.62rem;
+      height: 100%;
+      color: black;
+      font-size: 0.23rem;
+      border-radius: 0.17rem;
+      text-align: center;
+    }
+    .store {
+      background: #ffc600;
+    }
   }
 }
-  
-}
-.time{
-    font-size: 0;
+.time {
+  font-size: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0.33rem;
+  justify-content: space-between;
+  margin-top: 0.39rem;
+  .star {
     display: flex;
-    flex-direction: row;
-    padding: 0 .33rem;
-    justify-content: space-between;
-    margin-top: .39rem;
-    .star{
-      display: flex;
-      flex-direction: column;
-      font-size: .26rem;
-      width: 1.5rem;
-      align-items: center;
-      .math{
-        font-size: .26rem;
-        margin: 0;
-        color: white;
-      }
-      .clock{
-        font-size: .20rem;
-        margin: 0;
-        color: #999999;
-      }
+    flex-direction: column;
+    font-size: 0.26rem;
+    width: 1.5rem;
+    align-items: center;
+    .math {
+      font-size: 0.26rem;
+      margin: 0;
+      color: white;
     }
-    .day{
-       display: flex;
-      flex-direction: column;
-      font-size: .26rem;
-      width: 2rem;
-      align-items: center;
-      span{
-        color: #FFC600;
-      }
-      img{
-        width: 100%;
-        height: .14rem;
-      }
-    }
-    .end{
-       display: flex;
-      flex-direction: column;
-      font-size: .26rem;
-      width: 1.5rem;
-      align-items: center;
-      .math{
-        font-size: .26rem;
-        margin: 0;
-        color: white;
-      }
-      .clock{
-        font-size: .20rem;
-        margin: 0;
-        color: #999999;
-      }
+    .clock {
+      font-size: 0.2rem;
+      margin: 0;
+      color: #999999;
     }
   }
-  .choice{
-    text-align: center;
-    input{
-      width: 6.86rem;
-      height: .89rem;
-      background: #FFC600;
-      font-size: .32rem;
-      border:none;
-      border-radius: .45rem;
+  .day {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.26rem;
+    width: 2rem;
+    align-items: center;
+    span {
+      color: #ffc600;
+    }
+    img {
+      width: 100%;
+      height: 0.14rem;
+    }
+  }
+  .end {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.26rem;
+    width: 1.5rem;
+    align-items: center;
+    .math {
+      font-size: 0.26rem;
+      margin: 0;
+      color: white;
+    }
+    .clock {
+      font-size: 0.2rem;
+      margin: 0;
+      color: #999999;
     }
   }
   .van-popup--center{
     width:65%;
   }
+
+}
+.choice {
+  text-align: center;
+  input {
+    width: 6.86rem;
+    height: 0.89rem;
+    background: #ffc600;
+    font-size: 0.32rem;
+    border: none;
+    border-radius: 0.45rem;
+  }
+}
+
 </style>
 

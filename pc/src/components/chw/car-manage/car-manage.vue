@@ -2,16 +2,17 @@
 <template>
   <div class="car-manage">
     <div class="car-M">
-      <div class="search">
-        <input type="search" placeholder="请输入要查询的车牌号或车辆品牌" >
+      <form class="search">
+        <input type="search" placeholder="请输入要查询的车辆品牌" v-model='searchmas'>
         <button @click="btnClick">查询车辆</button>
-      </div>
+      </form>
       <div class="massage">
         <nav>
           <ul>
             <li v-for="(item,index) in list1.car_nav_list" :key="index">{{item}}</li>
           </ul>
         </nav>
+         <div v-show="aa_show" class="kong">你输入的车辆品牌不存在</div>
         <ul class="car_massage">
           <li
             v-for="(item,index) in list"
@@ -53,7 +54,15 @@ export default {
       list2: "",
       isactive: "",
       currentPage: 1,
-      pagesize: 5
+      pagesize: 5,
+      searchmas:"",
+      car_name:["宝马","奥迪","雪佛兰","凯迪拉克","大众"],
+       ad:"",
+       bm:"",
+       kdlk:"",
+       dz:"",
+       xfl:"",
+       aa_show:false,
     };
   },
   mounted() {
@@ -64,17 +73,47 @@ export default {
         this.list = res.data.car_massage_list;
         this.list1 = res.data;
         this.list2 = res.data.all_car_massage_list;
+        this.bm=res.data.all_car_massage_list.slice(5, 12);
+        this.ad=res.data.all_car_massage_list.slice(12, 21);
+        this.kdlk=res.data.all_car_massage_list.slice(21, 26);
+        this.xfl=res.data.all_car_massage_list.slice(26, 33);
+        this.dz=res.data.all_car_massage_list.slice(33, 41);
+        console.log(this.kdlk)
       })
       .catch(err => {
         console.log(err);
       });
   },
+  computed:{
+      
+
+      },
   methods: {
     fn(index) {
       this.isactive = index;
+      this.$router.push("/car-use")
     },
     btnClick() {
-      this.$router.replace("/car-use");
+      if(this.car_name[1]==this.searchmas){
+        this.list=this.ad;
+        this.aa_show=false
+      }else if(this.car_name[0]==this.searchmas){
+        console.log(this.car_name[0])
+         this.list=this.bm;
+         this.aa_show=false
+      }else if(this.car_name[2]==this.searchmas){
+         this.list=this.xfl;
+         this.aa_show=false
+      }else if(this.car_name[3]==this.searchmas){
+         this.list=this.kdlk;
+         this.aa_show=false
+      }else if(this.car_name[4]==this.searchmas){
+         this.list=this.dz;
+         this.aa_show=false
+      }else{
+        this.aa_show=true
+      }
+
     },
 
     handleSizeChange: function(size) {
@@ -82,41 +121,13 @@ export default {
     },
     handleCurrentChange: function(currentPage) {
       this.currentPage = currentPage;
-      console.log(currentPage);
+      // console.log(currentPage);
       this.list = this.list2.slice(
         (currentPage - 1) * 4,
         (currentPage - 1) * 4 + 4
       );
-      console.log(this.list);
-      console.log((currentPage - 1) * 4, (currentPage - 1) * 4 + 4);
     }
 
-    // openData() {},
-    // handleSizeChange(val) {
-    //   console.log(`每页 ${val} 条`);
-    //   this.pageSize = val;
-    //   this.handleCurrentChange(this.currentPage);
-    // },
-    // handleCurrentChange(val) {
-    //   console.log(`当前页: ${val}`);
-    //   this.currentPage = val;
-    //   //需要判断是否检索
-    //   if (!this.flag) {
-    //     this.currentChangePage(this.tableDataEnd);
-    //   } else {
-    //     this.currentChangePage(this.filterTableDataEnd);
-    //   }
-    // }, //组件自带监控当前页码
-    // currentChangePage(list) {
-    //   let from = (this.currentPage - 1) * this.pageSize;
-    //   let to = this.currentPage * this.pageSize;
-    //   this.tableDataEnd = [];
-    //   for (; from < to; from++) {
-    //     if (list[from]) {
-    //       this.tableDataEnd.push(list[from]);
-    //     }
-    //   }
-    // }
   },
 
   components: {}
@@ -156,8 +167,9 @@ export default {
       }
     }
     .massage {
-      height:454px;
+      height:444px;
       overflow: hidden;
+      position:relative;
       nav {
         width: 100%;
         height: 54px;
@@ -173,6 +185,17 @@ export default {
             font-size: 18px;
           }
         }
+      }
+      .kong{
+        width:1135px;
+        height:390px;
+        /* border:1px solid #ccc; */
+        background-color: #fff;
+        position:absolute;
+        text-align: center;
+        line-height: 400px;
+        font-size:30px;
+        bottom:0;
       }
       .car_massage {
         list-style: none;
