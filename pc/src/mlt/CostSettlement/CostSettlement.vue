@@ -14,7 +14,7 @@
         
         <div class="biaoge">
           <table border="2" cellspacing="0">
-    <tr class="hrt" v-for="(item,inde) in lt">
+    <tr class="hrt" v-for="(item,inde) in lt" :key="inde">
         <th>{{item.name}}</th>
         <th>{{item.Contact}}</th>
         <th>{{item.cart}}</th>
@@ -370,6 +370,7 @@ export default {
        this.a[index].bol = !this.a[index].bol;
      },200)
      console.log(index);
+     
    },
    f2(id,e){
       e = e || window.event;
@@ -404,7 +405,6 @@ export default {
           if(that.list[i].phone.indexOf(newValue)==0){
             arrT.push(that.list[i]);
             that.searc=arrT;
-           
           }
         }   
         console.log(that.searc)
@@ -441,7 +441,7 @@ mounted(){
   display: contents;
 }
 .pageContainer{
-      margin-left: 343px;
+      margin-left: 482px;
       margin-top: 30px;
 }
 .page{
@@ -460,7 +460,8 @@ mounted(){
   color: #fff;
 }
 table{
-  width: 1000px;
+  width: 1134px;
+  height: 54px;
 }
 .active{
   background:#FFC600;
@@ -475,11 +476,7 @@ table{
  .center{
      display: flex;
  }
- .left{
-    // width: 210px;
-    // height:900px;
-    // background: yellow;
- }
+ 
 tr td{
   text-align: center;
   width: 120px;
@@ -495,8 +492,8 @@ tr td{
 }
 tr th{
   background: #E8E8E8;
-  height: 50px;
-  width:212px;
+  height: 54px;
+  // width:212px;
 }
  .right{
   margin-top: 50px;
@@ -509,6 +506,7 @@ tr th{
    display: flex;
    justify-content: space-around;
    align-items: center;
+   width: 170px;
  }
 .ipt{
   display: flex;

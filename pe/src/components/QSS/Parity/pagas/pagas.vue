@@ -1,44 +1,65 @@
 <template>
-  <div class="parity">
-    <div class="PartyHeader"></div>
-    <ul>
-      <li>
-        <router-link to="domestic">国内租</router-link>
-      </li>
-      <li>
-        <router-link to="freeride">分时租</router-link>
-      </li>
-      <li>
-        <router-link to="timesharing">顺风车</router-link>
-      </li>
-      <li>
-        <router-link to="testdrive">试驾</router-link>
-      </li>
-      <li>
-        <router-link to="longrent">长租</router-link>
-      </li>
-    </ul>
-    <router-view></router-view>
-  </div>
+<div class="parity">
+    <div class="PartyHeader">
+      <Myheader txt="平价租车">
+        <img src="./../domestic/img/icon1.png" slot="left-img" class="left-img"  @click="fn"  />
+        <img
+          src="./../domestic/img/icon2.png"
+          slot="right-img"
+          class="right-img"
+          alt
+        />
+      </Myheader>
+    </div>
+      <ul>
+        <li>
+          <router-link to="/pages/domestic">国内租</router-link>
+        </li>
+        <li>
+          <router-link to="/pages/freeride">分时租</router-link>
+        </li>
+        <li>
+          <router-link to="/pages/timesharing">顺风车</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'Longrent'}">长租</router-link>
+        </li>
+      </ul>
+      <router-view></router-view>
+    </div>
 </template>
 
 <script>
+import Myheader from "./../../../chw/header";
 export default {
   data() {
     return {};
   },
-  methods: {},
-  components: {}
+  methods: {
+    fn(){
+      this.$router.push("/mine")
+    }
+  },
+  components: {
+    Myheader
+  },
+  mounted() {
+    this.$router.push("/pages/domestic");
+  }
 };
 </script>
 
 <style scoped lang='less'>
+
 .parity {
-  //    padding: 0 .34rem;
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
   .PartyHeader {
+    width: 100%;
     height: 0.88rem;
-    background: black;
-    padding: 0 0.34rem;
   }
   ul {
     display: flex;
@@ -47,7 +68,7 @@ export default {
     justify-content: space-between;
     padding: 0 0.34rem;
     margin-bottom: 0.29rem;
-    margin-top: 0.51rem;
+    margin-top: 0.1rem;
     li {
       a {
         font-size: 0.31rem;

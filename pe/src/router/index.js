@@ -1,5 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+<<<<<<< HEAD
+=======
+
+import Domestic from '../components/QSS/Parity/domestic/domestic'
+import Freeride from '../components/QSS/Parity/Freeride/Freeride.vue'
+import Timesharing from '../components/QSS/Parity/Timesharing/Timesharing'
+import Longrent from '../components/QSS/Parity/Longrent/Longrent'
+import Pages from '../components/QSS/Parity/pagas/pagas.vue'
+import YearSent from '../components/QSS/Parity/Longrent/year_sent/year_sent.vue'
+import BestLong from '../components/QSS/Parity/Longrent/bestlong_sent/bestlong_sent.vue'
+
+
+>>>>>>> 4c6cc2f41de30bff5d8adcafd742f6086e082c2f
 import Mine from "../components/chw/mine/mine.vue"
 import Mywallet from "../components/chw/mine/my_wallet.vue"
 import Myorder from "../components/chw/mine/my_order.vue"
@@ -13,6 +26,9 @@ import Choice from './../components/DMH/UrbanChoice/Choice'
 import Start from '../components/zzy/start/start'
 import intro from '../components/zzy/start/intro'
 import Shop from '../components/zzy/shop/shop'
+import pay from '../components/zzy/pay/pay'
+
+
 import Login from './../components/swh/login/login'
 import Registered from './../components/swh/registered/registered'
 
@@ -22,6 +38,58 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+<<<<<<< HEAD
+=======
+      path: '/pages',
+      name: 'Pages',
+      component: Pages,
+      children: [
+        {
+          path: '/',
+          name: 'Domestic',
+          component: Domestic
+        },
+        {
+          path: 'domestic',
+          name: 'Domestic',
+          component: Domestic
+        },
+        {
+          path: 'freeride',
+          name: 'Freeride',
+          component: Freeride
+        },
+        {
+          path: 'timesharing',
+          name: 'Timesharing',
+          component: Timesharing
+        },
+        {
+          path: 'longrent',
+          name: 'Longrent',
+          component: Longrent,
+          children:[
+            {
+              path: '/',
+              name: 'YearSent',
+              component: YearSent
+            },
+            {
+              path: 'year_sent',
+              name: 'YearSent',
+              component: YearSent
+            },
+            {
+              path: 'bestlong_sent',
+              name: 'BestLong',
+              component: BestLong
+            }
+          ]
+        },
+      ]
+    },
+    {
+>>>>>>> 4c6cc2f41de30bff5d8adcafd742f6086e082c2f
       path: '/paysuccess',
       name: 'Paysuccess',
       component: Paysuccess,
@@ -97,9 +165,14 @@ export default new Router({
       component: Registered
     },
     {
-      path: '/start',
+      path: '/',
       name: 'start',
       component: Start
+    },
+    {
+      path: '/pay',
+      name: 'pay',
+      component: pay
     },
     
   ]
