@@ -51,7 +51,7 @@ export default {
           img_src: require("./img/fy.png"),
           src: "/costSettlement"
         },
-        { text: "车辆管理", img_src: require("./img/cl.png"), src: "" }
+        { text: "车辆管理", img_src: require("./img/cl.png"), src: "/CarManage" }
       ],
       num: 0
     };
@@ -134,7 +134,7 @@ body {
         flex: 1;
         overflow: auto;
         overflow-y: auto;
-        // padding-bottom: 50px;
+        padding-bottom: 50px;
       }
       ul {
         width: 210px;

@@ -29,6 +29,9 @@ import Choice from './../components/DMH/UrbanChoice/Choice'
 import Start from '../components/zzy/start/start'
 import intro from '../components/zzy/start/intro'
 import Shop from '../components/zzy/shop/shop'
+import pay from '../components/zzy/pay/pay'
+
+
 import Login from './../components/swh/login/login'
 
 import Registered from './../components/swh/registered/registered'
@@ -176,6 +179,11 @@ export default new Router({
       path: '/',
       name: 'start',
       component: Start
+    },
+    {
+      path: '/pay',
+      name: 'pay',
+      component: pay
     },
     
   ]

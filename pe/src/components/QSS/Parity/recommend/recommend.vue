@@ -3,7 +3,7 @@
       <div class="Recommend">
       <h3>车型推荐</h3>
       <ul>
-        <li v-for="(item,index) in car_type":key="index">
+        <li v-for="(item,index) in car_type" :key="index">
             <img :src="item.car_img">
             <span class="rent">{{ item.rent }}</span>
           <p class="name">
@@ -24,7 +24,7 @@
       </ul>
       <h3>顺风车推荐</h3>
       <ul>
-         <li v-for="(item,index) in Freeride":key="index">
+         <li v-for="(item,index) in Freeride" :key="index">
             <img :src="item.car_img">
             <span class="rent">{{ item.rent }}</span>
           <p class="name">
