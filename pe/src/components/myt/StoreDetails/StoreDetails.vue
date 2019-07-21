@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div class="kong"></div>
+    <div class="kong">
+       <Myheader txt="门店详情">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img"  @click="store"  />
+      </Myheader>
+    </div>
     <div class="big">
       <div class="banner">
         <img src="./img/图层 516.png" />
@@ -51,14 +55,14 @@
           </ul>
         </div>
         <div class="jing">
-          <div class="tit">
+          <div class="tit" @click="tit">
             <span>精品评价</span>
             <a href="#">
               更多
               <img src="./img/icon5.png" />
             </a>
           </div>
-          <ul class="time" v-for="(item,index) in transfer ">
+          <ul class="time" v-for="(item,index) in transfer " :key="index">
             <li>
               <div class="bao">
                 <span>{{item.tlt}}</span>
@@ -67,7 +71,7 @@
                 <ul style="    float: right;
                   margin-top: -0.33rem;
                   margin-left: .90rem">
-                  <li v-for="(ite,ind) in image">
+                  <li v-for="(ite,ind) in image" :key="ind">
                     <img :src="ite.img" />
                   </li>
                 </ul>
@@ -85,6 +89,7 @@
 </template>
 
 <script>
+import Myheader from './../../chw/header'
 export default {
   data() {
     return {
@@ -110,8 +115,17 @@ export default {
       ]
     }
   },
-  methods: {},
-  components: {}
+  methods: {
+    store(){
+      this.$router.push('/shop');
+    },
+    tit(){
+      this.$router.push('/evaluation')
+    }
+  },
+  components: {
+    Myheader,
+  }
 };
 </script>
 

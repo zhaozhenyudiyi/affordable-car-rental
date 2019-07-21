@@ -1,6 +1,10 @@
 <template>
   <section>
-    <header></header>
+    <header>
+       <Myheader txt="评价列表">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img"  @click="store"  />
+      </Myheader>
+    </header>
     <div class="evalu">
       <div class="tion">
         <p :class="cl?'clor':''" @click="cl=!cl">
@@ -44,6 +48,7 @@
 </template>
 
 <script>
+import Myheader from './../../chw/header'
 export default {
   data() {
     return {
@@ -62,8 +67,12 @@ export default {
       text2: "商家回复：感谢您对我们的支持，祝您用车愉快哟！"
     };
   },
-  methods: {},
-  components: {}
+  methods: {
+    store(){
+      this.$router.push('/StoreDetails');
+    }
+  },
+  components: {Myheader,}
 };
 </script>
 
@@ -71,7 +80,6 @@ export default {
 header {
   width: 100%;
   height: 0.88rem;
-  background: green;
 }
 section {
   width: 100%;

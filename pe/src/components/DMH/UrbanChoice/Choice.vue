@@ -41,7 +41,7 @@
           </i>
         </p>
         <ul>
-          <li v-for="(item, index) in History" :key="index">{{ item }}</li>
+          <li v-for="(item, index) in History" :key="index" @click="his(index)">{{ item }}</li>
         </ul>
       </div>
       <div class="Popular">
@@ -265,6 +265,8 @@ export default {
     title(a){
       this.History.push(a);
       this.value = "";
+      this.$store.commit('chen',a);
+      this.$router.push("/pages");
     },
     pop(a){
       this.$store.commit('chen',this.Popular[a]);
@@ -272,6 +274,10 @@ export default {
     },
     back(){
       this.$router.push('/pages');
+    },
+    his(a){
+      this.$store.commit('chen',this.History[a]);
+      this.$router.push("/pages");
     }
   },
   components: {

@@ -1,10 +1,14 @@
 <template>
   <div class="out">
-    <div class="head"></div>
+    <div class="head">
+       <Myheader txt="门店">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img"  @click="header"  />
+      </Myheader>
+    </div>
     <p>
       <span>用车城市</span>
       <router-link to="/intro" class="a">
-        <span @click="dd">郑州</span>
+        <span @click="dd">{{ $store.state.option }}</span>
         <img src="./img/icon1.png" alt />
       </router-link>
     </p>
@@ -24,6 +28,7 @@
 </template>
 
 <script>
+import Myheader from './../../chw/header';
 import dedetails from "./shop-details";
 export default {
   data() {
@@ -54,10 +59,14 @@ export default {
       li[index].classList.add("click");
       this.num = index;
     //   console.log();
+    },
+    header(){
+      this.$router.push('/pages/freeride')
     }
   },
   components: {
-    dedetails
+    dedetails,
+    Myheader,
   }
 };
 </script>
