@@ -17,15 +17,11 @@ import Axios from 'axios';
 import VueAxios from 'vue-axios';
 Vue.use(VueAxios, Axios)
 
-
 import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);
 
 
-
-
-// Vue.use(Vant);
 
 Vue.config.productionTip = false
 

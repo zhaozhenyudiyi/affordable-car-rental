@@ -10,7 +10,7 @@
             <div>
                 <img src="./img/ICON-2.png" alt="">
                 <input type="text"  placeholder="请输入验证码">
-                <button>获取验证码</button>
+                <button @click="btnCheck()">获取验证码</button>
             </div>
             <div>
                 <img src="./img/ICON-3.png" alt="">
@@ -32,18 +32,56 @@
 export default {
  data() {
  return {
+     yz: "获取验证码",
+      a:true
+
  }
  },
  methods: {
+     btnCheck(){
+      if(this.a){
+        this.a=false;
+        let a=60;
+        let b=setInterval(() => {
+          this.yz=a+'s';
+          a--;
+        if(a==0){
+          this.yz="获取验证码";
+          clearInterval(b);
+          this.a=true;
+        }
+      }, 1000);
+      }
+    },
+    // res() {
+    //   let shur = document.getElementsByClassName("aa")[0];
+    //   if (shur.checked == true) {
+    //     this.$axios(
+    //       "http://172.25.5.205:8080/user/saveUser?"+"phone"+"password" 
+    //      ).then(res=>{
+    //      if(res.data){
+    //          this.$router.push("/login")
+    //      }else{
+    //          alert('租车失败')
+    //      }
+    //    }
+    //    ,(err)=>{
+    //      console.log(err)
+    //    }).catch(err=>{
+    //      console.log(err);
+    //    })
+    //   }
+
      res(){ 
          if(window.location.href.split('#')[1] == '/registered'){
             var phone = document.getElementById('phone').value;
             var pwd = document.getElementById('pwd').value;
             if(!(/^1[3456789]\d{9}$/.test(phone))){ 
-                alert("手机号码不符合规范，请重填");  
-                return false; 
+                alert('手机号不正确');
+                return false;
             } else if(!/^[0-9A-Za-z]{6,15}$/.test(pwd)){
-                alert('密码不符合规范');
+                alert('密码不正确');
+                return false;
             }else{
                 alert('注册成功');
             }

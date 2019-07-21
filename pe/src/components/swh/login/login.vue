@@ -5,14 +5,17 @@
          <form>
             <div>
                 <img src="./img/ICON-1.png" alt="">
-                <input type="text" placeholder="请输入手机号" id="phone">
+                <input type="text" placeholder="请输入手机号" id="phone" v-model="loginForm.username">
             </div>
             <div>
                 <img src="./img/ICON-2.png" alt="">
-                <input type="password"  placeholder="请输入密码" id='pwd'>
+                <input type="password"  placeholder="请输入密码" id='pwd' v-model="loginForm.password">
             </div>
             <p>忘记密码?</p>
          </form>
+         <div class='mengban'>
+
+         </div>
         <section>
             <p>使用以下账号登录</p>
             <ul>
@@ -31,33 +34,55 @@
      </div>
  </div>
 </template>
-
 <script>
 export default {
  data() {
  return {
-     
+     loginForm:{
+         username:'',
+         password:''
+     }
  }
  },
  methods: {
-     
-    phone(){ 
-        if(window.location.href.split('#')[1] == '/login1'){
-            var phone = document.getElementById('phone').value;
-        var pwd = document.getElementById('pwd').value;
-        if(!(/^1[3456789]\d{9}$/.test(phone))){ 
-            alert("手机号码不正确，请重填");  
-            return false; 
-        } else if(!/^[0-9A-Za-z]{6,15}$/.test(pwd)){
-            alert('密码不正确');
-        }else{
-            alert('登录成功');
-        }
-        }
+    // phone(){ 
+    //     if(window.location.href.split('#')[1] == '/login'){
+    //         var phone = document.getElementById('phone').value;
+    //     var pwd = document.getElementById('pwd').value;
+    //     if(!(/^1[3456789]\d{9}$/.test(phone))){ 
+    //         alert('手机号不正确')
+    //         return false; 
+    //     } else if(!/^[0-9A-Za-z]{6,15}$/.test(pwd)){
+    //         alert('密码不正确')
+    //     }else{
+    //         alert('登录成功');
+    //     }
+    //     }
+    // }
+    phone () {
+      let _this = this;
+      if (this.loginForm.username === '' || this.loginForm.password === '') {
+        alert('账号或密码不能为空');
+      } else {
+        this.axios({
+          method: 'post',
+          url: '/user/login',
+          data: _this.loginForm
+        }).then(res => {
+          console.log(res.data);
+          _this.userToken = 'Bearer ' + res.data.data.body.token;
+          // 将用户token保存到vuex中
+          _this.changeLogin({ Authorization: _this.userToken });
+          _this.$router.push('/home');
+          alert('登陆成功');
+        }).catch(error => {
+          alert('账号或密码错误');
+          console.log(error);
+        });
+      }
     }
  },
  components: {
-
  }
 }
 </script>
