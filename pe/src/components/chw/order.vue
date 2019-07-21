@@ -52,13 +52,12 @@ export default {
 };
 </script>
 
-<style scoped lang=less>
+<style scoped lang="less" >
 .car_order {
   width: 100%;
   box-sizing: border-box;
   padding: 0 0.2rem;
   font-size: 0.26rem;
-  margin-top: 1.86rem;
   color: #fff;
   li:first-of-type .order_num p:last-of-type {
     border: 2px solid #ffc600 ;
@@ -119,6 +118,5 @@ export default {
       }
     }
   }
-  li: first-of-type;
 }
 </style>

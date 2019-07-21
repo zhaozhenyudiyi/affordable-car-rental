@@ -15,10 +15,10 @@ export default {
 
 <style scoped lang="less">
 @import "../static/css/reset.css";
-*{
-  margin:0;
-  padding:0;
-}
+// *{
+//   margin:0;
+//   padding:0;
+// }
 
 #app {
   width: 100%;
