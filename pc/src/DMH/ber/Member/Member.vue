@@ -60,7 +60,7 @@ export default {
       tableData: [
         {
           date: "其松松",
-          number: "13837451107",
+          number: "123456",
           type: "二代身份证",
           ber: "411024199908105515",
           currency: "150",
@@ -97,6 +97,7 @@ export default {
 <style scoped lang="less">
 section {
   width: 100%;
+  height: 100%;
   font-size: 0;
   .search {
     width: 100%;
@@ -191,7 +192,7 @@ section {
       font-size: 24px;
       font-weight: bold;
       border-radius: 10px;
-      margin: 72px 0 0 151px;
+      margin: 52px 0 0 151px;
     }
   }
   .surface {

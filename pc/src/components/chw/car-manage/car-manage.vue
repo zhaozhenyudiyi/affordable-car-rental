@@ -73,11 +73,11 @@ export default {
         this.list = res.data.car_massage_list;
         this.list1 = res.data;
         this.list2 = res.data.all_car_massage_list;
-        this.bm=res.data.all_car_massage_list.slice(5, 12);
-        this.ad=res.data.all_car_massage_list.slice(12, 21);
-        this.kdlk=res.data.all_car_massage_list.slice(21, 26);
-        this.xfl=res.data.all_car_massage_list.slice(26, 33);
-        this.dz=res.data.all_car_massage_list.slice(33, 41);
+        // this.bm=res.data.all_car_massage_list.slice(5, 12);
+        // this.ad=res.data.all_car_massage_list.slice(12, 21);
+        // this.kdlk=res.data.all_car_massage_list.slice(21, 26);
+        // this.xfl=res.data.all_car_massage_list.slice(26, 33);
+        // this.dz=res.data.all_car_massage_list.slice(33, 41);
         console.log(this.kdlk)
       })
       .catch(err => {
@@ -94,25 +94,35 @@ export default {
       this.$router.push("/caruse")
     },
     btnClick() {
-      if(this.car_name[1]==this.searchmas){
-        this.list=this.ad;
-        this.aa_show=false
-      }else if(this.car_name[0]==this.searchmas){
-        console.log(this.car_name[0])
-         this.list=this.bm;
-         this.aa_show=false
-      }else if(this.car_name[2]==this.searchmas){
-         this.list=this.xfl;
-         this.aa_show=false
-      }else if(this.car_name[3]==this.searchmas){
-         this.list=this.kdlk;
-         this.aa_show=false
-      }else if(this.car_name[4]==this.searchmas){
-         this.list=this.dz;
-         this.aa_show=false
+      this.list=[];
+      if(this.searchmas !=""){
+        this.list2.forEach((a,b,c)=>{
+          if(a.name.indexOf(this.searchmas)!=-1){
+            this.list.push(a);
+          }
+        });
       }else{
-        this.aa_show=true
+        return
       }
+      // if(this.car_name[1]==this.searchmas){
+      //   this.list=this.ad;
+      //   this.aa_show=false
+      // }else if(this.car_name[0]==this.searchmas){
+      //   console.log(this.car_name[0])
+      //    this.list=this.bm;
+      //    this.aa_show=false
+      // }else if(this.car_name[2]==this.searchmas){
+      //    this.list=this.xfl;
+      //    this.aa_show=false
+      // }else if(this.car_name[3]==this.searchmas){
+      //    this.list=this.kdlk;
+      //    this.aa_show=false
+      // }else if(this.car_name[4]==this.searchmas){
+      //    this.list=this.dz;
+      //    this.aa_show=false
+      // }else{
+      //   this.aa_show=true
+      // }
 
     },
 
@@ -227,5 +237,17 @@ export default {
       /* margin-top: 40px; */
     }
   }
+}
+/deep/.el-pagination.is-background .el-pager li {
+  border-radius: 50%;
+  overflow: hidden;
+}
+/deep/.el-pagination.is-background .btn-next{
+  border-radius: 50%;
+  overflow: hidden;
+}
+/deep/.el-pagination.is-background .btn-prev{
+  border-radius: 50%;
+  overflow: hidden;
 }
 </style>

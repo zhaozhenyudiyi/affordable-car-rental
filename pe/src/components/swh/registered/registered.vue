@@ -10,18 +10,18 @@
         <div>
           <img src="./img/ICON-2.png" alt />
           <input type="text" placeholder="请输入验证码" v-model="yzm_num" />
-          <button  @click.stop="yzm" :disabled="timer">{{yzm_text}}</button>
+          <button @click.stop="yzm" :disabled="timer">{{yzm_text}}</button>
         </div>
         <div>
           <img src="./img/ICON-3.png" alt />
-          <input type="password" placeholder="请输入最少6位密码" id="pwd" />
+          <input type="password" placeholder="请输入最少6位密码" id="pwd" v-model="pass" />
         </div>
       </form>
       <footer>
         <div>
-          <router-link to="/registered">
+          <a>
             <button class="aa" @click="res()" style="color:#000000">注册</button>
-          </router-link>
+          </a>
           <router-link to="/login">
             <button class="log">登录</button>
           </router-link>
@@ -44,7 +44,8 @@ export default {
       num: "",
       yzm_text: "获取验证码",
       down: 60,
-      timer: false
+      timer: false,
+      pass: ""
     };
   },
   methods: {
@@ -58,37 +59,48 @@ export default {
         } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
           alert("密码不符合规范");
         } else if (this.yzm_num != this.num) {
-            alert('验证码不正确')
+          alert("验证码不正确");
         } else {
           alert("注册成功");
+          this.axios
+            .get(
+              "http://172.25.1.204:8080/user/insertOne?user_tel=" +
+                this.tel +
+                "&user_password=" +
+                this.pass
+            )
+            .then(wor => {
+              console.log(wor);
+            });
+          this.$router.push("/login");
         }
       }
     },
     yzm() {
       let num = Math.floor(Math.random() * (999999 - 100000) + 100000);
       this.num = num;
-        if (/^1[3456789]\d{9}$/.test(this.tel)) {
-          console.log(this.tel);
-          this.axios
-            .get(
-              "http://172.25.1.67:8080/message/send?tel=" +
-                this.tel +
-                "&verificationCode=" +
-                this.num
-            )
-            .then(response=> {
-              console.log(response);
-            })
-            .catch(error=> {
-              // console.log(error);
-            });
-        }
-        if(this.timer){
-            this.timer = !this.timer;
-        }
+      if (/^1[3456789]\d{9}$/.test(this.tel)) {
+        console.log(this.tel);
+        this.axios
+          .get(
+            "http://172.25.1.67:8080/message/send?tel=" +
+              this.tel +
+              "&verificationCode=" +
+              this.num
+          )
+          .then(response => {
+            console.log(response);
+          })
+          .catch(error => {
+            // console.log(error);/login
+          });
+      }
+      if (this.timer) {
+        this.timer = !this.timer;
+      }
 
       let time = setInterval(() => {
-        this.yzm_text = this.down +'秒';
+        this.yzm_text = this.down + "秒";
         this.down--;
         if (this.down < 0) {
           clearInterval(time);

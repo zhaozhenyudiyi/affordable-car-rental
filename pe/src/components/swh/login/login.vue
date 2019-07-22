@@ -5,11 +5,11 @@
       <form>
         <div>
           <img src="./img/ICON-1.png" alt />
-          <input type="text" placeholder="请输入手机号" id="phone" />
+          <input type="text" placeholder="请输入手机号" id="phone" v-model="YZTEL" />
         </div>
         <div>
           <img src="./img/ICON-2.png" alt />
-          <input type="password" placeholder="请输入密码" id="pwd" />
+          <input type="password" placeholder="请输入密码" id="pwd" v-model="YZPASS" />
         </div>
         <p>忘记密码?</p>
       </form>
@@ -43,47 +43,61 @@
       </footer>
     </div>
   </div>
-
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      YZTEL: "",
+      YZPASS: ""
+    };
   },
   methods: {
     //   window.location.pathname
     phone() {
-      var phone = document.getElementById("phone").value;
-      var pwd = document.getElementById("pwd").value;
-      if (!/^1[3456789]\d{9}$/.test(phone)) {
-        alert("手机号码不正确，请重填");
-        return false;
-      } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
-        alert("密码不正确");
-      } else {
-        this.$router.push("/pages");
-      }
+      this.axios
+        .get(
+          "http://172.25.1.204:8080/user/findByTel?user_tel=" +
+            this.YZTEL +
+            "&user_password=" +
+            this.YZPASS
+        )
+        .then(wor => {
+          console.log(wor);
+          var phone = document.getElementById("phone").value;
+          var pwd = document.getElementById("pwd").value;
+          if (!/^1[3456789]\d{9}$/.test(phone)) {
+            alert("手机号码不正确，请重填");
+            return false;
+          } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
+            alert("密码格式不正确");
+          } else if(wor.data == 1) {
+              this.$router.push("/pages");
+          }else if(wor.data == 0){
+            alert("请输入正确的手机号或者密码");
+          }
+        });
     }
   },
-  components: {}
+  components: {},
+  mounted() {}
 };
 </script>
 
 <style scoped lang="less">
-.log{
-        left: 0;
-        background-color:#FFC600;
-        z-index: 3;
-        font-size: .36rem;
-        color: #000;
-
-    }
-    .zc{
-      background-color:rgba(245, 245, 245, .4);
-      color:rgba(255,255,255,1);
-    }
-.inp{
-  font-size: .36rem;
+.log {
+  left: 0;
+  background-color: #ffc600;
+  z-index: 3;
+  font-size: 0.36rem;
+  color: #000;
+}
+.zc {
+  background-color: rgba(245, 245, 245, 0.4);
+  color: rgba(255, 255, 255, 1);
+}
+.inp {
+  font-size: 0.36rem;
 }
 .login {
   position: fixed;
@@ -184,23 +198,23 @@ export default {
             border: 0;
           }
         }
-        a{
-                        position: relative;
-                        button{
-                            width:3.15rem;
-                            height:.88rem;
-                            box-shadow:-9px 0px 16px 0px rgba(51,51,51,0.18);
-                            border-radius:.44rem;
-                            font-size: .36rem;
-                            position: absolute;
-                            border: 0;
-                        }
-                    }
-                    a:last-child{
-                        button{
-                            left: 2.47rem;
-                        }
-                    }
+        a {
+          position: relative;
+          button {
+            width: 3.15rem;
+            height: 0.88rem;
+            box-shadow: -9px 0px 16px 0px rgba(51, 51, 51, 0.18);
+            border-radius: 0.44rem;
+            font-size: 0.36rem;
+            position: absolute;
+            border: 0;
+          }
+        }
+        a:last-child {
+          button {
+            left: 2.47rem;
+          }
+        }
       }
       p {
         font-size: 0.12rem;

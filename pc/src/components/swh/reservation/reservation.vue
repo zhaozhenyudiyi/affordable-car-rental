@@ -555,9 +555,9 @@ section {
   /deep/.el-pagination.is-background .el-pager li {
     width: 28px;
     height: 28px;
-    border: 1px solid rgba(102, 102, 102, 1);
+    // border: 1px solid rgba(102, 102, 102, 1);
     border-radius: 50%;
-    background: #ffffff;
+    // background: #e6e66e6;
   }
   .div {
     width: 100%;

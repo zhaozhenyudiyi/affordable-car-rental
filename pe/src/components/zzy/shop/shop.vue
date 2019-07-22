@@ -1,8 +1,8 @@
 <template>
   <div class="out">
     <div class="head">
-       <Myheader txt="门店">
-        <img src="./../../chw/images/2.png" slot="left-img" class="left-img"  @click="header"  />
+      <Myheader txt="门店">
+        <img src="./../../chw/images/2.png" slot="left-img" class="left-img" @click="header" />
       </Myheader>
     </div>
     <p>
@@ -22,14 +22,14 @@
           @click="click(index)"
         >{{value}}</li>
       </ul>
-      <dedetails></dedetails>
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import Myheader from './../../chw/header';
-import dedetails from "./shop-details";
+import Myheader from "./../../chw/header";
+// import dedetails from "./shop-details";
 export default {
   data() {
     return {
@@ -58,15 +58,18 @@ export default {
       li[this.num].classList.remove("click");
       li[index].classList.add("click");
       this.num = index;
-    //   console.log();
+      this.$router.push("/shopdetails"+index);
+      //   console.log();
     },
-    header(){
-      this.$router.push('/pages/freeride')
+    header() {
+      this.$router.push("/pages/freeride");
     }
   },
   components: {
-    dedetails,
-    Myheader,
+    Myheader
+  },
+  mounted () {
+    this.$router.push("/shopdetails0");
   }
 };
 </script>

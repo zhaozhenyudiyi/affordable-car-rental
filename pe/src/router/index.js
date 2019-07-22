@@ -29,6 +29,16 @@ import Choice from './../components/DMH/UrbanChoice/Choice'
 import Start from '../components/zzy/start/start'
 import intro from '../components/zzy/start/intro'
 import Shop from '../components/zzy/shop/shop'
+import shopdetails0 from '../components/zzy/shop/shop-details0'
+import shopdetails1 from '../components/zzy/shop/shop-details1'
+import shopdetails2 from '../components/zzy/shop/shop-details2'
+import shopdetails3 from '../components/zzy/shop/shop-details3'
+import shopdetails4 from '../components/zzy/shop/shop-details4'
+import shopdetails5 from '../components/zzy/shop/shop-details5'
+import shopdetails6 from '../components/zzy/shop/shop-details6'
+import shopdetails7 from '../components/zzy/shop/shop-details7'
+import shopdetails8 from '../components/zzy/shop/shop-details8'
+import shopdetails9 from '../components/zzy/shop/shop-details9'
 import pay from '../components/zzy/pay/pay'
 
 
@@ -163,7 +173,64 @@ export default new Router({
     {
       path: '/shop',
       name: 'shop',
-      component: Shop
+      component: Shop,
+      children:[
+        {
+          path: '/shopdetails0',
+          name: 'shopdetails0',
+          component: shopdetails0,
+        },
+        {
+          path: '/shopdetails1',
+          name: 'shopdetails1',
+          component: shopdetails1,
+        },
+        {
+          path: '/shopdetails2',
+          name: 'shopdetails2',
+          component: shopdetails2,
+        },
+        {
+          path: '/shopdetails3',
+          name: 'shopdetails3',
+          component: shopdetails3,
+        },
+        {
+          path: '/shopdetails4',
+          name: 'shopdetails4',
+          component: shopdetails4,
+        },
+        {
+          path: '/shopdetails5',
+          name: 'shopdetails5',
+          component: shopdetails5,
+        },
+        {
+          path: '/shopdetails6',
+          name: 'shopdetails6',
+          component: shopdetails6,
+        },
+        {
+          path: '/shopdetails7',
+          name: 'shopdetails7',
+          component: shopdetails7,
+        },
+        {
+          path: '/shopdetails8',
+          name: 'shopdetails8',
+          component: shopdetails8,
+        },
+        {
+          path: '/shopdetails9',
+          name: 'shopdetails9',
+          component: shopdetails9,
+        },
+        {
+          path: '/shopdetails9',
+          name: 'shopdetails9',
+          component: shopdetails9,
+        },
+      ]
     },
     {
       path: '/login',

@@ -9,19 +9,19 @@
         {
             "photo_url":"../../../../static/image/dz01.jpg",
             "name":"大众朗逸",
-            "tel":"豫F  DZ001",
+            "tel":"豫A  dz001",
             "foul_play":"1"
         },
         {
             "photo_url": "../../../../static/image/p1.jpg",
             "name": "雪佛兰",
-            "tel": "豫A  XFL01",
+            "tel": "豫A  xfl01",
             "foul_play": "0"
         },
         {
             "photo_url": "../../../../static/image/k1.png",
             "name": "凯迪拉克",
-            "tel": "豫F  KDLK1",
+            "tel": "豫A  kdlk1",
             "foul_play": "5"
         },
         {

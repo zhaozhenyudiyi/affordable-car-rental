@@ -12,7 +12,7 @@
         </div>
         <form action>
           <div class="ZH">
-            <input type="text" placeholder="账号" name="num" id="ZH" />
+            <input type="text" placeholder="账号" name="num" id="ZH" v-model="user_id"/>
           </div>
           <div class="MM">
             <input type="password" placeholder="密码" name="password" id="MM" />
@@ -39,14 +39,17 @@
 import "../.././.././../static/css/reset.css";
 export default {
   data() {
-    return {};
+    return {
+      ID:'18537002596',
+      user_id:''
+    };
   },
   methods: {
     PD() {
       var phone = document.getElementById("ZH").value;
       var pwd = document.getElementById("MM").value;
-      if (!/^1[3456789]\d{9}$/.test(phone)) {
-        alert("手机号码不正确，请重填");
+      if (!/^1[3456789]\d{9}$/.test(phone) || this.user_id != this.ID) {
+        alert("请输入正确的管理员手机号！");
         return;
       } else if (!/^[0-9A-Za-z]{6,15}$/.test(pwd)) {
         alert("密码不正确");

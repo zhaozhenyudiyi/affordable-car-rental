@@ -448,10 +448,11 @@ mounted(){
   width: 28px;
   height: 28px;
   float: left;
-  border:1px solid rgba(102,102,102,1);
+  // border:1px solid rgba(102,102,102,1);
   margin-left: 10px;
   text-align: center;
   line-height: 28px;
+  background: #f4f4f5;
   border-radius: 50%;
 }
 .actived {
